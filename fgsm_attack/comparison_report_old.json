@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-05-14T14:06:26.991725",
+  "clean": {
+    "hamming_loss": 0.5741496067093816,
+    "exact_match": 0.0,
+    "f1_macro": 0.14259485065786912,
+    "auc_macro": 0.0
+  },
+  "adversarial": {
+    "0.001": {
+      "hamming_loss": 0.619594207428244,
+      "exact_match": 0.0,
+      "f1_macro": 0.13097188324372924,
+      "auc_macro": 0.0
+    },
+    "0.002": {
+      "hamming_loss": 0.6395791009011825,
+      "exact_match": 0.0,
+      "f1_macro": 0.12602853871188657,
+      "auc_macro": 0.0
+    },
+    "0.005": {
+      "hamming_loss": 0.663192165442517,
+      "exact_match": 0.0,
+      "f1_macro": 0.11832274795713997,
+      "auc_macro": 0.0
+    },
+    "0.01": {
+      "hamming_loss": 0.6769677553784446,
+      "exact_match": 0.0,
+      "f1_macro": 0.11501945765251644,
+      "auc_macro": 0.0
+    }
+  },
+  "comparison": {
+    "0.001": {
+      "hamming_loss_change": 0.04544460071886236,
+      "exact_match_change": 0.0,
+      "f1_macro_change": -0.011622967414139873,
+      "auc_macro_change": 0.0,
+      "flip_rate": 0.07244882012814502
+    },
+    "0.002": {
+      "hamming_loss_change": 0.06542949419180089,
+      "exact_match_change": 0.0,
+      "f1_macro_change": -0.016566311945982543,
+      "auc_macro_change": 0.0,
+      "flip_rate": 0.10492524873678179
+    },
+    "0.005": {
+      "hamming_loss_change": 0.08904255873313538,
+      "exact_match_change": 0.0,
+      "f1_macro_change": -0.024272102700729145,
+      "auc_macro_change": 0.0,
+      "flip_rate": 0.14344168359639528
+    },
+    "0.01": {
+      "hamming_loss_change": 0.10281814866906291,
+      "exact_match_change": 0.0,
+      "f1_macro_change": -0.02757539300535268,
+      "auc_macro_change": 0.0,
+      "flip_rate": 0.16597385008074178
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "attack_model": "gradient_boosting",
+    "accuracy": 0.5016,
+    "precision": 0.5256410256410257,
+    "recall": 0.0328,
+    "f1": 0.061746987951807226,
+    "attack_label": "Fluctuation / Gradient Boosting",
+    "victim_label": "Baseline (best-practice standard)",
+    "conf_gap": 

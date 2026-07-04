@@ -1,0 +1,47 @@
+NIH Chest X-ray — Fluctuation MIA Results
+==========================================================================================
+
+  Victim Model                        Attack                                      Gap      Acc     Prec      Rec       F1
+  ----------------------------------------------------------------------------------------
+  Baseline (best-practice standard)   Fluctuation / Gradient Boosting         +0.0063   0.5016   0.5256   0.0328   0.0617
+  Baseline (best-practice standard)   Fluctuation / Random Forest             +0.0063   0.5100   0.5144   0.3580   0.4222
+  Baseline (best-practice standard)   Fluctuation / MLP                       +0.0063   0.5047   0.5050   0.4714   0.4876
+  Baseline (best-practice standard)   Fluctuation / Logistic Regression       +0.0063   0.5042   0.5265   0.0834   0.1440
+  Baseline (best-practice standard)   Fluct+Variance / Gradient Boosting      +0.0063   0.5004   0.5071   0.0286   0.0541
+  Baseline (best-practice standard)   Fluct+Variance / Random Forest          +0.0063   0.4981   0.4959   0.2278   0.3122
+  Baseline (best-practice standard)   Fluct+Variance / MLP                    +0.0063   0.5055   0.5051   0.5490   0.5261
+  Baseline (best-practice standard)   Fluct+Variance / Logistic Regression    +0.0063   0.5043   0.5280   0.0812   0.1408
+
+Random baseline: 0.5000
+Total runtime:   12572.2s
+
+==========================================================================================
+Victim Model Details
+==========================================================================================
+
+  Baseline (best-practice standard)
+    architecture             : densenet121
+    mode                     : baseline
+    num_classes              : 15
+    img_size                 : 224
+    final_train_acc          : 0.879143623010772
+    final_val_acc            : 0.8663899712010842
+    final_val_auc            : 0.8356270526670355
+    memorization_gap         : 0.012753651809687794
+    epochs                   : 30
+    epochs_trained           : 17
+    best_epoch               : 10
+    batch_size               : 64
+    learning_rate            : 0.0001
+    optimizer                : AdamW
+    scheduler                : LinearWarmup+CosineAnnealing
+    warmup_epochs            : 3
+    weight_decay             : 0.0001
+    dropout                  : True
+    augmentation             : True
+    augmentation_details     : RandomResizedCrop+HFlip+Rotation+ColorJitter
+    mixed_precision          : True
+    pos_weight_used          : True
+    grad_clip                : 5.0
+    early_stopping_patience  : 7
+    training_type            : standard

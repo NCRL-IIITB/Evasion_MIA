@@ -1,0 +1,51 @@
+[INFO] Device:       cuda
+[INFO] GPU:          NVIDIA GeForce RTX 4090
+[INFO] Mode:         regularized
+[INFO] Architecture: densenet121
+[INFO] Output model: /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_regularized.pth
+[INFO] Member images: 56060
+[INFO] Num classes:   15
+[INFO] Class names:   ['Atelectasis', 'Consolidation', 'Infiltration', 'Pneumothorax', 'Edema', 'Emphysema', 'Fibrosis', 'Effusion', 'Pneumonia', 'Pleural_Thickening', 'Cardiomegaly', 'Nodule', 'Mass', 'Hernia', 'No Finding']
+[INFO] Training on 47651 images, validating on 8409.
+[INFO] Using augmented training transform (regularized mode).
+[INFO] Regularisation: Dropout(0.3) + weight_decay=0.0001 + augmentation
+
+[TRAIN] Starting training …
+  Epoch 01/30  train_loss=0.2038  train_acc=0.9294  val_loss=0.1854  val_acc=0.9324  gap=-0.29%  (154.2s)
+  Epoch 02/30  train_loss=0.1829  train_acc=0.9334  val_loss=0.1817  val_acc=0.9333  gap=+0.01%  (154.7s)
+  Epoch 03/30  train_loss=0.1778  train_acc=0.9344  val_loss=0.1781  val_acc=0.9335  gap=+0.10%  (155.2s)
+  Epoch 04/30  train_loss=0.1742  train_acc=0.9352  val_loss=0.1775  val_acc=0.9339  gap=+0.13%  (155.5s)
+  Epoch 05/30  train_loss=0.1717  train_acc=0.9358  val_loss=0.1771  val_acc=0.9340  gap=+0.18%  (154.5s)
+  Epoch 06/30  train_loss=0.1693  train_acc=0.9364  val_loss=0.1754  val_acc=0.9343  gap=+0.22%  (154.4s)
+  Epoch 07/30  train_loss=0.1670  train_acc=0.9372  val_loss=0.1756  val_acc=0.9343  gap=+0.29%  (155.3s)
+  Epoch 08/30  train_loss=0.1647  train_acc=0.9378  val_loss=0.1762  val_acc=0.9342  gap=+0.36%  (154.9s)
+  Epoch 09/30  train_loss=0.1628  train_acc=0.9383  val_loss=0.1771  val_acc=0.9338  gap=+0.45%  (154.9s)
+  Epoch 10/30  train_loss=0.1602  train_acc=0.9391  val_loss=0.1791  val_acc=0.9333  gap=+0.59%  (154.2s)
+  Epoch 11/30  train_loss=0.1575  train_acc=0.9402  val_loss=0.1823  val_acc=0.9328  gap=+0.75%  (154.7s)
+  Epoch 12/30  train_loss=0.1552  train_acc=0.9407  val_loss=0.1786  val_acc=0.9334  gap=+0.73%  (154.3s)
+  Epoch 13/30  train_loss=0.1525  train_acc=0.9414  val_loss=0.1818  val_acc=0.9318  gap=+0.96%  (155.2s)
+  Epoch 14/30  train_loss=0.1495  train_acc=0.9427  val_loss=0.1831  val_acc=0.9311  gap=+1.16%  (154.4s)
+  Epoch 15/30  train_loss=0.1465  train_acc=0.9437  val_loss=0.1858  val_acc=0.9295  gap=+1.42%  (155.6s)
+  Epoch 16/30  train_loss=0.1433  train_acc=0.9449  val_loss=0.1873  val_acc=0.9321  gap=+1.29%  (155.5s)
+  Epoch 17/30  train_loss=0.1404  train_acc=0.9460  val_loss=0.1930  val_acc=0.9313  gap=+1.47%  (155.6s)
+  Epoch 18/30  train_loss=0.1365  train_acc=0.9474  val_loss=0.1918  val_acc=0.9297  gap=+1.77%  (154.7s)
+  Epoch 19/30  train_loss=0.1333  train_acc=0.9489  val_loss=0.2054  val_acc=0.9296  gap=+1.93%  (154.1s)
+  Epoch 20/30  train_loss=0.1298  train_acc=0.9498  val_loss=0.2039  val_acc=0.9284  gap=+2.14%  (154.3s)
+  Epoch 21/30  train_loss=0.1266  train_acc=0.9512  val_loss=0.2045  val_acc=0.9288  gap=+2.25%  (154.5s)
+  Epoch 22/30  train_loss=0.1228  train_acc=0.9528  val_loss=0.2059  val_acc=0.9272  gap=+2.56%  (154.9s)
+  Epoch 23/30  train_loss=0.1187  train_acc=0.9543  val_loss=0.2114  val_acc=0.9266  gap=+2.77%  (154.5s)
+  Epoch 24/30  train_loss=0.1160  train_acc=0.9553  val_loss=0.2133  val_acc=0.9253  gap=+3.00%  (154.4s)
+  Epoch 25/30  train_loss=0.1122  train_acc=0.9567  val_loss=0.2162  val_acc=0.9221  gap=+3.45%  (154.8s)
+  Epoch 26/30  train_loss=0.1089  train_acc=0.9578  val_loss=0.2277  val_acc=0.9225  gap=+3.53%  (154.3s)
+  Epoch 27/30  train_loss=0.1064  train_acc=0.9591  val_loss=0.2304  val_acc=0.9196  gap=+3.96%  (153.8s)
+  Epoch 28/30  train_loss=0.1025  train_acc=0.9608  val_loss=0.2380  val_acc=0.9259  gap=+3.49%  (154.2s)
+  Epoch 29/30  train_loss=0.0993  train_acc=0.9619  val_loss=0.2547  val_acc=0.9247  gap=+3.73%  (154.0s)
+  Epoch 30/30  train_loss=0.0964  train_acc=0.9631  val_loss=0.2412  val_acc=0.9259  gap=+3.72%  (153.6s)
+
+[DONE]
+  Mode:             regularized
+  Model:            /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_regularized.pth
+  Metadata:         /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_regularized_meta.json
+  Final train_acc:  0.9631
+  Final val_acc:    0.9259
+  Memorization gap: +3.72%

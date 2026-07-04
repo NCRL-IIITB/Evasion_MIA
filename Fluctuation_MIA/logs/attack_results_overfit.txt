@@ -1,0 +1,51 @@
+NIH Chest X-ray — Fluctuation MIA Results
+==========================================================================================
+
+  Victim Model                        Attack                                      Gap      Acc     Prec      Rec       F1
+  ----------------------------------------------------------------------------------------
+  Adversarial (ε=0.02, no augmentation)  Fluctuation / Gradient Boosting         +0.1098   0.6730   0.6048   0.9984   0.7533
+  Adversarial (ε=0.02, no augmentation)  Fluctuation / Random Forest             +0.1098   0.6618   0.6227   0.8212   0.7083
+  Adversarial (ε=0.02, no augmentation)  Fluctuation / MLP                       +0.1098   0.6128   0.5636   0.9996   0.7208
+  Adversarial (ε=0.02, no augmentation)  Fluctuation / Logistic Regression       +0.1098   0.5938   0.5518   1.0000   0.7111
+  Adversarial (ε=0.02, no augmentation)  Fluct+Variance / Gradient Boosting      +0.1098   0.6744   0.6059   0.9978   0.7540
+  Adversarial (ε=0.02, no augmentation)  Fluct+Variance / Random Forest          +0.1098   0.6641   0.6230   0.8314   0.7122
+  Adversarial (ε=0.02, no augmentation)  Fluct+Variance / MLP                    +0.1098   0.6038   0.5579   0.9996   0.7161
+  Adversarial (ε=0.02, no augmentation)  Fluct+Variance / Logistic Regression    +0.1098   0.5936   0.5516   1.0000   0.7110
+
+Random baseline: 0.5000
+Total runtime:   12516.3s
+
+==========================================================================================
+Victim Model Details
+==========================================================================================
+
+  Adversarial (ε=0.02, no augmentation)
+    architecture             : densenet121
+    mode                     : adversarial
+    num_classes              : 15
+    img_size                 : 224
+    final_train_acc          : 0.9998594959791934
+    final_val_acc            : 0.9232367722626913
+    final_val_auc            : 0.7801974845791773
+    final_adv_val_auc        : 0.859990537537455
+    memorization_gap         : 0.07662272371650214
+    epochs                   : 35
+    epochs_trained           : 35
+    best_epoch               : 35
+    batch_size               : 64
+    learning_rate            : 0.0001
+    optimizer                : AdamW
+    scheduler                : LinearWarmup+CosineAnnealing
+    warmup_epochs            : 3
+    weight_decay             : 0.0001
+    dropout                  : True
+    augmentation             : False
+    augmentation_details     : None
+    mixed_precision          : True
+    pos_weight_used          : True
+    grad_clip                : 5.0
+    early_stopping_patience  : disabled
+    training_type            : adversarial
+    adversarial_epsilon      : 0.02
+    adversarial_alpha        : 0.5
+    adversarial_method       : FGSM (Goodfellow et al. 2015)

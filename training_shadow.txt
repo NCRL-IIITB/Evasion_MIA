@@ -1,0 +1,287 @@
+======================================================================
+  Shadow Model MIA — NIH Chest X-ray
+======================================================================
+
+[SETUP] Loading manifest …
+[DATA] Members:     56060
+[DATA] Non-members: 56060
+
+[SETUP] Pool size:      6000 (3000 member + 3000 nonmember, shuffled)
+[SETUP] Eval members:    2000
+[SETUP] Eval nonmembers: 2000
+
+======================================================================
+  VICTIM: OVERFITTED (NO REGULARISATION)
+======================================================================
+  Architecture:    densenet121
+  train_acc:       0.9961
+  val_acc:         0.9182
+  Memorization gap:+7.80%
+  Dropout:         False
+  Weight decay:    0.0
+  Augmentation:    False
+
+  Inference device: cuda
+
+  Pre-computing confidence-gap diagnostic …
+  4000 eval images queried in 44.6s
+
+[DIAG] Mean max-confidence on members:     0.8884
+[DIAG] Mean max-confidence on non-members: 0.8877
+[DIAG] Confidence gap (member - nonmember): +0.0007  (positive = MIA signal exists)
+
+  WARNING: Confidence gap is very small. The MIA signal may be weak for this victim.
+
+======================================================================
+  [Overfitted (no regularisation)] ATTACK 1: STANDARD SHADOW MODEL MIA
+======================================================================
+[MIA] Step 1/3: Training shadow models …
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /home/iiitb-101/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|█████████████████████████████████████████████████████████████| 44.7M/44.7M [00:04<00:00, 11.4MB/s]
+      [resnet18] Epoch 1/15 | Batch 0/79 | Loss: 0.8303
+      [resnet18] Epoch 1/15 | Batch 10/79 | Loss: 0.1490
+      [resnet18] Epoch 1/15 | Batch 20/79 | Loss: 0.1630
+      [resnet18] Epoch 1/15 | Batch 30/79 | Loss: 0.1771
+      [resnet18] Epoch 1/15 | Batch 40/79 | Loss: 0.1865
+      [resnet18] Epoch 1/15 | Batch 50/79 | Loss: 0.1262
+      [resnet18] Epoch 1/15 | Batch 60/79 | Loss: 0.1917
+      [resnet18] Epoch 1/15 | Batch 70/79 | Loss: 0.1547
+      [resnet18] Epoch 2/15 | Batch 0/79 | Loss: 0.1500
+      [resnet18] Epoch 2/15 | Batch 10/79 | Loss: 0.1348
+      [resnet18] Epoch 2/15 | Batch 20/79 | Loss: 0.1149
+      [resnet18] Epoch 2/15 | Batch 30/79 | Loss: 0.1335
+      [resnet18] Epoch 2/15 | Batch 40/79 | Loss: 0.0933
+      [resnet18] Epoch 2/15 | Batch 50/79 | Loss: 0.1519
+      [resnet18] Epoch 2/15 | Batch 60/79 | Loss: 0.1472
+      [resnet18] Epoch 2/15 | Batch 70/79 | Loss: 0.1460
+      [resnet18] Epoch 3/15 | Batch 0/79 | Loss: 0.1255
+      [resnet18] Epoch 3/15 | Batch 10/79 | Loss: 0.1305
+      [resnet18] Epoch 3/15 | Batch 20/79 | Loss: 0.1571
+      [resnet18] Epoch 3/15 | Batch 30/79 | Loss: 0.1099
+      [resnet18] Epoch 3/15 | Batch 40/79 | Loss: 0.1857
+      [resnet18] Epoch 3/15 | Batch 50/79 | Loss: 0.1913
+      [resnet18] Epoch 3/15 | Batch 60/79 | Loss: 0.1252
+      [resnet18] Epoch 3/15 | Batch 70/79 | Loss: 0.1623
+      [resnet18] Epoch 4/15 | Batch 0/79 | Loss: 0.1066
+      [resnet18] Epoch 4/15 | Batch 10/79 | Loss: 0.1497
+      [resnet18] Epoch 4/15 | Batch 20/79 | Loss: 0.1583
+      [resnet18] Epoch 4/15 | Batch 30/79 | Loss: 0.1162
+      [resnet18] Epoch 4/15 | Batch 40/79 | Loss: 0.1345
+      [resnet18] Epoch 4/15 | Batch 50/79 | Loss: 0.1512
+      [resnet18] Epoch 4/15 | Batch 60/79 | Loss: 0.1319
+      [resnet18] Epoch 4/15 | Batch 70/79 | Loss: 0.1445
+      [resnet18] Epoch 5/15 | Batch 0/79 | Loss: 0.1274
+      [resnet18] Epoch 5/15 | Batch 10/79 | Loss: 0.0881
+      [resnet18] Epoch 5/15 | Batch 20/79 | Loss: 0.1126
+      [resnet18] Epoch 5/15 | Batch 30/79 | Loss: 0.1358
+      [resnet18] Epoch 5/15 | Batch 40/79 | Loss: 0.1184
+      [resnet18] Epoch 5/15 | Batch 50/79 | Loss: 0.1117
+      [resnet18] Epoch 5/15 | Batch 60/79 | Loss: 0.1327
+      [resnet18] Epoch 5/15 | Batch 70/79 | Loss: 0.1173
+      [resnet18] Epoch 6/15 | Batch 0/79 | Loss: 0.1075
+      [resnet18] Epoch 6/15 | Batch 10/79 | Loss: 0.1580
+      [resnet18] Epoch 6/15 | Batch 20/79 | Loss: 0.1196
+      [resnet18] Epoch 6/15 | Batch 30/79 | Loss: 0.1110
+      [resnet18] Epoch 6/15 | Batch 40/79 | Loss: 0.0885
+      [resnet18] Epoch 6/15 | Batch 50/79 | Loss: 0.1305
+      [resnet18] Epoch 6/15 | Batch 60/79 | Loss: 0.0862
+      [resnet18] Epoch 6/15 | Batch 70/79 | Loss: 0.0953
+      [resnet18] Epoch 7/15 | Batch 0/79 | Loss: 0.0883
+      [resnet18] Epoch 7/15 | Batch 10/79 | Loss: 0.1042
+      [resnet18] Epoch 7/15 | Batch 20/79 | Loss: 0.0788
+      [resnet18] Epoch 7/15 | Batch 30/79 | Loss: 0.1333
+      [resnet18] Epoch 7/15 | Batch 40/79 | Loss: 0.0593
+      [resnet18] Epoch 7/15 | Batch 50/79 | Loss: 0.1058
+      [resnet18] Epoch 7/15 | Batch 60/79 | Loss: 0.1128
+      [resnet18] Epoch 7/15 | Batch 70/79 | Loss: 0.1164
+      [resnet18] Epoch 8/15 | Batch 0/79 | Loss: 0.0829
+      [resnet18] Epoch 8/15 | Batch 10/79 | Loss: 0.1059
+      [resnet18] Epoch 8/15 | Batch 20/79 | Loss: 0.0643
+      [resnet18] Epoch 8/15 | Batch 30/79 | Loss: 0.0622
+      [resnet18] Epoch 8/15 | Batch 40/79 | Loss: 0.0819
+      [resnet18] Epoch 8/15 | Batch 50/79 | Loss: 0.0817
+      [resnet18] Epoch 8/15 | Batch 60/79 | Loss: 0.0906
+      [resnet18] Epoch 8/15 | Batch 70/79 | Loss: 0.0757
+      [resnet18] Epoch 9/15 | Batch 0/79 | Loss: 0.0671
+      [resnet18] Epoch 9/15 | Batch 10/79 | Loss: 0.0988
+      [resnet18] Epoch 9/15 | Batch 20/79 | Loss: 0.0598
+      [resnet18] Epoch 9/15 | Batch 30/79 | Loss: 0.0555
+      [resnet18] Epoch 9/15 | Batch 40/79 | Loss: 0.0885
+      [resnet18] Epoch 9/15 | Batch 50/79 | Loss: 0.0763
+      [resnet18] Epoch 9/15 | Batch 60/79 | Loss: 0.0719
+      [resnet18] Epoch 9/15 | Batch 70/79 | Loss: 0.1089
+      [resnet18] Epoch 10/15 | Batch 0/79 | Loss: 0.0289
+      [resnet18] Epoch 10/15 | Batch 10/79 | Loss: 0.0669
+      [resnet18] Epoch 10/15 | Batch 20/79 | Loss: 0.0472
+      [resnet18] Epoch 10/15 | Batch 30/79 | Loss: 0.0729
+      [resnet18] Epoch 10/15 | Batch 40/79 | Loss: 0.0703
+      [resnet18] Epoch 10/15 | Batch 50/79 | Loss: 0.0965
+      [resnet18] Epoch 10/15 | Batch 60/79 | Loss: 0.0702
+      [resnet18] Epoch 10/15 | Batch 70/79 | Loss: 0.0797
+      [resnet18] Epoch 11/15 | Batch 0/79 | Loss: 0.0425
+      [resnet18] Epoch 11/15 | Batch 10/79 | Loss: 0.0754
+      [resnet18] Epoch 11/15 | Batch 20/79 | Loss: 0.0366
+      [resnet18] Epoch 11/15 | Batch 30/79 | Loss: 0.0302
+      [resnet18] Epoch 11/15 | Batch 40/79 | Loss: 0.0694
+      [resnet18] Epoch 11/15 | Batch 50/79 | Loss: 0.0374
+      [resnet18] Epoch 11/15 | Batch 60/79 | Loss: 0.0389
+      [resnet18] Epoch 11/15 | Batch 70/79 | Loss: 0.0506
+      [resnet18] Epoch 12/15 | Batch 0/79 | Loss: 0.0417
+      [resnet18] Epoch 12/15 | Batch 10/79 | Loss: 0.0285
+      [resnet18] Epoch 12/15 | Batch 20/79 | Loss: 0.0530
+      [resnet18] Epoch 12/15 | Batch 30/79 | Loss: 0.0376
+      [resnet18] Epoch 12/15 | Batch 40/79 | Loss: 0.0292
+      [resnet18] Epoch 12/15 | Batch 50/79 | Loss: 0.0234
+      [resnet18] Epoch 12/15 | Batch 60/79 | Loss: 0.0323
+      [resnet18] Epoch 12/15 | Batch 70/79 | Loss: 0.0273
+      [resnet18] Epoch 13/15 | Batch 0/79 | Loss: 0.0192
+      [resnet18] Epoch 13/15 | Batch 10/79 | Loss: 0.0604
+      [resnet18] Epoch 13/15 | Batch 20/79 | Loss: 0.0566
+      [resnet18] Epoch 13/15 | Batch 30/79 | Loss: 0.0381
+      [resnet18] Epoch 13/15 | Batch 40/79 | Loss: 0.0278
+      [resnet18] Epoch 13/15 | Batch 50/79 | Loss: 0.0163
+      [resnet18] Epoch 13/15 | Batch 60/79 | Loss: 0.0151
+      [resnet18] Epoch 13/15 | Batch 70/79 | Loss: 0.0114
+      [resnet18] Epoch 14/15 | Batch 0/79 | Loss: 0.0164
+      [resnet18] Epoch 14/15 | Batch 10/79 | Loss: 0.0355
+      [resnet18] Epoch 14/15 | Batch 20/79 | Loss: 0.0335
+      [resnet18] Epoch 14/15 | Batch 30/79 | Loss: 0.0235
+      [resnet18] Epoch 14/15 | Batch 40/79 | Loss: 0.0182
+      [resnet18] Epoch 14/15 | Batch 50/79 | Loss: 0.0121
+      [resnet18] Epoch 14/15 | Batch 60/79 | Loss: 0.0122
+      [resnet18] Epoch 14/15 | Batch 70/79 | Loss: 0.0285
+      [resnet18] Epoch 15/15 | Batch 0/79 | Loss: 0.0141
+      [resnet18] Epoch 15/15 | Batch 10/79 | Loss: 0.0243
+      [resnet18] Epoch 15/15 | Batch 20/79 | Loss: 0.0082
+      [resnet18] Epoch 15/15 | Batch 30/79 | Loss: 0.0213
+      [resnet18] Epoch 15/15 | Batch 40/79 | Loss: 0.0082
+      [resnet18] Epoch 15/15 | Batch 50/79 | Loss: 0.0143
+      [resnet18] Epoch 15/15 | Batch 60/79 | Loss: 0.0108
+      [resnet18] Epoch 15/15 | Batch 70/79 | Loss: 0.0046
+  Shadow model 1/8 trained (resnet18).
+
+  Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to /home/iiitb-101/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+100%|█████████████████████████████████████████████████████████████| 9.83M/9.83M [00:00<00:00, 11.4MB/s]
+      [mobilenet_v3_small] Epoch 1/15 | Batch 0/79 | Loss: 0.7018
+      [mobilenet_v3_small] Epoch 1/15 | Batch 10/79 | Loss: 0.1899
+      [mobilenet_v3_small] Epoch 1/15 | Batch 20/79 | Loss: 0.1156
+      [mobilenet_v3_small] Epoch 1/15 | Batch 30/79 | Loss: 0.1675
+      [mobilenet_v3_small] Epoch 1/15 | Batch 40/79 | Loss: 0.1484
+      [mobilenet_v3_small] Epoch 1/15 | Batch 50/79 | Loss: 0.1691
+      [mobilenet_v3_small] Epoch 1/15 | Batch 60/79 | Loss: 0.1434
+      [mobilenet_v3_small] Epoch 1/15 | Batch 70/79 | Loss: 0.1470
+      [mobilenet_v3_small] Epoch 2/15 | Batch 0/79 | Loss: 0.2024
+      [mobilenet_v3_small] Epoch 2/15 | Batch 10/79 | Loss: 0.1220
+      [mobilenet_v3_small] Epoch 2/15 | Batch 20/79 | Loss: 0.1465
+      [mobilenet_v3_small] Epoch 2/15 | Batch 30/79 | Loss: 0.1609
+      [mobilenet_v3_small] Epoch 2/15 | Batch 40/79 | Loss: 0.1705
+      [mobilenet_v3_small] Epoch 2/15 | Batch 50/79 | Loss: 0.1382
+      [mobilenet_v3_small] Epoch 2/15 | Batch 60/79 | Loss: 0.1767
+      [mobilenet_v3_small] Epoch 2/15 | Batch 70/79 | Loss: 0.1734
+      [mobilenet_v3_small] Epoch 3/15 | Batch 0/79 | Loss: 0.1240
+      [mobilenet_v3_small] Epoch 3/15 | Batch 10/79 | Loss: 0.1182
+      [mobilenet_v3_small] Epoch 3/15 | Batch 20/79 | Loss: 0.1326
+      [mobilenet_v3_small] Epoch 3/15 | Batch 30/79 | Loss: 0.1053
+      [mobilenet_v3_small] Epoch 3/15 | Batch 40/79 | Loss: 0.1221
+      [mobilenet_v3_small] Epoch 3/15 | Batch 50/79 | Loss: 0.1591
+      [mobilenet_v3_small] Epoch 3/15 | Batch 60/79 | Loss: 0.1255
+      [mobilenet_v3_small] Epoch 3/15 | Batch 70/79 | Loss: 0.1081
+      [mobilenet_v3_small] Epoch 4/15 | Batch 0/79 | Loss: 0.0876
+      [mobilenet_v3_small] Epoch 4/15 | Batch 10/79 | Loss: 0.1215
+      [mobilenet_v3_small] Epoch 4/15 | Batch 20/79 | Loss: 0.1017
+      [mobilenet_v3_small] Epoch 4/15 | Batch 30/79 | Loss: 0.1128
+      [mobilenet_v3_small] Epoch 4/15 | Batch 40/79 | Loss: 0.1411
+      [mobilenet_v3_small] Epoch 4/15 | Batch 50/79 | Loss: 0.1281
+      [mobilenet_v3_small] Epoch 4/15 | Batch 60/79 | Loss: 0.1421
+      [mobilenet_v3_small] Epoch 4/15 | Batch 70/79 | Loss: 0.0942
+      [mobilenet_v3_small] Epoch 5/15 | Batch 0/79 | Loss: 0.0889
+      [mobilenet_v3_small] Epoch 5/15 | Batch 10/79 | Loss: 0.1250
+      [mobilenet_v3_small] Epoch 5/15 | Batch 20/79 | Loss: 0.0899
+      [mobilenet_v3_small] Epoch 5/15 | Batch 30/79 | Loss: 0.0967
+      [mobilenet_v3_small] Epoch 5/15 | Batch 40/79 | Loss: 0.0912
+      [mobilenet_v3_small] Epoch 5/15 | Batch 50/79 | Loss: 0.0706
+      [mobilenet_v3_small] Epoch 5/15 | Batch 60/79 | Loss: 0.1003
+      [mobilenet_v3_small] Epoch 5/15 | Batch 70/79 | Loss: 0.1059
+      [mobilenet_v3_small] Epoch 6/15 | Batch 0/79 | Loss: 0.0551
+      [mobilenet_v3_small] Epoch 6/15 | Batch 10/79 | Loss: 0.1062
+      [mobilenet_v3_small] Epoch 6/15 | Batch 20/79 | Loss: 0.0626
+      [mobilenet_v3_small] Epoch 6/15 | Batch 30/79 | Loss: 0.0987
+      [mobilenet_v3_small] Epoch 6/15 | Batch 40/79 | Loss: 0.0999
+      [mobilenet_v3_small] Epoch 6/15 | Batch 50/79 | Loss: 0.1123
+      [mobilenet_v3_small] Epoch 6/15 | Batch 60/79 | Loss: 0.0606
+      [mobilenet_v3_small] Epoch 6/15 | Batch 70/79 | Loss: 0.0803
+      [mobilenet_v3_small] Epoch 7/15 | Batch 0/79 | Loss: 0.0483
+      [mobilenet_v3_small] Epoch 7/15 | Batch 10/79 | Loss: 0.0312
+      [mobilenet_v3_small] Epoch 7/15 | Batch 20/79 | Loss: 0.0501
+      [mobilenet_v3_small] Epoch 7/15 | Batch 30/79 | Loss: 0.0483
+      [mobilenet_v3_small] Epoch 7/15 | Batch 40/79 | Loss: 0.0256
+      [mobilenet_v3_small] Epoch 7/15 | Batch 50/79 | Loss: 0.0631
+      [mobilenet_v3_small] Epoch 7/15 | Batch 60/79 | Loss: 0.0461
+      [mobilenet_v3_small] Epoch 7/15 | Batch 70/79 | Loss: 0.0486
+      [mobilenet_v3_small] Epoch 8/15 | Batch 0/79 | Loss: 0.0253
+      [mobilenet_v3_small] Epoch 8/15 | Batch 10/79 | Loss: 0.0279
+      [mobilenet_v3_small] Epoch 8/15 | Batch 20/79 | Loss: 0.0682
+      [mobilenet_v3_small] Epoch 8/15 | Batch 30/79 | Loss: 0.0377
+      [mobilenet_v3_small] Epoch 8/15 | Batch 40/79 | Loss: 0.0413
+      [mobilenet_v3_small] Epoch 8/15 | Batch 50/79 | Loss: 0.0423
+      [mobilenet_v3_small] Epoch 8/15 | Batch 60/79 | Loss: 0.0429
+      [mobilenet_v3_small] Epoch 8/15 | Batch 70/79 | Loss: 0.0441
+      [mobilenet_v3_small] Epoch 9/15 | Batch 0/79 | Loss: 0.0268
+      [mobilenet_v3_small] Epoch 9/15 | Batch 10/79 | Loss: 0.0557
+      [mobilenet_v3_small] Epoch 9/15 | Batch 20/79 | Loss: 0.0449
+      [mobilenet_v3_small] Epoch 9/15 | Batch 30/79 | Loss: 0.0888
+      [mobilenet_v3_small] Epoch 9/15 | Batch 40/79 | Loss: 0.0483
+      [mobilenet_v3_small] Epoch 9/15 | Batch 50/79 | Loss: 0.0348
+      [mobilenet_v3_small] Epoch 9/15 | Batch 60/79 | Loss: 0.0274
+      [mobilenet_v3_small] Epoch 9/15 | Batch 70/79 | Loss: 0.0404
+      [mobilenet_v3_small] Epoch 10/15 | Batch 0/79 | Loss: 0.0198
+      [mobilenet_v3_small] Epoch 10/15 | Batch 10/79 | Loss: 0.0409
+      [mobilenet_v3_small] Epoch 10/15 | Batch 20/79 | Loss: 0.0205
+      [mobilenet_v3_small] Epoch 10/15 | Batch 30/79 | Loss: 0.0445
+      [mobilenet_v3_small] Epoch 10/15 | Batch 40/79 | Loss: 0.0436
+      [mobilenet_v3_small] Epoch 10/15 | Batch 50/79 | Loss: 0.0176
+      [mobilenet_v3_small] Epoch 10/15 | Batch 60/79 | Loss: 0.0487
+      [mobilenet_v3_small] Epoch 10/15 | Batch 70/79 | Loss: 0.0178
+      [mobilenet_v3_small] Epoch 11/15 | Batch 0/79 | Loss: 0.0084
+      [mobilenet_v3_small] Epoch 11/15 | Batch 10/79 | Loss: 0.0279
+      [mobilenet_v3_small] Epoch 11/15 | Batch 20/79 | Loss: 0.0222
+      [mobilenet_v3_small] Epoch 11/15 | Batch 30/79 | Loss: 0.0304
+      [mobilenet_v3_small] Epoch 11/15 | Batch 40/79 | Loss: 0.0208
+      [mobilenet_v3_small] Epoch 11/15 | Batch 50/79 | Loss: 0.0091
+      [mobilenet_v3_small] Epoch 11/15 | Batch 60/79 | Loss: 0.0192
+      [mobilenet_v3_small] Epoch 11/15 | Batch 70/79 | Loss: 0.0267
+      [mobilenet_v3_small] Epoch 12/15 | Batch 0/79 | Loss: 0.0177
+      [mobilenet_v3_small] Epoch 12/15 | Batch 10/79 | Loss: 0.0298
+      [mobilenet_v3_small] Epoch 12/15 | Batch 20/79 | Loss: 0.0183
+      [mobilenet_v3_small] Epoch 12/15 | Batch 30/79 | Loss: 0.0136
+      [mobilenet_v3_small] Epoch 12/15 | Batch 40/79 | Loss: 0.0127
+      [mobilenet_v3_small] Epoch 12/15 | Batch 50/79 | Loss: 0.0290
+      [mobilenet_v3_small] Epoch 12/15 | Batch 60/79 | Loss: 0.0183
+      [mobilenet_v3_small] Epoch 12/15 | Batch 70/79 | Loss: 0.0218
+      [mobilenet_v3_small] Epoch 13/15 | Batch 0/79 | Loss: 0.0118
+      [mobilenet_v3_small] Epoch 13/15 | Batch 10/79 | Loss: 0.0223
+      [mobilenet_v3_small] Epoch 13/15 | Batch 20/79 | Loss: 0.0100
+      [mobilenet_v3_small] Epoch 13/15 | Batch 30/79 | Loss: 0.0222
+      [mobilenet_v3_small] Epoch 13/15 | Batch 40/79 | Loss: 0.0160
+      [mobilenet_v3_small] Epoch 13/15 | Batch 50/79 | Loss: 0.0050
+      [mobilenet_v3_small] Epoch 13/15 | Batch 60/79 | Loss: 0.0117
+      [mobilenet_v3_small] Epoch 13/15 | Batch 70/79 | Loss: 0.0260
+      [mobilenet_v3_small] Epoch 14/15 | Batch 0/79 | Loss: 0.0101
+      [mobilenet_v3_small] Epoch 14/15 | Batch 10/79 | Loss: 0.0161
+      [mobilenet_v3_small] Epoch 14/15 | Batch 20/79 | Loss: 0.0178
+      [mobilenet_v3_small] Epoch 14/15 | Batch 30/79 | Loss: 0.0192
+      [mobilenet_v3_small] Epoch 14/15 | Batch 40/79 | Loss: 0.0140
+      [mobilenet_v3_small] Epoch 14/15 | Batch 50/79 | Loss: 0.0109
+      [mobilenet_v3_small] Epoch 14/15 | Batch 60/79 | Loss: 0.0056
+      [mobilenet_v3_small] Epoch 14/15 | Batch 70/79 | Loss: 0.0114
+      [mobilenet_v3_small] Epoch 15/15 | Batch 0/79 | Loss: 0.0237
+      [mobilenet_v3_small] Epoch 15/15 | Batch 10/79 | Loss: 0.0159
+      [mobilenet_v3_small] Epoch 15/15 | Batch 20/79 | Loss: 0.0153
+      [mobilenet_v3_small] Epoch 15/15 | Batch 30/79 | Loss: 0.0205
+      [mobilenet_v3_small] Epoch 15/15 | Batch 40/79 | Loss: 0.0286
+      [mobilenet_v3_small] Epoch 15/15 | Batch 50/79 | Loss: 0.0101
+      [mobilenet_v3_small] Epoch 15/15 | Batch 60/79 | Loss: 0.0075
+      [mobilenet_v3_small] Epoch 15/15 | Batch 70/79 | Loss: 0.0249
+  Shadow model 2/8 trained (mobilenet_v3_small).
+
+  

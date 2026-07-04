@@ -1,0 +1,18 @@
+# 1. Run the setup script to create the venv and install GPU dependencies
+bash setup.sh
+
+# 2. Activate the environment
+source mia_env/bin/activate
+
+# 3. Download the full 40GB dataset (this takes a while, but it's idempotent!)
+python Victim_Model/prepare_dataset.py
+
+# 4. Train Model 1 (Overfitted)
+python Victim_Model/train_victim.py --mode overfit
+
+# 5. Train Model 2 (Regularized)
+python Victim_Model/train_victim.py --mode regularized
+
+# 6. Run the attacks to get the final comparison table
+python Membership_Inference_Attack/run_attack.py
+       

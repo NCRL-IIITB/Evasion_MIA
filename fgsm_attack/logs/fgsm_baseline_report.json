@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-06-04T08:06:06.963853",
+  "total_runtime_s": 1092.429003238678,
+  "victim_key": "baseline",
+  "victim_label": "Baseline (best-practice standard)",
+  "victim_meta": {
+    "architecture": "densenet121",
+    "mode": "baseline",
+    "num_classes": 15,
+    "img_size": 224,
+    "final_train_acc": 0.879143623010772,
+    "final_val_acc": 0.8663899712010842,
+    "final_val_auc": 0.8356270526670355,
+    "memorization_gap": 0.012753651809687794,
+    "epochs": 30,
+    "epochs_trained": 17,
+    "best_epoch": 10,
+    "batch_size": 64,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "scheduler": "LinearWarmup+CosineAnnealing",
+    "warmup_epochs": 3,
+    "weight_decay": 0.0001,
+    "dropout": true,
+    "augmentation": true,
+    "augmentation_details": "RandomResizedCrop+HFlip+Rotation+ColorJitter",
+    "mixed_precision": true,
+    "pos_weight_used": true,
+    "grad_clip": 5.0,
+    "early_stopping_patience": 7,
+    "training_type": "standard"
+  },
+  "test_set_size": 33412,
+  "test_set_split": "nonmember (from manifest.csv, 70/30 patient-level)",
+  "clean": {
+    "hamming_loss": 0.132309748992378,
+    "exact_match": 0.2794504968274871,
+    "f1_macro": 0.33183866554746394,
+    "auc_macro": 0.8278291523972253
+  },
+  "clean_per_class": {
+    "precision": [
+      0.2515319800842589,
+      0.14475402699172835,
+      0.2837450199203187,
+      0.24002186987424823,
+      0.14196023718172304,
+      0.3524229074889868,
+      0.1148036253776435,
+      0.313173007896626,
+      0.07834101382488479,
+      0.13147683177356767,
+      0.19446808510638297,
+      0.19514790380932112,
+      0.28902838427947597,
+      0.2897196261682243,
+      0.7730478746645029
+    ],
+    "recall": [
+      0.7373000280662363,
+      0.46996466431095407,
+      0.6257248286768582,
+      0.5880776959142666,
+      0.6065573770491803,
+      0.5657708628005658,
+      0.296875,
+      0.8617283950617284,
+      0.08585858585858586,
+      0.549618320610687,
+      0.558679706601467,
+      0.48932764140875135,
+      0.5771117166212534,
+      0.5849056603773585,
+      0.6845945497761318
+    ],
+    "f1": [
+      0.37509816520311273,
+      0.22133466466966217,
+      0.3904391206622444,
+      0.34090467870316443,
+      0.23007348784624082,
+      0.43431053203040176,
+      0.1655773420479303,
+      0.4593918652099513,
+      0.0819277108433735,
+      0.21219377417572297,
+      0.288510101010101,
+      0.2790202342917998,
+      0.3851609383524277,
+      0.3875,
+      0.7261374296435272
+    ],
+    "classes": [
+      "Atelectasis",
+      "Consolidation",
+      "Infiltration",
+      "Pneumothorax",
+      "Edema",
+      "Emphysema",
+      "Fibrosis",
+      "Effusion",
+      "Pneumonia",
+      "Pleural_Thickening",
+      "Cardiomegaly",
+      "Nodule",
+      "Mass",
+      "Hernia",
+      "No Finding"
+    ]
+  },
+  "adversarial": {
+    "0.001": {
+      "metrics": {
+        "hamming_loss": 0.19986831078654377,
+        "exact_match": 0.11522806177421285,
+        "f1_macro": 0.2090914278265573,
+        "auc_macro": 0.6832141518056911
+      },
+      "flip_rate": 0.07440241031166447,
+      "comparison": {
+        "hamming_loss": 0.06755856179416578,
+        "exact_match": -0.16422243505327427,
+        "f1_macro": -0.12274723772090665,
+        "auc_macro": -0.1446150005915342
+      }
+    },
+    "0.002": {
+      "metrics": {
+        "hamming_loss": 0.24987030607765673,
+        "exact_match": 0.038668741769424156,
+        "f1_macro": 0.14899952429581506,
+        "auc_macro": 0.5842336537174323
+      },
+      "flip_rate": 0.12869029091344428,
+      "comparison": {
+        "hamming_loss": 0.11756055708527874,
+        "exact_match": -0.24078175505806299,
+        "f1_macro": -0.18283914125164888,
+        "auc_macro": -0.24359549867979302
+      }
+    },
+    "0.005": {
+      "metrics": {
+        "hamming_loss": 0.31941418252923104,
+        "exact_match": 0.0013168921345624327,
+        "f1_macro": 0.08106877667198367,
+        "auc_macro": 0.4396295714762939
+      },
+      "flip_rate": 0.2052097050959735,
+      "comparison": {
+        "hamming_loss": 0.18710443353685305,
+        "exact_match": -0.2781336046929247,
+        "f1_macro": -0.25076988887548024,
+        "auc_macro": -0.38819958092093143
+      }
+    },
+    "0.01": {
+      "metrics": {
+        "hamming_loss": 0.34989225427989945,
+        "exact_match": 2.992936669460074e-05,
+        "f1_macro": 0.05784835996216902,
+        "auc_macro": 0.3590748872820248
+      },
+      "flip_rate": 0.24186120755018156,
+      "comparison": {
+        "hamming_loss": 0.21758250528752146,
+        "exact_match": -0.2794205674607925,
+        "f1_macro": -0.2739903055852949,
+        "auc_macro": -0.4687542651152005
+      }
+    },
+    "0.02": {
+      "metrics": {
+        "hamming_loss": 0.3624206871782593,
+        "exact_match": 2.992936669460074e-05,
+        "f1_macro": 0.04582274610374303,
+        "auc_macro": 0.3109565882198489
+      },
+      "flip_rate": 0.2611975737260066,
+      "comparison": {
+        "hamming_loss": 0.23011093818588133,
+        "exact_match": -0.2794205674607925,
+        "f1_macro": -0.2860159194437209,
+        "auc_macro": -0.5168725641773764
+      }
+    }
+  },
+  "epsilons": [
+    0.001,
+    0.002,
+    0.005,
+    0.01,
+    0.02
+  ]
+}

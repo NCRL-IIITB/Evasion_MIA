@@ -1,0 +1,13 @@
+{
+  "total_runtime_s": 64097.69,
+  "random_baseline": 0.5,
+  "results": [
+    {
+      "attack_model": "gradient_boosting",
+      "accuracy": 0.4998,
+      "precision": 0.375,
+      "recall": 0.0006,
+      "f1": 0.0011980830670926517,
+      "attack_label": "Baseline / Gradient Boosting",
+      "victim_label": "Adversarial (FGSM-trained defence)",
+      "conf_gap": 

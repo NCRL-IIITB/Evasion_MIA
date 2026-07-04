@@ -1,0 +1,38 @@
+NIH Chest X-ray — MIA Results (Overfit vs Regularized)
+==========================================================================================
+
+  Victim Model                        Attack                                      Gap      Acc     Prec      Rec       F1
+  ----------------------------------------------------------------------------------------
+  Regularised (Dropout + WD + Aug)    Baseline / Gradient Boosting            +0.0316   0.5195   0.5657   0.1678   0.2588
+  Regularised (Dropout + WD + Aug)    Baseline / Random Forest                +0.0316   0.5231   0.5691   0.1902   0.2851
+  Regularised (Dropout + WD + Aug)    Baseline / MLP                          +0.0316   0.5230   0.5458   0.2740   0.3648
+  Regularised (Dropout + WD + Aug)    Baseline / Logistic Regression          +0.0316   0.5073   0.5059   0.6284   0.5605
+  Regularised (Dropout + WD + Aug)    Variance / Gradient Boosting            +0.0316   0.5175   0.5531   0.1822   0.2741
+  Regularised (Dropout + WD + Aug)    Variance / Random Forest                +0.0316   0.5207   0.5451   0.2504   0.3432
+  Regularised (Dropout + WD + Aug)    Variance / MLP                          +0.0316   0.5312   0.5603   0.2900   0.3822
+  Regularised (Dropout + WD + Aug)    Variance / Logistic Regression          +0.0316   0.5053   0.5042   0.6328   0.5612
+
+Random baseline: 0.5000
+Total runtime:   29195.8s
+
+==========================================================================================
+Victim Model Details
+==========================================================================================
+
+  Regularised (Dropout + WD + Aug)
+    architecture             : densenet121
+    mode                     : regularized
+    num_classes              : 15
+    img_size                 : 224
+    final_train_acc          : 0.9487831664952817
+    final_val_acc            : 0.8951044515796567
+    final_val_auc            : 0.7770337240636792
+    memorization_gap         : 0.053678714915625036
+    epochs                   : 30
+    batch_size               : 64
+    learning_rate            : 0.0001
+    weight_decay             : 0.0001
+    dropout                  : True
+    augmentation             : True
+    pos_weight_used          : True
+    grad_clip                : 5.0

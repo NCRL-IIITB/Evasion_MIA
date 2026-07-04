@@ -1,0 +1,59 @@
+Using device: cuda
+
+Evaluating: victim_adversarial_eps002_noaug.pth
+  Processing Members (2000 samples)...
+    Done in 6.2s
+  Processing Non-Members (2000 samples)...
+    Done in 5.9s
+
+Evaluating: victim_baseline.pth
+  Processing Members (2000 samples)...
+    Done in 5.8s
+  Processing Non-Members (2000 samples)...
+    Done in 5.8s
+
+============================================================
+RESULTS (LaTeX Table Format)
+============================================================
+
+--- Adversarial Model ---
+Class                & Members    & Non-Members  & Gap (M-NM) \\
+------------------------------------------------------------
+Atelectasis          & 0.1992     & 0.2058       & -0.0066     \\
+Consolidation        & 0.1180     & 0.1025       & +0.0155     \\
+Infiltration         & 0.2050     & 0.1970       & +0.0080     \\
+Pneumothorax         & 0.0268     & 0.0279       & -0.0011     \\
+Edema                & 0.0166     & 0.0175       & -0.0009     \\
+Emphysema            & 0.0137     & 0.0131       & +0.0006     \\
+Fibrosis             & 0.0161     & 0.0202       & -0.0041     \\
+Effusion             & 0.0868     & 0.0848       & +0.0020     \\
+Pneumonia            & 0.0102     & 0.0120       & -0.0018     \\
+Pleural_Thickening   & 0.0203     & 0.0201       & +0.0002     \\
+Cardiomegaly         & 0.0196     & 0.0195       & +0.0001     \\
+Nodule               & 0.0716     & 0.0782       & -0.0065     \\
+Mass                 & 0.0396     & 0.0410       & -0.0014     \\
+Hernia               & 0.0008     & 0.0007       & +0.0001     \\
+No Finding           & 0.3800     & 0.3814       & -0.0014     \\
+------------------------------------------------------------
+Average              & 0.0816     & 0.0814       & +0.0002     \\
+
+--- Baseline Model ---
+Class                & Members    & Non-Members  & Gap (M-NM) \\
+------------------------------------------------------------
+Atelectasis          & 0.2536     & 0.2516       & +0.0020     \\
+Consolidation        & 0.1193     & 0.1131       & +0.0063     \\
+Infiltration         & 0.1311     & 0.1328       & -0.0017     \\
+Pneumothorax         & 0.0917     & 0.0952       & -0.0035     \\
+Edema                & 0.0781     & 0.0715       & +0.0066     \\
+Emphysema            & 0.0579     & 0.0557       & +0.0023     \\
+Fibrosis             & 0.0675     & 0.0710       & -0.0036     \\
+Effusion             & 0.1246     & 0.1224       & +0.0022     \\
+Pneumonia            & 0.0644     & 0.0645       & -0.0001     \\
+Pleural_Thickening   & 0.1648     & 0.1611       & +0.0037     \\
+Cardiomegaly         & 0.0740     & 0.0747       & -0.0007     \\
+Nodule               & 0.2101     & 0.2022       & +0.0079     \\
+Mass                 & 0.1665     & 0.1619       & +0.0046     \\
+Hernia               & 0.0101     & 0.0092       & +0.0009     \\
+No Finding           & 0.1501     & 0.1476       & +0.0025     \\
+------------------------------------------------------------
+Average              & 0.1176     & 0.1156       & +0.0020     \\

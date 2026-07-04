@@ -1,0 +1,86 @@
+NIH Chest X-ray — MIA Results (Overfit vs Regularized)
+==========================================================================================
+
+  Victim Model                        Attack                                      Gap      Acc     Prec      Rec       F1
+  ----------------------------------------------------------------------------------------
+  Baseline (best-practice standard)   Baseline / Gradient Boosting            +0.0063   0.5000   0.0000   0.0000   0.0000
+  Baseline (best-practice standard)   Baseline / Random Forest                +0.0063   0.4999   0.0000   0.0000   0.0000
+  Baseline (best-practice standard)   Baseline / MLP                          +0.0063   0.4941   0.4664   0.0820   0.1395
+  Baseline (best-practice standard)   Baseline / Logistic Regression          +0.0063   0.5013   0.5565   0.0128   0.0250
+  Baseline (best-practice standard)   Variance / Gradient Boosting            +0.0063   0.5000   0.0000   0.0000   0.0000
+  Baseline (best-practice standard)   Variance / Random Forest                +0.0063   0.4998   0.0000   0.0000   0.0000
+  Baseline (best-practice standard)   Variance / MLP                          +0.0063   0.5003   0.5037   0.0406   0.0751
+  Baseline (best-practice standard)   Variance / Logistic Regression          +0.0063   0.5013   0.5565   0.0128   0.0250
+  Adversarial (FGSM ε=0.02)           Baseline / Gradient Boosting            +0.0056   0.5004   0.5833   0.0028   0.0056
+  Adversarial (FGSM ε=0.02)           Baseline / Random Forest                +0.0056   0.5005   0.5472   0.0058   0.0115
+  Adversarial (FGSM ε=0.02)           Baseline / MLP                          +0.0056   0.5017   0.5098   0.0886   0.1510
+  Adversarial (FGSM ε=0.02)           Baseline / Logistic Regression          +0.0056   0.5027   0.5310   0.0462   0.0850
+  Adversarial (FGSM ε=0.02)           Variance / Gradient Boosting            +0.0056   0.5004   0.5625   0.0036   0.0072
+  Adversarial (FGSM ε=0.02)           Variance / Random Forest                +0.0056   0.5001   0.5143   0.0036   0.0071
+  Adversarial (FGSM ε=0.02)           Variance / MLP                          +0.0056   0.5086   0.5461   0.1018   0.1716
+  Adversarial (FGSM ε=0.02)           Variance / Logistic Regression          +0.0056   0.5026   0.5300   0.0460   0.0847
+
+Random baseline: 0.5000
+Total runtime:   23959.3s
+
+==========================================================================================
+Victim Model Details
+==========================================================================================
+
+  Baseline (best-practice standard)
+    architecture             : densenet121
+    mode                     : baseline
+    num_classes              : 15
+    img_size                 : 224
+    final_train_acc          : 0.879143623010772
+    final_val_acc            : 0.8663899712010842
+    final_val_auc            : 0.8356270526670355
+    memorization_gap         : 0.012753651809687794
+    epochs                   : 30
+    epochs_trained           : 17
+    best_epoch               : 10
+    batch_size               : 64
+    learning_rate            : 0.0001
+    optimizer                : AdamW
+    scheduler                : LinearWarmup+CosineAnnealing
+    warmup_epochs            : 3
+    weight_decay             : 0.0001
+    dropout                  : True
+    augmentation             : True
+    augmentation_details     : RandomResizedCrop+HFlip+Rotation+ColorJitter
+    mixed_precision          : True
+    pos_weight_used          : True
+    grad_clip                : 5.0
+    early_stopping_patience  : 7
+    training_type            : standard
+
+  Adversarial (FGSM ε=0.02)
+    architecture             : densenet121
+    mode                     : adversarial
+    num_classes              : 15
+    img_size                 : 224
+    final_train_acc          : 0.8962920889260909
+    final_val_acc            : 0.896990230956011
+    final_val_auc            : 0.8188552192623634
+    final_adv_val_auc        : 0.9347575790965325
+    memorization_gap         : -0.0006981420299201346
+    epochs                   : 35
+    epochs_trained           : 20
+    best_epoch               : 13
+    batch_size               : 64
+    learning_rate            : 0.0001
+    optimizer                : AdamW
+    scheduler                : LinearWarmup+CosineAnnealing
+    warmup_epochs            : 3
+    weight_decay             : 0.0001
+    dropout                  : True
+    augmentation             : True
+    augmentation_details     : RandomResizedCrop+HFlip+Rotation+ColorJitter
+    mixed_precision          : True
+    pos_weight_used          : True
+    grad_clip                : 5.0
+    early_stopping_patience  : 7
+    training_type            : adversarial
+    adversarial_epsilon      : 0.02
+    adversarial_alpha        : 0.5
+    adversarial_method       : FGSM (Goodfellow et al. 2015)

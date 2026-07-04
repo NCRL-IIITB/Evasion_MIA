@@ -1,0 +1,52 @@
+[INFO] Device:       cuda
+[INFO] GPU:          NVIDIA GeForce RTX 4090
+[INFO] Mode:         overfit
+[INFO] Architecture: densenet121
+[INFO] Output model: /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_overfit.pth
+[INFO] Member images: 56060
+[INFO] Num classes:   15
+[INFO] Class names:   ['Atelectasis', 'Consolidation', 'Infiltration', 'Pneumothorax', 'Edema', 'Emphysema', 'Fibrosis', 'Effusion', 'Pneumonia', 'Pleural_Thickening', 'Cardiomegaly', 'Nodule', 'Mass', 'Hernia', 'No Finding']
+[INFO] Training on 47651 images, validating on 8409.
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /home/iiitb-101/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+100%|█████████████████████████████████████████████████████████████| 30.8M/30.8M [00:02<00:00, 11.1MB/s]
+[INFO] Regularisation: NONE (intentional overfitting)
+
+[TRAIN] Starting training …
+  Epoch 01/30  train_loss=0.1972  train_acc=0.9310  val_loss=0.1817  val_acc=0.9332  gap=-0.22%  (146.3s)
+  Epoch 02/30  train_loss=0.1759  train_acc=0.9347  val_loss=0.1795  val_acc=0.9331  gap=+0.16%  (147.0s)
+  Epoch 03/30  train_loss=0.1664  train_acc=0.9372  val_loss=0.1786  val_acc=0.9336  gap=+0.36%  (146.3s)
+  Epoch 04/30  train_loss=0.1543  train_acc=0.9410  val_loss=0.1833  val_acc=0.9328  gap=+0.81%  (146.5s)
+  Epoch 05/30  train_loss=0.1358  train_acc=0.9476  val_loss=0.1973  val_acc=0.9296  gap=+1.81%  (146.9s)
+  Epoch 06/30  train_loss=0.1116  train_acc=0.9569  val_loss=0.2161  val_acc=0.9232  gap=+3.37%  (146.3s)
+  Epoch 07/30  train_loss=0.0860  train_acc=0.9669  val_loss=0.2524  val_acc=0.9240  gap=+4.29%  (145.8s)
+  Epoch 08/30  train_loss=0.0651  train_acc=0.9751  val_loss=0.2853  val_acc=0.9226  gap=+5.24%  (146.3s)
+  Epoch 09/30  train_loss=0.0489  train_acc=0.9816  val_loss=0.3221  val_acc=0.9204  gap=+6.11%  (146.2s)
+  Epoch 10/30  train_loss=0.0379  train_acc=0.9859  val_loss=0.3629  val_acc=0.9198  gap=+6.61%  (146.2s)
+  Epoch 11/30  train_loss=0.0311  train_acc=0.9885  val_loss=0.3792  val_acc=0.9205  gap=+6.80%  (147.1s)
+  Epoch 12/30  train_loss=0.0264  train_acc=0.9903  val_loss=0.3915  val_acc=0.9163  gap=+7.39%  (146.8s)
+  Epoch 13/30  train_loss=0.0230  train_acc=0.9915  val_loss=0.4188  val_acc=0.9210  gap=+7.05%  (146.5s)
+  Epoch 14/30  train_loss=0.0206  train_acc=0.9925  val_loss=0.4312  val_acc=0.9191  gap=+7.34%  (146.5s)
+  Epoch 15/30  train_loss=0.0201  train_acc=0.9926  val_loss=0.4269  val_acc=0.9203  gap=+7.23%  (146.9s)
+  Epoch 16/30  train_loss=0.0174  train_acc=0.9936  val_loss=0.4474  val_acc=0.9203  gap=+7.34%  (146.4s)
+  Epoch 17/30  train_loss=0.0174  train_acc=0.9936  val_loss=0.4540  val_acc=0.9193  gap=+7.43%  (148.2s)
+  Epoch 18/30  train_loss=0.0158  train_acc=0.9942  val_loss=0.4758  val_acc=0.9205  gap=+7.37%  (147.0s)
+  Epoch 19/30  train_loss=0.0152  train_acc=0.9945  val_loss=0.4704  val_acc=0.9192  gap=+7.53%  (147.2s)
+  Epoch 20/30  train_loss=0.0145  train_acc=0.9947  val_loss=0.4628  val_acc=0.9203  gap=+7.44%  (146.7s)
+  Epoch 21/30  train_loss=0.0134  train_acc=0.9952  val_loss=0.4662  val_acc=0.9165  gap=+7.88%  (147.5s)
+  Epoch 22/30  train_loss=0.0124  train_acc=0.9955  val_loss=0.5179  val_acc=0.9220  gap=+7.35%  (147.2s)
+  Epoch 23/30  train_loss=0.0141  train_acc=0.9949  val_loss=0.4996  val_acc=0.9190  gap=+7.59%  (147.2s)
+  Epoch 24/30  train_loss=0.0120  train_acc=0.9957  val_loss=0.5249  val_acc=0.9223  gap=+7.34%  (147.7s)
+  Epoch 25/30  train_loss=0.0119  train_acc=0.9957  val_loss=0.5135  val_acc=0.9212  gap=+7.45%  (147.1s)
+  Epoch 26/30  train_loss=0.0121  train_acc=0.9956  val_loss=0.4861  val_acc=0.9152  gap=+8.04%  (146.6s)
+  Epoch 27/30  train_loss=0.0115  train_acc=0.9958  val_loss=0.5224  val_acc=0.9194  gap=+7.65%  (146.6s)
+  Epoch 28/30  train_loss=0.0109  train_acc=0.9961  val_loss=0.5391  val_acc=0.9218  gap=+7.42%  (147.7s)
+  Epoch 29/30  train_loss=0.0111  train_acc=0.9960  val_loss=0.5248  val_acc=0.9230  gap=+7.30%  (147.4s)
+  Epoch 30/30  train_loss=0.0110  train_acc=0.9961  val_loss=0.5238  val_acc=0.9182  gap=+7.80%  (147.5s)
+
+[DONE]
+  Mode:             overfit
+  Model:            /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_overfit.pth
+  Metadata:         /home/iiitb-101/Container_based_Combined_Attack/Attacks-on-ML/Victim_Model/victim_overfit_meta.json
+  Final train_acc:  0.9961
+  Final val_acc:    0.9182
+  Memorization gap: +7.80%
