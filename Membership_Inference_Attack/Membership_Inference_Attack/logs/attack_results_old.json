@@ -1,0 +1,13 @@
+{
+  "total_runtime_s": 29195.8,
+  "random_baseline": 0.5,
+  "results": [
+    {
+      "attack_model": "gradient_boosting",
+      "accuracy": 0.5195,
+      "precision": 0.5657451112609575,
+      "recall": 0.1678,
+      "f1": 0.2588307882153324,
+      "attack_label": "Baseline / Gradient Boosting",
+      "victim_label": "Regularised (Dropout + WD + Aug)",
+      "conf_gap": 
