@@ -1,20 +1,66 @@
-# Data and models
-*.csv
+# =============================================================================
+# Dataset — NIH ChestX-ray14 (~42 GB zips + extracted PNGs)
+# Re-create with: python Victim_Model/prepare_dataset.py
+# =============================================================================
+Victim_Model/data/
+Victim_Model/images/
+images_*.zip
+# NIH label file, placed manually in the project root (any copy of it)
+Data_Entry_2017.csv
+# Generated split file with machine-specific absolute paths; regenerate with
+# prepare_dataset.py (the split itself is tracked in Victim_Model/patient_splits.json)
+Victim_Model/manifest.csv
+
+# =============================================================================
+# Model weights and training checkpoints (~30 MB each)
+# =============================================================================
 *.pth
 *.pt
+*.ckpt
 
-# Virtual environments
+# =============================================================================
+# Matched_Experiments — large or transient artefacts
+# (result JSON / CSV / MD / PNG / TXT files and logs ARE pushed)
+# =============================================================================
+# 5.6 GB image cache, rebuilt by Matched_Experiments/build_image_cache.py
+Matched_Experiments/cache/
+# smoke-test output
+Matched_Experiments/results_smoke/
+# pipeline bookkeeping
+Matched_Experiments/results*/.markers/
+Matched_Experiments/results*/.lock
+# numpy arrays (only the image cache uses them)
+*.npy
+*.npz
+
+# =============================================================================
+# Run logs written to the repo root (e.g. by nohup)
+# =============================================================================
+/*.log
+nohup.out
+
+# =============================================================================
+# Unpublished paper PDF — delete this line if the paper should be in the repo
+# =============================================================================
+Exploiting_the_Robustness_Privacy_Tradeoff__*.pdf
+
+# =============================================================================
+# Python, environments, editors, OS junk
+# =============================================================================
+__pycache__/
+*.py[cod]
+*.tmp
+*.tmp.*
+.ipynb_checkpoints/
+mia_env/
 env/
 venv/
+.venv/
 .env
-
-# Python
-__pycache__/
-*.pyc
-
-# IDEs
 .idea/
 .vscode/
-
-# Other
+.DS_Store
+__MACOSX/
+._*
+# stray file created by a mistyped `pip install x>=2.31`
 =2.31

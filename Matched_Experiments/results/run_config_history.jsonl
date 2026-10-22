@@ -1,0 +1,2 @@
+{"started": "2026-10-22T01:29:40", "seeds": [42, 43, 44], "attack_parallel": 2, "robust_es": true, "smoke": false, "git_commit": "d68a191bf275de64f77cb2181e0c21ba2675fd53", "torch": "2.4.1+cu121", "torchvision": "0.19.1+cu121", "sklearn": "1.5.2", "gpu": "NVIDIA GeForce RTX 4090"}
+{"started": "2026-10-22T01:29:54", "seeds": [42, 43, 44], "attack_parallel": 2, "robust_es": true, "smoke": false, "git_commit": "d68a191bf275de64f77cb2181e0c21ba2675fd53", "torch": "2.4.1+cu121", "torchvision": "0.19.1+cu121", "sklearn": "1.5.2", "gpu": "NVIDIA GeForce RTX 4090"}

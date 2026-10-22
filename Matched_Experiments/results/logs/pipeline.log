@@ -1,0 +1,24 @@
+[2026-10-22 01:29:37] ======================================================================
+[2026-10-22 01:29:37]  Matched-control experiment  
+[2026-10-22 01:29:37]    python   : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/../Attacks-on-ML/mia_env/bin/python
+[2026-10-22 01:29:37]    seeds    : 42 43 44
+[2026-10-22 01:29:37]    parallel : 2 attack/eval job(s) alongside training
+[2026-10-22 01:29:37]    robustES : 1
+[2026-10-22 01:29:37]    results  : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/Matched_Experiments/results
+[2026-10-22 01:29:37]    cache    : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/Matched_Experiments/cache
+[2026-10-22 01:29:37] ======================================================================
+[2026-10-22 01:29:38]    GPU      : NVIDIA GeForce RTX 4090, 241 MiB, 24564 MiB
+[2026-10-22 01:29:38]    disk free: 21 GB
+[2026-10-22 01:29:41] STAGE 1: image cache
+[2026-10-22 01:29:47] ======================================================================
+[2026-10-22 01:29:47]  Matched-control experiment  
+[2026-10-22 01:29:47]    python   : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/../Attacks-on-ML/mia_env/bin/python
+[2026-10-22 01:29:47]    seeds    : 42 43 44
+[2026-10-22 01:29:47]    parallel : 2 attack/eval job(s) alongside training
+[2026-10-22 01:29:47]    robustES : 1
+[2026-10-22 01:29:47]    results  : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/Matched_Experiments/results
+[2026-10-22 01:29:47]    cache    : /home/iiitb-101/Container_based_Combined_Attack/Evasion_MIA/Matched_Experiments/cache
+[2026-10-22 01:29:47] ======================================================================
+[2026-10-22 01:29:49]    GPU      : NVIDIA GeForce RTX 4090, 236 MiB, 24564 MiB
+[2026-10-22 01:29:49]    disk free: 23 GB
+[2026-10-22 01:29:56] STAGE 1: image cache
