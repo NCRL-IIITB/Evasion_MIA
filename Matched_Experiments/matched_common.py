@@ -91,6 +91,12 @@ def run_name(cell: str, seed: int) -> str:
     return f"{cell}_seed{seed}"
 
 
+def loader_workers(default: int) -> int:
+    """DataLoader worker count; MATCHED_NUM_WORKERS caps it (e.g. 4 vCPUs on Kaggle)."""
+    cap = os.environ.get("MATCHED_NUM_WORKERS")
+    return max(0, min(default, int(cap))) if cap else default
+
+
 # ─── Image cache ──────────────────────────────────────────────────────────────
 
 class ImageCache:
@@ -467,7 +473,7 @@ def make_cached_victim_api(cache: ImageCache, inference_dataset_cls):
             loader = DataLoader(
                 inference_dataset_cls(X, self.transform),
                 batch_size=self.batch_size, shuffle=False,
-                num_workers=4 if self.device.type == "cuda" else 0,
+                num_workers=loader_workers(4) if self.device.type == "cuda" else 0,
                 pin_memory=(self.device.type == "cuda"),
             )
             out = []

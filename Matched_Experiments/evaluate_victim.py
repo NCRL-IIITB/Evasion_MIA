@@ -90,7 +90,7 @@ def run_evasion(model, cache, device, smoke):
         nonmember_df = nonmember_df.sample(n=256, random_state=42).reset_index(drop=True)
     loader = DataLoader(
         mc.CachedDataset(cache, cache.index_of(nonmember_df["path"]), mc.parse_labels(nonmember_df)),
-        batch_size=EVASION_BATCH, shuffle=False, num_workers=6, pin_memory=True,
+        batch_size=EVASION_BATCH, shuffle=False, num_workers=mc.loader_workers(6), pin_memory=True,
     )
     clean_preds, clean_labels, clean_probs = _inference(model, loader, device)
     clean = _compute_metrics(clean_preds, clean_labels, clean_probs)
@@ -118,7 +118,7 @@ def run_evasion(model, cache, device, smoke):
 
 def _per_sample(model, cache, paths, labels, device):
     loader = DataLoader(mc.CachedDataset(cache, cache.index_of(paths), labels),
-                        batch_size=128, shuffle=False, num_workers=6, pin_memory=True)
+                        batch_size=128, shuffle=False, num_workers=mc.loader_workers(6), pin_memory=True)
     bce_none, bce = nn.BCEWithLogitsLoss(reduction="none"), nn.BCEWithLogitsLoss()
     out = {k: [] for k in ("loss", "certainty", "adv_loss", "fluct", "probs", "labels")}
     for x, y in loader:

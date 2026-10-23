@@ -26,7 +26,8 @@ Victim_Model/manifest.csv
 Matched_Experiments/cache/
 # smoke-test output
 Matched_Experiments/results_smoke/
-# pipeline bookkeeping
+# pipeline bookkeeping (incl. resume state of unfinished attacks / training)
+Matched_Experiments/results*/attacks/*/*/_state/
 Matched_Experiments/results*/.markers/
 Matched_Experiments/results*/.lock
 # numpy arrays (only the image cache uses them)

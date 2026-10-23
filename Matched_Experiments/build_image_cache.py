@@ -107,7 +107,7 @@ def main():
     p = argparse.ArgumentParser(description="Build the 224x224 NIH image cache")
     p.add_argument("--cache_dir", default=mc.DEFAULT_CACHE_DIR)
     p.add_argument("--zip_dir", default=mc.ZIP_DIR)
-    p.add_argument("--workers", type=int, default=max(1, min(16, (os.cpu_count() or 2) - 4)))
+    p.add_argument("--workers", type=int, default=max(1, min(16, os.cpu_count() or 1)))
     p.add_argument("--verify", type=int, default=500, help="images to re-check bit-exactly")
     p.add_argument("--force", action="store_true", help="rebuild even if complete")
     args = p.parse_args()

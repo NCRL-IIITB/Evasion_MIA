@@ -48,6 +48,19 @@ nohup bash Matched_Experiments/run_matched_experiments.sh > matched_run.log 2>&1
 - **Re-running resumes:** completed steps are skipped; failed steps are retried.
 - **Progress:** `tail -f Matched_Experiments/results/logs/pipeline.log`.
 
+**Interrupted runs resume:** training continues from its last finished epoch
+(`train_state.pt`), and attacks continue from their last finished shadow
+model or classifier (`attacks/<kind>/<run>/_state/`).
+
+### On Kaggle (free tier, one cell per account)
+
+See [kaggle/README_KAGGLE.md](kaggle/README_KAGGLE.md). Import
+`kaggle/matched_experiment_kaggle.ipynb` and set `CELL`. The pipeline
+(`kaggle/kaggle_pipeline.py`) uses Kaggle's own NIH dataset, survives the
+12-hour session limit and uses both T4 GPUs.
+`kaggle/merge_kaggle_results.py` combines the four accounts' outputs into
+one report.
+
 ## Output (`results/`)
 
 ```
@@ -74,4 +87,8 @@ summary/                       REPORT.md, per_run.csv, cell_summary.*, contrasts
 | `evaluate_victim.py` | FGSM evasion + threshold MIAs on checkpoints |
 | `run_shadow_attacks.py` | paper's shadow-model MIA / AFMIA (+BCVA) on one victim |
 | `aggregate_results.py` | tables, paired-seed contrasts with 95 % CIs, gap-matched fit, figures |
-| `run_matched_experiments.sh` | end-to-end driver |
+| `run_matched_experiments.sh` | end-to-end driver (local machine) |
+| `kaggle/kaggle_pipeline.py` | end-to-end driver for one cell on Kaggle |
+| `kaggle/matched_experiment_kaggle.ipynb` | notebook to import on Kaggle |
+| `kaggle/manifest_portable.csv.gz` | the exact membership split and labels (image names only) |
+| `kaggle/merge_kaggle_results.py` | merges the Kaggle outputs and builds the combined report |

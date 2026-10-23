@@ -34,6 +34,15 @@ Differences from the original scripts (all applied to every cell equally):
     to the 224 px image instead of the 1024 px original
   * validation runs under AMP; FGSM input gradients are computed with
     torch.autograd.grad (identical gradient, no parameter-gradient work)
+  * the batch order is a fixed function of (seed, epoch), so a resumed run
+    sees the same batches as an uninterrupted one
+
+Resume / time budget (for Kaggle's 12-hour sessions)
+  The full training state (model, optimiser, scheduler, AMP scaler,
+  early-stopping trackers, history, RNG) is saved to <out_dir>/train_state.pt
+  after every epoch and training resumes from it automatically.  With
+  --deadline <unix time> the script exits with code 75 ("paused") before an
+  epoch that would not finish in time; rerun the same command to continue.
 
 Usage
 -----
@@ -82,6 +91,26 @@ AUGMENTATION = transforms.Compose([
 ])
 
 CHANNELS_LAST = torch.channels_last
+STATE_FILE    = "train_state.pt"
+EXIT_PAUSED   = 75          # "try again later" — the deadline was reached
+
+
+class EpochSampler(torch.utils.data.Sampler):
+    """Shuffle whose order depends only on (seed, epoch) — identical in every
+    cell and unaffected by resuming."""
+
+    def __init__(self, n: int, seed: int):
+        self.n, self.seed, self.epoch = n, seed, 1
+
+    def set_epoch(self, epoch: int):
+        self.epoch = epoch
+
+    def __iter__(self):
+        g = torch.Generator().manual_seed(self.seed * 1000 + self.epoch)
+        return iter(torch.randperm(self.n, generator=g).tolist())
+
+    def __len__(self):
+        return self.n
 
 
 def compute_pos_weight(labels: np.ndarray) -> torch.Tensor:
@@ -252,6 +281,9 @@ def main():
                    help="fgsm+reg only: where to write the adversarial-val-AUC-selected model (B2)")
     p.add_argument("--cache_dir", default=mc.DEFAULT_CACHE_DIR)
     p.add_argument("--num_workers", type=int, default=10)
+    p.add_argument("--deadline", type=float, default=None,
+                   help="unix time; pause (exit 75) before an epoch that cannot finish by then")
+    p.add_argument("--no_resume", action="store_true", help="ignore an existing train_state.pt")
     p.add_argument("--smoke", action="store_true", help="tiny run to test the pipeline")
     args = p.parse_args()
 
@@ -297,16 +329,19 @@ def main():
           f"Early stopping: {'ON (patience %d, clean val AUC)' % patience if use_es else 'OFF'}"
           f"{'   + robust-ES tracking (adv val AUC)' if track_robust else ''}", flush=True)
 
+    sampler = EpochSampler(len(train_idx), args.seed)
+    train_workers = mc.loader_workers(args.num_workers)
     train_loader = DataLoader(
         mc.CachedDataset(cache, train_idx, train_y, uint8_transform=augment),
-        batch_size=BATCH_SIZE, shuffle=True, num_workers=args.num_workers,
-        pin_memory=True, persistent_workers=True,
+        batch_size=BATCH_SIZE, sampler=sampler, num_workers=train_workers,
+        pin_memory=True, persistent_workers=train_workers > 0,
         generator=torch.Generator().manual_seed(args.seed),
     )
+    val_workers = mc.loader_workers(4)
     val_loader = DataLoader(
         mc.CachedDataset(cache, val_idx, val_y),
-        batch_size=128, shuffle=False, num_workers=4, pin_memory=True,
-        persistent_workers=True, generator=torch.Generator().manual_seed(args.seed),
+        batch_size=128, shuffle=False, num_workers=val_workers, pin_memory=True,
+        persistent_workers=val_workers > 0, generator=torch.Generator().manual_seed(args.seed),
     )
 
     # ── Model / optimiser / schedule (identical for every cell) ───────────────
@@ -328,17 +363,64 @@ def main():
     # ── Training loop ─────────────────────────────────────────────────────────
     history = []
     hist_path = os.path.join(args.out_dir, "history.csv")
+    state_path = os.path.join(args.out_dir, STATE_FILE)
     fields = ["epoch", "train_loss", "train_acc", "train_auc", "val_loss", "val_acc",
               "val_auc", "adv_val_loss", "adv_val_acc", "adv_val_auc", "lr", "gap_pct",
               "elapsed_s"]
-    hist_file = open(hist_path, "w", newline="")
-    writer = csv.DictWriter(hist_file, fieldnames=fields)
-    writer.writeheader()
+
+    def write_history():
+        with open(hist_path, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=fields)
+            w.writeheader()
+            for r in history:
+                w.writerow({k: (round(v, 6) if isinstance(v, float) else v) for k, v in r.items()})
 
     clean = dict(best=-1.0, epoch=0, wait=0, stopped=not use_es, state=None, stop_epoch=None)
     robust = dict(best=-1.0, epoch=0, wait=0, stopped=not track_robust, state=None, stop_epoch=None)
+    config = dict(training=args.training, regime=args.regime, seed=args.seed,
+                  epochs=args.epochs, smoke=args.smoke, track_robust=track_robust)
 
-    for epoch in range(1, args.epochs + 1):
+    # ── Resume from the last completed epoch, if a matching state exists ─────
+    start_epoch = 1
+    if os.path.exists(state_path) and not args.no_resume:
+        st = torch.load(state_path, map_location="cpu", weights_only=False)
+        if st["config"] != config:
+            sys.exit(f"ERROR: {state_path} belongs to a different run {st['config']}; "
+                     "delete it or pass --no_resume")
+        model.load_state_dict(st["model"])
+        optimizer.load_state_dict(st["optimizer"])
+        scheduler.load_state_dict(st["scheduler"])
+        scaler.load_state_dict(st["scaler"])
+        clean, robust, history = st["clean"], st["robust"], st["history"]
+        torch.set_rng_state(st["rng_torch"])
+        torch.cuda.set_rng_state(st["rng_cuda"])
+        np.random.set_state(st["rng_numpy"])
+        random.setstate(st["rng_python"])
+        start_epoch = st["epoch"] + 1
+        print(f"[RESUME] continuing after epoch {st['epoch']} from {state_path}", flush=True)
+    write_history()
+
+    def save_state(epoch):
+        tmp = state_path + ".tmp"
+        torch.save(dict(config=config, epoch=epoch, model=cpu_state(model),
+                        optimizer=optimizer.state_dict(), scheduler=scheduler.state_dict(),
+                        scaler=scaler.state_dict(), clean=clean, robust=robust,
+                        history=history, rng_torch=torch.get_rng_state(),
+                        rng_cuda=torch.cuda.get_rng_state(), rng_numpy=np.random.get_state(),
+                        rng_python=random.getstate()), tmp)
+        os.replace(tmp, state_path)
+
+    for epoch in range(start_epoch, args.epochs + 1):
+        if use_es and clean["stopped"] and robust["stopped"]:
+            break
+        if args.deadline and history:
+            need = 1.15 * max(r["elapsed_s"] for r in history[-3:]) + 120
+            if time.time() + need > args.deadline:
+                print(f"[PAUSED] {need / 60:.0f} min needed for epoch {epoch} but the deadline "
+                      f"is in {(args.deadline - time.time()) / 60:.0f} min — state saved after "
+                      f"epoch {epoch - 1}; rerun to continue.", flush=True)
+                sys.exit(EXIT_PAUSED)
+        sampler.set_epoch(epoch)
         t0 = time.time()
         tr_loss, tr_acc, tr_auc = train_one_epoch(
             model, train_loader, optimizer, scaler, criterion, device, args.training,
@@ -354,13 +436,12 @@ def main():
                    adv_val_acc=av_acc, adv_val_auc=av_auc, lr=lr,
                    gap_pct=(tr_acc - vl_acc) * 100, elapsed_s=round(time.time() - t0, 1))
         history.append(row)
-        writer.writerow({k: (round(v, 6) if isinstance(v, float) else v) for k, v in row.items()})
-        hist_file.flush()
+        write_history()
         print(f"  Epoch {epoch:02d}/{args.epochs}  loss={tr_loss:.4f} tr_acc={tr_acc:.4f} "
               f"tr_auc={tr_auc:.4f}  vl_acc={vl_acc:.4f} vl_auc={vl_auc:.4f} "
               f"adv_auc={av_auc:.4f}  lr={lr:.2e}  gap={row['gap_pct']:+.2f}%  "
               f"({row['elapsed_s']:.0f}s)", flush=True)
-        if epoch == 1:
+        if epoch == start_epoch:
             print(f"  [GPU] peak memory {torch.cuda.max_memory_allocated() / 2**30:.1f} GiB",
                   flush=True)
 
@@ -380,10 +461,10 @@ def main():
                     print(f"  [EARLY STOP:{name}] no improvement for {patience} epochs — "
                           f"best epoch {tracker['epoch']} (AUC={tracker['best']:.4f})",
                           flush=True)
+        save_state(epoch)
         if use_es and clean["stopped"] and robust["stopped"]:
             break
 
-    hist_file.close()
     epochs_trained = len(history)
 
     # ── Save the selected model(s) ────────────────────────────────────────────
@@ -423,6 +504,8 @@ def main():
     else:
         finalize(args.out_dir, cpu_state(model), epochs_trained,
                  "last epoch (no early stopping)", None, f"Victim {cell_desc}")
+    if os.path.exists(state_path):   # finished: the resume state is no longer needed
+        os.remove(state_path)
 
 
 if __name__ == "__main__":

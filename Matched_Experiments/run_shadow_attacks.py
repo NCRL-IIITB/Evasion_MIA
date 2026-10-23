@@ -29,6 +29,11 @@ What differs from the original runners
 * Besides accuracy / precision / recall / F1 (computed exactly as before from
   attack.predict), each classifier's predict_proba gives AUC and TPR at
   1 % and 0.1 % FPR.
+* Resumable (for Kaggle's 12-hour sessions): every trained shadow model, the
+  attack dataset and every classifier result are saved in --state_dir as soon
+  as they exist; a rerun skips finished work.  The shadow loop replays the
+  original _train_shadow_models() exactly (same RNG draws, same calls), it only
+  saves/loads each shadow's weights.  The state is deleted on success.
 
 Usage
 -----
@@ -39,6 +44,7 @@ Usage
 import argparse
 import json
 import os
+import shutil
 import sys
 import time
 
@@ -66,18 +72,24 @@ ATTACK_MODELS = [   # identical to run_original_mia.py / run_fluctuation_attack.
 ]
 
 
-def evaluate_feature_set(obj, feature_label, eval_m, eval_nm):
+def evaluate_feature_set(obj, feature_label, eval_m, eval_nm, partial: dict, partial_path):
     """Train each attack classifier on obj.attack_dataset and score it.
 
     Uses the original class's own _train_attack_model() (so each class keeps
     its own feature columns) and attack(..., return_confidence=True) (so the
-    victim is queried exactly as in evaluate_attack_model()).
+    victim is queried exactly as in evaluate_attack_model()).  Finished
+    classifiers are recorded in ``partial`` and skipped on a rerun.
     """
     from mia import ModelParameters
     X_eval = np.concatenate([eval_m, eval_nm])
     y_true = np.concatenate([np.ones(len(eval_m)), np.zeros(len(eval_nm))])
     rows = []
     for label, model_type, kwargs in ATTACK_MODELS:
+        key = f"{feature_label} / {label}"
+        if key in partial:
+            print(f"  {key:<42s} (already done)", flush=True)
+            rows.append(partial[key])
+            continue
         t0 = time.time()
         obj.attack_model_parameters = ModelParameters(model_type, **kwargs)
         obj._train_attack_model()
@@ -100,7 +112,55 @@ def evaluate_feature_set(obj, feature_label, eval_m, eval_nm):
         print(f"  {r['attack_label']:<42s} acc={r['accuracy']:.4f} f1={r['f1']:.4f} "
               f"auc={r['auc']:.4f} tpr@1%={r['tpr_at_1pct_fpr']:.4f}", flush=True)
         rows.append(r)
+        partial[key] = r
+        mc.write_json(partial_path, partial)
     return rows
+
+
+def train_shadows_resumable(full, state_dir, afmia):
+    """Same as VarianceMIA / FluctuationVarianceMIA._train_shadow_models(),
+    plus a saved weights file per shadow so an interrupted run can resume.
+
+    The pool sample of every shadow (rng draws), the victim queries and the
+    shadow construction (param.build(random_state + i), whose _build_model()
+    re-seeds torch) are replayed in the original order; only fit() is skipped
+    for shadows whose weights already exist.
+    """
+    rng = np.random.RandomState(full.random_state)
+    n = len(full.unlabelled_data)
+    params = full.shadow_model_parameters
+    victim_max_scores = []
+    for i in range(full.num_shadow_models):
+        train_indices = rng.choice(n, size=full.shadow_model_dataset_size, replace=False)
+        train_paths = full.unlabelled_data[train_indices]
+        victim_scores = full.victim_model_api.predict(train_paths)
+        pseudo_labels = (victim_scores > 0.5).astype(np.float32)
+        victim_max_scores.append(np.max(victim_scores, axis=1))
+
+        param = params[i % len(params)] if isinstance(params, list) else params
+        shadow = param.build(random_state=full.random_state + i)
+        ckpt = os.path.join(state_dir, f"shadow_{i}.pth")
+        if os.path.exists(ckpt):
+            shadow.model = shadow._build_model()
+            shadow.model.load_state_dict(torch.load(ckpt, map_location=shadow.device,
+                                                    weights_only=True))
+            print(f"  Shadow model {i + 1}/{full.num_shadow_models} loaded "
+                  f"({shadow.architecture}) from {ckpt}", flush=True)
+        else:
+            t0 = time.time()
+            shadow.fit(train_paths, pseudo_labels)
+            torch.save(shadow.model.state_dict(), ckpt + ".tmp")
+            os.replace(ckpt + ".tmp", ckpt)
+            print(f"  Shadow model {i + 1}/{full.num_shadow_models} trained "
+                  f"({shadow.architecture}, {time.time() - t0:.0f}s) → saved", flush=True)
+
+        full.shadow_models[i] = {"model": shadow, "train_indices": set(train_indices.tolist())}
+        if afmia:
+            full._shadow_pseudo_labels[i] = {"train_paths": train_paths,
+                                             "pseudo_labels": pseudo_labels}
+            if full._reference_shadow is None:
+                full._reference_shadow = shadow
+    full._victim_max_conf_pool = np.concatenate(victim_max_scores)
 
 
 def main():
@@ -111,6 +171,8 @@ def main():
     p.add_argument("--out_dir", required=True)
     p.add_argument("--cache_dir", default=mc.DEFAULT_CACHE_DIR)
     p.add_argument("--splits_dir", default=None, help="where to record the attack split")
+    p.add_argument("--state_dir", default=None,
+                   help="resume state (default: <out_dir>/_state; removed on success)")
     p.add_argument("--smoke", action="store_true")
     args = p.parse_args()
 
@@ -118,6 +180,11 @@ def main():
     n_shadow, shadow_size, shadow_epochs = NUM_SHADOW_MODELS, SHADOW_DATASET_SIZE, SHADOW_EPOCHS
     if args.smoke:
         n_shadow, shadow_size, shadow_epochs = 2, 200, 1
+
+    state_dir = args.state_dir or os.path.join(args.out_dir, "_state")
+    os.makedirs(state_dir, exist_ok=True)
+    with open(os.path.join(state_dir, "README.txt"), "w") as f:
+        f.write("Resume state of run_shadow_attacks.py — deleted automatically on success.\n")
 
     torch.backends.cudnn.benchmark = True
     mc.import_original_attack_modules(afmia=afmia)
@@ -170,9 +237,17 @@ def main():
         full = VarianceMIA(shadow_model_parameters=shadow_params, **common_kw)
     full.random_state = args.seed
     print("[SHADOW] training shadow models …", flush=True)
-    full._train_shadow_models()
-    print("[SHADOW] building attack dataset …", flush=True)
-    full._prepare_attack_dataset()
+    train_shadows_resumable(full, state_dir, afmia)
+    dataset_path = os.path.join(state_dir, "attack_dataset.pkl")
+    if os.path.exists(dataset_path):
+        import pandas as pd
+        full.attack_dataset = pd.read_pickle(dataset_path)
+        print(f"[SHADOW] attack dataset loaded from {dataset_path}", flush=True)
+    else:
+        print("[SHADOW] building attack dataset …", flush=True)
+        full._prepare_attack_dataset()
+        full.attack_dataset.to_pickle(dataset_path + ".tmp")
+        os.replace(dataset_path + ".tmp", dataset_path)
     t_shadow = time.time() - t_start
 
     if afmia:
@@ -188,10 +263,12 @@ def main():
     base.shadow_models = full.shadow_models
     base.attack_dataset = full.attack_dataset
 
+    partial_path = os.path.join(state_dir, "partial_results.json")
+    partial = json.load(open(partial_path)) if os.path.exists(partial_path) else {}
     results = []
     for label, obj in feature_sets:
         print(f"\n[EVAL] {label}", flush=True)
-        results.extend(evaluate_feature_set(obj, label, eval_m, eval_nm))
+        results.extend(evaluate_feature_set(obj, label, eval_m, eval_nm, partial, partial_path))
 
     out = {
         "attack": args.attack,
@@ -221,6 +298,7 @@ def main():
                     f"{r['recall']:8.4f}{r['f1']:8.4f}{r['auc']:8.4f}"
                     f"{r['tpr_at_1pct_fpr']:9.4f}{r['tpr_at_0.1pct_fpr']:9.4f}\n")
         f.write(f"\nmax-confidence gap: {conf_gap:+.4f}\nruntime: {out['runtime_s']}\n")
+    shutil.rmtree(state_dir, ignore_errors=True)
     print(f"\n[DONE] {args.attack} → {args.out_dir} ({out['runtime_s']['total']:.0f}s)", flush=True)
 
 
