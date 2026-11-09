@@ -1,0 +1,105 @@
+{
+  "test_set": "33412 non-member images (patient-disjoint)",
+  "protocol": "attack_and_compare.py: unweighted BCE on true labels, eval mode, fp32, clamp [-3,3]",
+  "clean": {
+    "hamming_loss": 0.13357077297577716,
+    "exact_match": 0.27226744882078296,
+    "f1_macro": 0.31253287911504357,
+    "auc_macro": 0.8173957695237051
+  },
+  "clean_per_class_f1": {
+    "Atelectasis": 0.2936482604532397,
+    "Consolidation": 0.21153036891569646,
+    "Infiltration": 0.38719675109543655,
+    "Pneumothorax": 0.31709973549089776,
+    "Edema": 0.26292895118414694,
+    "Emphysema": 0.3166547533952823,
+    "Fibrosis": 0.1111111111111111,
+    "Effusion": 0.505075942393956,
+    "Pneumonia": 0.03296703296703297,
+    "Pleural_Thickening": 0.19708846584546472,
+    "Cardiomegaly": 0.2835319278948977,
+    "Nodule": 0.2687211093990755,
+    "Mass": 0.4064144324730644,
+    "Hernia": 0.38333333333333336,
+    "No Finding": 0.7106910738775267
+  },
+  "adversarial": {
+    "0.001": {
+      "metrics": {
+        "hamming_loss": 0.15971108184684146,
+        "exact_match": 0.19325392074703698,
+        "f1_macro": 0.25155090706040795,
+        "auc_macro": 0.7435529727066625
+      },
+      "flip_rate": 0.0281635340596193,
+      "comparison": {
+        "hamming_loss": 0.026140308871064305,
+        "exact_match": -0.07901352807374598,
+        "f1_macro": -0.060981972054635625,
+        "auc_macro": -0.07384279681704253
+      }
+    },
+    "0.002": {
+      "metrics": {
+        "hamming_loss": 0.17399337563350492,
+        "exact_match": 0.15156231294145817,
+        "f1_macro": 0.2265559978378885,
+        "auc_macro": 0.7021330181457686
+      },
+      "flip_rate": 0.04374675765194142,
+      "comparison": {
+        "hamming_loss": 0.04042260265772776,
+        "exact_match": -0.1207051358793248,
+        "f1_macro": -0.08597688127715508,
+        "auc_macro": -0.11526275137793651
+      }
+    },
+    "0.005": {
+      "metrics": {
+        "hamming_loss": 0.18065764795083603,
+        "exact_match": 0.14219442116604813,
+        "f1_macro": 0.21993864902954746,
+        "auc_macro": 0.6998229808601527
+      },
+      "flip_rate": 0.06164451893531266,
+      "comparison": {
+        "hamming_loss": 0.04708687497505887,
+        "exact_match": -0.13007302765473483,
+        "f1_macro": -0.09259423008549611,
+        "auc_macro": -0.11757278866355236
+      }
+    },
+    "0.01": {
+      "metrics": {
+        "hamming_loss": 0.19331777006265213,
+        "exact_match": 0.11028971626960374,
+        "f1_macro": 0.20678457477074133,
+        "auc_macro": 0.6928024868245767
+      },
+      "flip_rate": 0.0823536453968634,
+      "comparison": {
+        "hamming_loss": 0.059746997086874976,
+        "exact_match": -0.16197773255117923,
+        "f1_macro": -0.10574830434430224,
+        "auc_macro": -0.1245932826991284
+      }
+    },
+    "0.02": {
+      "metrics": {
+        "hamming_loss": 0.21265613152959018,
+        "exact_match": 0.0680893092302167,
+        "f1_macro": 0.17721240856385306,
+        "auc_macro": 0.6596497276947617
+      },
+      "flip_rate": 0.10593000518775689,
+      "comparison": {
+        "hamming_loss": 0.07908535855381302,
+        "exact_match": -0.20417813959056627,
+        "f1_macro": -0.1353204705511905,
+        "auc_macro": -0.15774604182894336
+      }
+    }
+  },
+  "victim_dir": "/kaggle/working/results/victims/fgsm_reg_seed42"
+}

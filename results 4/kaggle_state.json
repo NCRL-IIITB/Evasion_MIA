@@ -1,0 +1,59 @@
+{
+  "cell": "fgsm_reg",
+  "seeds": [
+    42
+  ],
+  "robust_es": true,
+  "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+  "smoke": false,
+  "complete": true,
+  "failed": [],
+  "updated": "2026-10-28T14:14:04",
+  "tasks": {
+    "train_fgsm_reg_seed42": "done",
+    "afmia_fgsm_reg_seed42": "done",
+    "shadow_mia_fgsm_reg_seed42": "done",
+    "eval_fgsm_reg_seed42": "done",
+    "afmia_fgsm_reg_robustES_seed42": "done",
+    "shadow_mia_fgsm_reg_robustES_seed42": "done",
+    "eval_fgsm_reg_robustES_seed42": "done"
+  },
+  "sessions": [
+    {
+      "start": "2026-10-27T14:25:49",
+      "end": "2026-10-28T01:26:08",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+      "status": {
+        "train_fgsm_reg_seed42": "done",
+        "afmia_fgsm_reg_seed42": "interrupted",
+        "shadow_mia_fgsm_reg_seed42": "done",
+        "eval_fgsm_reg_seed42": "pending",
+        "afmia_fgsm_reg_robustES_seed42": "pending",
+        "shadow_mia_fgsm_reg_robustES_seed42": "pending",
+        "eval_fgsm_reg_robustES_seed42": "pending"
+      }
+    },
+    {
+      "start": "2026-10-28T04:25:34",
+      "end": "2026-10-28T14:14:04",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+      "status": {
+        "train_fgsm_reg_seed42": "done",
+        "afmia_fgsm_reg_seed42": "done",
+        "shadow_mia_fgsm_reg_seed42": "done",
+        "eval_fgsm_reg_seed42": "done",
+        "afmia_fgsm_reg_robustES_seed42": "done",
+        "shadow_mia_fgsm_reg_robustES_seed42": "done",
+        "eval_fgsm_reg_robustES_seed42": "done"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+
+===== 2026-10-27 15:43:47 session start (GPU 0) =====
+[INFO] training=fgsm regime=reg seed=42  → /kaggle/working/results/victims/fgsm_reg_seed42
+[INFO] GPU: Tesla T4
+[INFO] Train 66902 / val 11806 images (split seed 42)
+[INFO] Augmentation: ON   Early stopping: ON (patience 7, clean val AUC)   + robust-ES tracking (adv val AUC)
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+  0%|          | 0.00/30.8M [00:00<?, ?B/s] 33%|███▎      | 10.1M/30.8M [00:00<00:00, 106MB/s]100%|██████████| 30.8M/30.8M [00:00<00:00, 177MB/s]
+  Epoch 01/35  loss=0.7545 tr_acc=0.8564 tr_auc=0.6323  vl_acc=0.8915 vl_auc=0.7087 adv_auc=0.5597  lr=1.00e-05  gap=-3.51%  (922s)
+  [GPU] peak memory 8.2 GiB
+  Epoch 02/35  loss=0.6657 tr_acc=0.8621 tr_auc=0.7490  vl_acc=0.8563 vl_auc=0.7824 adv_auc=0.7198  lr=4.00e-05  gap=+0.58%  (908s)
+  Epoch 03/35  loss=0.6249 tr_acc=0.8634 tr_auc=0.7862  vl_acc=0.8748 vl_auc=0.7990 adv_auc=0.7316  lr=7.00e-05  gap=-1.14%  (908s)
+  Epoch 04/35  loss=0.5904 tr_acc=0.8667 tr_auc=0.7979  vl_acc=0.8854 vl_auc=0.7955 adv_auc=0.7026  lr=1.00e-04  gap=-1.87%  (907s)
+  Epoch 05/35  loss=0.4772 tr_acc=0.8690 tr_auc=0.8115  vl_acc=0.9076 vl_auc=0.7933 adv_auc=0.4276  lr=9.98e-05  gap=-3.86%  (906s)
+  Epoch 06/35  loss=0.4358 tr_acc=0.8704 tr_auc=0.8223  vl_acc=0.8757 vl_auc=0.8154 adv_auc=0.7408  lr=9.90e-05  gap=-0.53%  (906s)
+  Epoch 07/35  loss=0.4165 tr_acc=0.8704 tr_auc=0.8311  vl_acc=0.8525 vl_auc=0.8199 adv_auc=0.8303  lr=9.79e-05  gap=+1.79%  (906s)
+  Epoch 08/35  loss=0.3920 tr_acc=0.8726 tr_auc=0.8383  vl_acc=0.8470 vl_auc=0.8156 adv_auc=0.6415  lr=9.62e-05  gap=+2.56%  (906s)
+  Epoch 09/35  loss=0.3863 tr_acc=0.8721 tr_auc=0.8459  vl_acc=0.8807 vl_auc=0.8257 adv_auc=0.7505  lr=9.42e-05  gap=-0.86%  (908s)
+  Epoch 10/35  loss=0.3692 tr_acc=0.8734 tr_auc=0.8513  vl_acc=0.8541 vl_auc=0.8196 adv_auc=0.4989  lr=9.17e-05  gap=+1.93%  (906s)
+  Epoch 11/35  loss=0.3604 tr_acc=0.8757 tr_auc=0.8600  vl_acc=0.8471 vl_auc=0.8262 adv_auc=0.7290  lr=8.88e-05  gap=+2.87%  (907s)
+  Epoch 12/35  loss=0.3603 tr_acc=0.8756 tr_auc=0.8660  vl_acc=0.8709 vl_auc=0.8243 adv_auc=0.6344  lr=8.55e-05  gap=+0.47%  (908s)
+  Epoch 13/35  loss=0.3550 tr_acc=0.8776 tr_auc=0.8731  vl_acc=0.8648 vl_auc=0.8282 adv_auc=0.6287  lr=8.19e-05  gap=+1.28%  (906s)
+  Epoch 14/35  loss=0.3343 tr_acc=0.8792 tr_auc=0.8803  vl_acc=0.8845 vl_auc=0.8267 adv_auc=0.6519  lr=7.80e-05  gap=-0.53%  (906s)
+  [EARLY STOP:robust] no improvement for 7 epochs — best epoch 7 (AUC=0.8303)
+  Epoch 15/35  loss=0.3258 tr_acc=0.8810 tr_auc=0.8870  vl_acc=0.8587 vl_auc=0.8187 adv_auc=0.6012  lr=7.38e-05  gap=+2.23%  (907s)
+  Epoch 16/35  loss=0.3232 tr_acc=0.8826 tr_auc=0.8942  vl_acc=0.8470 vl_auc=0.8152 adv_auc=0.6261  lr=6.94e-05  gap=+3.55%  (908s)
+  Epoch 17/35  loss=0.3097 tr_acc=0.8852 tr_auc=0.9013  vl_acc=0.8236 vl_auc=0.8157 adv_auc=0.5867  lr=6.49e-05  gap=+6.15%  (906s)
+  Epoch 18/35  loss=0.3000 tr_acc=0.8874 tr_auc=0.9093  vl_acc=0.8735 vl_auc=0.8143 adv_auc=0.6496  lr=6.02e-05  gap=+1.39%  (906s)
+  Epoch 19/35  loss=0.2887 tr_acc=0.8907 tr_auc=0.9162  vl_acc=0.8860 vl_auc=0.8160 adv_auc=0.4365  lr=5.54e-05  gap=+0.48%  (907s)
+  Epoch 20/35  loss=0.2792 tr_acc=0.8936 tr_auc=0.9229  vl_acc=0.8756 vl_auc=0.8135 adv_auc=0.5260  lr=5.05e-05  gap=+1.80%  (906s)
+  [EARLY STOP:clean] no improvement for 7 epochs — best epoch 13 (AUC=0.8282)
+[DONE] Victim training=fgsm regime=reg seed=42 [clean-ES]: selected epoch 13 (best clean val macro-AUC (patience 7)) → /kaggle/working/results/victims/fgsm_reg_seed42/model.pth
+[DONE] Victim training=fgsm regime=reg seed=42 [robust-ES]: selected epoch 7 (best adversarial val macro-AUC (FGSM eps=0.02, patience 7)) → /kaggle/working/results/victims/fgsm_reg_robustES_seed42/model.pth

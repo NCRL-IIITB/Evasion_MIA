@@ -1,0 +1,15 @@
+shadow_mia on /kaggle/working/results/victims/std_noreg_seed42 (seed 42)
+========================================================================================================
+Attack                                           Acc    Prec     Rec      F1     AUC   TPR@1%  TPR@.1%
+--------------------------------------------------------------------------------------------------------
+Shadow-model MIA / Gradient Boosting          0.7069  0.6316  0.9932  0.7721  0.8372   0.1678   0.0626
+Shadow-model MIA / Random Forest              0.6954  0.6312  0.9398  0.7552  0.8026   0.1258   0.0378
+Shadow-model MIA / MLP                        0.6122  0.5636  0.9944  0.7194  0.7419   0.0628   0.0000
+Shadow-model MIA / Logistic Regression        0.5973  0.5573  0.9462  0.7015  0.6975   0.0370   0.0134
+Shadow-model MIA + BCVA / Gradient Boosting   0.7032  0.6289  0.9914  0.7696  0.8324   0.1600   0.0522
+Shadow-model MIA + BCVA / Random Forest       0.6872  0.6253  0.9342  0.7492  0.7989   0.1452   0.0322
+Shadow-model MIA + BCVA / MLP                 0.6415  0.5827  0.9972  0.7356  0.7373   0.0680   0.0000
+Shadow-model MIA + BCVA / Logistic Regression  0.5974  0.5574  0.9454  0.7013  0.6718   0.0360   0.0032
+
+max-confidence gap: +0.1275
+runtime: {'shadow_phase': 8347.0, 'total': 16236.6}

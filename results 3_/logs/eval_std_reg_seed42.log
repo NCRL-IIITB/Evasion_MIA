@@ -1,0 +1,15 @@
+
+===== 2026-10-25 19:57:30 session start (GPU 1) =====
+[EVAL] /kaggle/working/results/victims/std_reg_seed42: FGSM evasion …
+  [EVASION] clean AUC=0.8288
+  [EVASION] eps=0.001  AUC=0.6861  flip=0.0629
+  [EVASION] eps=0.002  AUC=0.5861  flip=0.1104
+  [EVASION] eps=0.005  AUC=0.4416  flip=0.1840
+  [EVASION] eps=0.01   AUC=0.3644  flip=0.2184
+  [EVASION] eps=0.02   AUC=0.3198  flip=0.2346
+[EVAL] threshold MIAs on 5000 members + 5000 non-members …
+  final: loss_gap=+0.0164  loss_AUC=0.5253  confidence_AUC=0.5012  adv_loss_AUC=0.5215  fluct_wb_AUC=0.5028
+  epoch 05: loss_gap=+0.0068  loss_AUC=0.5090  fluct_wb_AUC=0.5049
+  epoch 10: loss_gap=+0.0196  loss_AUC=0.5274  fluct_wb_AUC=0.4988
+  epoch 15: loss_gap=+0.0461  loss_AUC=0.5589  fluct_wb_AUC=0.5115
+[EVAL] done in 2466s → /kaggle/working/results/eval/std_reg_seed42

@@ -1,0 +1,272 @@
+
+===== 2026-10-27 19:16:14 session start (GPU 0) =====
+[SETUP] attack=afmia seed=42 pool=40000 eval=5000+5000
+[DIAG] max-confidence gap (member − non-member): +0.1275
+[SHADOW] training shadow models …
+      [resnet18] Epoch 1/25 | Avg Loss: 0.6918
+      [resnet18] Epoch 2/25 | Avg Loss: 0.6503
+      [resnet18] Epoch 3/25 | Avg Loss: 0.6301
+      [resnet18] Epoch 4/25 | Avg Loss: 0.6135
+      [resnet18] Epoch 5/25 | Avg Loss: 0.5969
+      [resnet18] Epoch 6/25 | Avg Loss: 0.5834
+      [resnet18] Epoch 7/25 | Avg Loss: 0.5679
+      [resnet18] Epoch 8/25 | Avg Loss: 0.5546
+      [resnet18] Epoch 9/25 | Avg Loss: 0.5279
+      [resnet18] Epoch 10/25 | Avg Loss: 0.4951
+      [resnet18] Epoch 11/25 | Avg Loss: 0.4507
+      [resnet18] Epoch 12/25 | Avg Loss: 0.3918
+      [resnet18] Epoch 13/25 | Avg Loss: 0.3307
+      [resnet18] Epoch 14/25 | Avg Loss: 0.2638
+      [resnet18] Epoch 15/25 | Avg Loss: 0.2047
+      [resnet18] Epoch 16/25 | Avg Loss: 0.1485
+      [resnet18] Epoch 17/25 | Avg Loss: 0.1151
+      [resnet18] Epoch 18/25 | Avg Loss: 0.0887
+      [resnet18] Epoch 19/25 | Avg Loss: 0.0702
+      [resnet18] Epoch 20/25 | Avg Loss: 0.0633
+      [resnet18] Epoch 21/25 | Avg Loss: 0.0552
+      [resnet18] Epoch 22/25 | Avg Loss: 0.0556
+      [resnet18] Epoch 23/25 | Avg Loss: 0.0485
+      [resnet18] Epoch 24/25 | Avg Loss: 0.0429
+      [resnet18] Epoch 25/25 | Avg Loss: 0.0377
+  Shadow model 1/8 trained (resnet18, 2233s) → saved
+      [mobilenet_v3_small] Epoch 1/25 | Avg Loss: 0.6494
+      [mobilenet_v3_small] Epoch 2/25 | Avg Loss: 0.4934
+      [mobilenet_v3_small] Epoch 3/25 | Avg Loss: 0.4343
+      [mobilenet_v3_small] Epoch 4/25 | Avg Loss: 0.3968
+      [mobilenet_v3_small] Epoch 5/25 | Avg Loss: 0.3828
+      [mobilenet_v3_small] Epoch 6/25 | Avg Loss: 0.3722
+      [mobilenet_v3_small] Epoch 7/25 | Avg Loss: 0.3383
+      [mobilenet_v3_small] Epoch 8/25 | Avg Loss: 0.3173
+      [mobilenet_v3_small] Epoch 9/25 | Avg Loss: 0.2852
+      [mobilenet_v3_small] Epoch 10/25 | Avg Loss: 0.2592
+      [mobilenet_v3_small] Epoch 11/25 | Avg Loss: 0.2391
+      [mobilenet_v3_small] Epoch 12/25 | Avg Loss: 0.2178
+      [mobilenet_v3_small] Epoch 13/25 | Avg Loss: 0.1912
+      [mobilenet_v3_small] Epoch 14/25 | Avg Loss: 0.1714
+      [mobilenet_v3_small] Epoch 15/25 | Avg Loss: 0.1643
+      [mobilenet_v3_small] Epoch 16/25 | Avg Loss: 0.1292
+      [mobilenet_v3_small] Epoch 17/25 | Avg Loss: 0.1049
+      [mobilenet_v3_small] Epoch 18/25 | Avg Loss: 0.0987
+      [mobilenet_v3_small] Epoch 19/25 | Avg Loss: 0.0919
+      [mobilenet_v3_small] Epoch 20/25 | Avg Loss: 0.0808
+      [mobilenet_v3_small] Epoch 21/25 | Avg Loss: 0.0901
+      [mobilenet_v3_small] Epoch 22/25 | Avg Loss: 0.0906
+      [mobilenet_v3_small] Epoch 23/25 | Avg Loss: 0.0781
+      [mobilenet_v3_small] Epoch 24/25 | Avg Loss: 0.0572
+      [mobilenet_v3_small] Epoch 25/25 | Avg Loss: 0.0488
+  Shadow model 2/8 trained (mobilenet_v3_small, 838s) → saved
+      [efficientnet_b0] Epoch 1/25 | Avg Loss: 0.6684
+      [efficientnet_b0] Epoch 2/25 | Avg Loss: 0.5167
+      [efficientnet_b0] Epoch 3/25 | Avg Loss: 0.4227
+      [efficientnet_b0] Epoch 4/25 | Avg Loss: 0.3883
+      [efficientnet_b0] Epoch 5/25 | Avg Loss: 0.3919
+      [efficientnet_b0] Epoch 6/25 | Avg Loss: 0.4709
+      [efficientnet_b0] Epoch 7/25 | Avg Loss: 0.3585
+      [efficientnet_b0] Epoch 8/25 | Avg Loss: 0.2679
+      [efficientnet_b0] Epoch 9/25 | Avg Loss: 0.2274
+      [efficientnet_b0] Epoch 10/25 | Avg Loss: 0.1957
+      [efficientnet_b0] Epoch 11/25 | Avg Loss: 0.1658
+      [efficientnet_b0] Epoch 12/25 | Avg Loss: 0.1420
+      [efficientnet_b0] Epoch 13/25 | Avg Loss: 0.1265
+      [efficientnet_b0] Epoch 14/25 | Avg Loss: 0.1110
+      [efficientnet_b0] Epoch 15/25 | Avg Loss: 0.1076
+      [efficientnet_b0] Epoch 16/25 | Avg Loss: 0.0856
+      [efficientnet_b0] Epoch 17/25 | Avg Loss: 0.0692
+      [efficientnet_b0] Epoch 18/25 | Avg Loss: 0.0724
+      [efficientnet_b0] Epoch 19/25 | Avg Loss: 0.0646
+      [efficientnet_b0] Epoch 20/25 | Avg Loss: 0.0763
+      [efficientnet_b0] Epoch 21/25 | Avg Loss: 0.0646
+      [efficientnet_b0] Epoch 22/25 | Avg Loss: 0.1041
+      [efficientnet_b0] Epoch 23/25 | Avg Loss: 0.0511
+      [efficientnet_b0] Epoch 24/25 | Avg Loss: 0.0480
+      [efficientnet_b0] Epoch 25/25 | Avg Loss: 0.0935
+  Shadow model 3/8 trained (efficientnet_b0, 3587s) → saved
+      [densenet121] Epoch 1/25 | Avg Loss: 0.6969
+      [densenet121] Epoch 2/25 | Avg Loss: 0.6664
+      [densenet121] Epoch 3/25 | Avg Loss: 0.6514
+      [densenet121] Epoch 4/25 | Avg Loss: 0.6406
+      [densenet121] Epoch 5/25 | Avg Loss: 0.6293
+      [densenet121] Epoch 6/25 | Avg Loss: 0.6223
+      [densenet121] Epoch 7/25 | Avg Loss: 0.6136
+      [densenet121] Epoch 8/25 | Avg Loss: 0.6065
+      [densenet121] Epoch 9/25 | Avg Loss: 0.5997
+      [densenet121] Epoch 10/25 | Avg Loss: 0.5901
+      [densenet121] Epoch 11/25 | Avg Loss: 0.5862
+      [densenet121] Epoch 12/25 | Avg Loss: 0.5783
+      [densenet121] Epoch 13/25 | Avg Loss: 0.5720
+      [densenet121] Epoch 14/25 | Avg Loss: 0.5648
+      [densenet121] Epoch 15/25 | Avg Loss: 0.5578
+      [densenet121] Epoch 16/25 | Avg Loss: 0.5498
+      [densenet121] Epoch 17/25 | Avg Loss: 0.5420
+      [densenet121] Epoch 18/25 | Avg Loss: 0.5363
+      [densenet121] Epoch 19/25 | Avg Loss: 0.5246
+      [densenet121] Epoch 20/25 | Avg Loss: 0.5136
+      [densenet121] Epoch 21/25 | Avg Loss: 0.5034
+      [densenet121] Epoch 22/25 | Avg Loss: 0.4923
+      [densenet121] Epoch 23/25 | Avg Loss: 0.4798
+      [densenet121] Epoch 24/25 | Avg Loss: 0.4636
+      [densenet121] Epoch 25/25 | Avg Loss: 0.4503
+  Shadow model 4/8 trained (densenet121, 7399s) → saved
+      [shufflenet_v2_x1_0] Epoch 1/25 | Avg Loss: 0.6783
+      [shufflenet_v2_x1_0] Epoch 2/25 | Avg Loss: 0.6173
+      [shufflenet_v2_x1_0] Epoch 3/25 | Avg Loss: 0.5883
+      [shufflenet_v2_x1_0] Epoch 4/25 | Avg Loss: 0.5703
+      [shufflenet_v2_x1_0] Epoch 5/25 | Avg Loss: 0.5543
+      [shufflenet_v2_x1_0] Epoch 6/25 | Avg Loss: 0.5347
+      [shufflenet_v2_x1_0] Epoch 7/25 | Avg Loss: 0.5195
+      [shufflenet_v2_x1_0] Epoch 8/25 | Avg Loss: 0.4978
+      [shufflenet_v2_x1_0] Epoch 9/25 | Avg Loss: 0.4837
+      [shufflenet_v2_x1_0] Epoch 10/25 | Avg Loss: 0.4532
+      [shufflenet_v2_x1_0] Epoch 11/25 | Avg Loss: 0.4254
+      [shufflenet_v2_x1_0] Epoch 12/25 | Avg Loss: 0.3915
+      [shufflenet_v2_x1_0] Epoch 13/25 | Avg Loss: 0.3262
+      [shufflenet_v2_x1_0] Epoch 14/25 | Avg Loss: 0.2712
+      [shufflenet_v2_x1_0] Epoch 15/25 | Avg Loss: 0.2238
+      [shufflenet_v2_x1_0] Epoch 16/25 | Avg Loss: 0.1964
+      [shufflenet_v2_x1_0] Epoch 17/25 | Avg Loss: 0.1638
+      [shufflenet_v2_x1_0] Epoch 18/25 | Avg Loss: 0.1543
+      [shufflenet_v2_x1_0] Epoch 19/25 | Avg Loss: 0.1259
+      [shufflenet_v2_x1_0] Epoch 20/25 | Avg Loss: 0.1234
+      [shufflenet_v2_x1_0] Epoch 21/25 | Avg Loss: 0.1171
+      [shufflenet_v2_x1_0] Epoch 22/25 | Avg Loss: 0.0987
+      [shufflenet_v2_x1_0] Epoch 23/25 | Avg Loss: 0.0794
+      [shufflenet_v2_x1_0] Epoch 24/25 | Avg Loss: 0.0915
+      [shufflenet_v2_x1_0] Epoch 25/25 | Avg Loss: 0.0832
+  Shadow model 5/8 trained (shufflenet_v2_x1_0, 1085s) → saved
+      [resnet18] Epoch 1/25 | Avg Loss: 0.7017
+      [resnet18] Epoch 2/25 | Avg Loss: 0.6620
+      [resnet18] Epoch 3/25 | Avg Loss: 0.6411
+      [resnet18] Epoch 4/25 | Avg Loss: 0.6180
+      [resnet18] Epoch 5/25 | Avg Loss: 0.6026
+      [resnet18] Epoch 6/25 | Avg Loss: 0.5898
+      [resnet18] Epoch 7/25 | Avg Loss: 0.5737
+      [resnet18] Epoch 8/25 | Avg Loss: 0.5525
+      [resnet18] Epoch 9/25 | Avg Loss: 0.5283
+      [resnet18] Epoch 10/25 | Avg Loss: 0.4974
+      [resnet18] Epoch 11/25 | Avg Loss: 0.4487
+      [resnet18] Epoch 12/25 | Avg Loss: 0.3891
+      [resnet18] Epoch 13/25 | Avg Loss: 0.3233
+      [resnet18] Epoch 14/25 | Avg Loss: 0.2532
+      [resnet18] Epoch 15/25 | Avg Loss: 0.1916
+      [resnet18] Epoch 16/25 | Avg Loss: 0.1445
+      [resnet18] Epoch 17/25 | Avg Loss: 0.1041
+      [resnet18] Epoch 18/25 | Avg Loss: 0.0843
+      [resnet18] Epoch 19/25 | Avg Loss: 0.0642
+      [resnet18] Epoch 20/25 | Avg Loss: 0.0553
+      [resnet18] Epoch 21/25 | Avg Loss: 0.0612
+      [resnet18] Epoch 22/25 | Avg Loss: 0.0568
+      [resnet18] Epoch 23/25 | Avg Loss: 0.0433
+      [resnet18] Epoch 24/25 | Avg Loss: 0.0331
+      [resnet18] Epoch 25/25 | Avg Loss: 0.0364
+  Shadow model 6/8 trained (resnet18, 2232s) → saved
+      [mobilenet_v3_small] Epoch 1/25 | Avg Loss: 0.6644
+      [mobilenet_v3_small] Epoch 2/25 | Avg Loss: 0.5260
+      [mobilenet_v3_small] Epoch 3/25 | Avg Loss: 0.4386
+      [mobilenet_v3_small] Epoch 4/25 | Avg Loss: 0.4126
+      [mobilenet_v3_small] Epoch 5/25 | Avg Loss: 0.4182
+      [mobilenet_v3_small] Epoch 6/25 | Avg Loss: 0.4178
+      [mobilenet_v3_small] Epoch 7/25 | Avg Loss: 0.3477
+      [mobilenet_v3_small] Epoch 8/25 | Avg Loss: 0.3283
+      [mobilenet_v3_small] Epoch 9/25 | Avg Loss: 0.3162
+      [mobilenet_v3_small] Epoch 10/25 | Avg Loss: 0.2873
+      [mobilenet_v3_small] Epoch 11/25 | Avg Loss: 0.2457
+      [mobilenet_v3_small] Epoch 12/25 | Avg Loss: 0.2326
+      [mobilenet_v3_small] Epoch 13/25 | Avg Loss: 0.2039
+      [mobilenet_v3_small] Epoch 14/25 | Avg Loss: 0.1650
+      [mobilenet_v3_small] Epoch 15/25 | Avg Loss: 0.1479
+      [mobilenet_v3_small] Epoch 16/25 | Avg Loss: 0.1271
+      [mobilenet_v3_small] Epoch 17/25 | Avg Loss: 0.1171
+      [mobilenet_v3_small] Epoch 18/25 | Avg Loss: 0.0994
+      [mobilenet_v3_small] Epoch 19/25 | Avg Loss: 0.0828
+      [mobilenet_v3_small] Epoch 20/25 | Avg Loss: 0.0795
+      [mobilenet_v3_small] Epoch 21/25 | Avg Loss: 0.1120
+      [mobilenet_v3_small] Epoch 22/25 | Avg Loss: 0.0850
+      [mobilenet_v3_small] Epoch 23/25 | Avg Loss: 0.0570
+      [mobilenet_v3_small] Epoch 24/25 | Avg Loss: 0.0490
+      [mobilenet_v3_small] Epoch 25/25 | Avg Loss: 0.0566
+  Shadow model 7/8 trained (mobilenet_v3_small, 932s) → saved
+      [efficientnet_b0] Epoch 1/25 | Avg Loss: 0.6764
+      [efficientnet_b0] Epoch 2/25 | Avg Loss: 0.5683
+      [efficientnet_b0] Epoch 3/25 | Avg Loss: 0.4864
+      [efficientnet_b0] Epoch 4/25 | Avg Loss: 0.4114
+      [efficientnet_b0] Epoch 5/25 | Avg Loss: 0.3466
+      [efficientnet_b0] Epoch 6/25 | Avg Loss: 0.3250
+      [efficientnet_b0] Epoch 7/25 | Avg Loss: 0.2901
+      [efficientnet_b0] Epoch 8/25 | Avg Loss: 0.3444
+      [efficientnet_b0] Epoch 9/25 | Avg Loss: 0.2607
+      [efficientnet_b0] Epoch 10/25 | Avg Loss: 0.2521
+      [efficientnet_b0] Epoch 11/25 | Avg Loss: 0.1804
+      [efficientnet_b0] Epoch 12/25 | Avg Loss: 0.1498
+      [efficientnet_b0] Epoch 13/25 | Avg Loss: 0.1942
+      [efficientnet_b0] Epoch 14/25 | Avg Loss: 0.1140
+      [efficientnet_b0] Epoch 15/25 | Avg Loss: 0.1132
+      [efficientnet_b0] Epoch 16/25 | Avg Loss: 0.0782
+      [efficientnet_b0] Epoch 17/25 | Avg Loss: 0.0660
+      [efficientnet_b0] Epoch 18/25 | Avg Loss: 0.0655
+      [efficientnet_b0] Epoch 19/25 | Avg Loss: 0.0690
+      [efficientnet_b0] Epoch 20/25 | Avg Loss: 0.1106
+      [efficientnet_b0] Epoch 21/25 | Avg Loss: 0.0802
+      [efficientnet_b0] Epoch 22/25 | Avg Loss: 0.0538
+      [efficientnet_b0] Epoch 23/25 | Avg Loss: 0.0340
+      [efficientnet_b0] Epoch 24/25 | Avg Loss: 0.0478
+      [efficientnet_b0] Epoch 25/25 | Avg Loss: 0.0602
+  Shadow model 8/8 trained (efficientnet_b0, 3585s) → saved
+[SHADOW] building attack dataset …
+  Shadow model 1: pool_size=10000, mean_var=0.048937
+  Shadow model 2: pool_size=10000, mean_var=0.020082
+  Shadow model 3: pool_size=10000, mean_var=0.025881
+
+===== 2026-10-28 06:34:25 session start (GPU 0) =====
+[SETUP] attack=afmia seed=42 pool=40000 eval=5000+5000
+[DIAG] max-confidence gap (member − non-member): +0.1275
+[SHADOW] training shadow models …
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+  0%|          | 0.00/44.7M [00:00<?, ?B/s] 29%|██▉       | 12.9M/44.7M [00:00<00:00, 134MB/s] 69%|██████▉   | 31.0M/44.7M [00:00<00:00, 167MB/s]100%|██████████| 44.7M/44.7M [00:00<00:00, 175MB/s]
+  Shadow model 1/8 loaded (resnet18) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_0.pth
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+  0%|          | 0.00/9.83M [00:00<?, ?B/s]100%|██████████| 9.83M/9.83M [00:00<00:00, 123MB/s]
+  Shadow model 2/8 loaded (mobilenet_v3_small) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_1.pth
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s] 28%|██▊       | 5.62M/20.5M [00:00<00:00, 58.1MB/s] 55%|█████▌    | 11.2M/20.5M [00:00<00:00, 56.0MB/s]100%|██████████| 20.5M/20.5M [00:00<00:00, 84.9MB/s]
+  Shadow model 3/8 loaded (efficientnet_b0) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_2.pth
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+  0%|          | 0.00/30.8M [00:00<?, ?B/s] 52%|█████▏    | 16.1M/30.8M [00:00<00:00, 169MB/s]100%|██████████| 30.8M/30.8M [00:00<00:00, 204MB/s]
+  Shadow model 4/8 loaded (densenet121) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_3.pth
+Downloading: "https://download.pytorch.org/models/shufflenetv2_x1-5666bf0f80.pth" to /root/.cache/torch/hub/checkpoints/shufflenetv2_x1-5666bf0f80.pth
+  0%|          | 0.00/8.79M [00:00<?, ?B/s]100%|██████████| 8.79M/8.79M [00:00<00:00, 135MB/s]
+  Shadow model 5/8 loaded (shufflenet_v2_x1_0) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_4.pth
+  Shadow model 6/8 loaded (resnet18) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_5.pth
+  Shadow model 7/8 loaded (mobilenet_v3_small) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_6.pth
+  Shadow model 8/8 loaded (efficientnet_b0) from /kaggle/working/results/attacks/afmia/std_noreg_seed42/_state/shadow_7.pth
+[SHADOW] building attack dataset …
+  Shadow model 1: pool_size=10000, mean_var=0.048937
+  Shadow model 2: pool_size=10000, mean_var=0.020082
+  Shadow model 3: pool_size=10000, mean_var=0.025881
+  Shadow model 4: pool_size=10000, mean_var=0.013553
+  Shadow model 5: pool_size=10000, mean_var=0.024013
+  Shadow model 6: pool_size=10000, mean_var=0.042514
+  Shadow model 7: pool_size=10000, mean_var=0.027228
+  Shadow model 8: pool_size=10000, mean_var=0.047572
+  Attack dataset built: 80000 samples (40000 positive, 40000 negative), 18 features (fluctuation + max_conf + max_class + variance).
+
+[EVAL] AFMIA
+  Attack model trained (gradient_boosting) on 17 fluctuation features.
+  AFMIA / Gradient Boosting                  acc=0.6920 f1=0.7638 auc=0.8009 tpr@1%=0.1618
+  Attack model trained (random_forest) on 17 fluctuation features.
+  AFMIA / Random Forest                      acc=0.6455 f1=0.6978 auc=0.7493 tpr@1%=0.1574
+  Attack model trained (mlp) on 17 fluctuation features.
+  AFMIA / MLP                                acc=0.6155 f1=0.7222 auc=0.7430 tpr@1%=0.0842
+  Attack model trained (logistic_regression) on 17 fluctuation features.
+  AFMIA / Logistic Regression                acc=0.6078 f1=0.7183 auc=0.8165 tpr@1%=0.0588
+
+[EVAL] AFMIA + BCVA
+  Attack model trained (gradient_boosting) on 18 features (fluctuation + variance).
+  AFMIA + BCVA / Gradient Boosting           acc=0.6866 f1=0.7598 auc=0.7995 tpr@1%=0.1594
+  Attack model trained (random_forest) on 18 features (fluctuation + variance).
+  AFMIA + BCVA / Random Forest               acc=0.6528 f1=0.7095 auc=0.7543 tpr@1%=0.1562
+  Attack model trained (mlp) on 18 features (fluctuation + variance).
+  AFMIA + BCVA / MLP                         acc=0.6000 f1=0.7142 auc=0.6896 tpr@1%=0.0356
+  Attack model trained (logistic_regression) on 18 features (fluctuation + variance).
+  AFMIA + BCVA / Logistic Regression         acc=0.6087 f1=0.7187 auc=0.7723 tpr@1%=0.0546
+
+[DONE] afmia → /kaggle/working/results/attacks/afmia/std_noreg_seed42 (7727s)

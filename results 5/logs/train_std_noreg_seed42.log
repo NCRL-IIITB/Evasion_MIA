@@ -1,0 +1,45 @@
+
+===== 2026-10-27 15:47:29 session start (GPU 0) =====
+[INFO] training=standard regime=noreg seed=42  → /kaggle/working/results/victims/std_noreg_seed42
+[INFO] GPU: Tesla T4
+[INFO] Train 66902 / val 11806 images (split seed 42)
+[INFO] Augmentation: OFF   Early stopping: OFF
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+  0%|          | 0.00/30.8M [00:00<?, ?B/s] 25%|██▌       | 7.75M/30.8M [00:00<00:00, 81.0MB/s] 86%|████████▋ | 26.6M/30.8M [00:00<00:00, 150MB/s] 100%|██████████| 30.8M/30.8M [00:00<00:00, 148MB/s]
+  Epoch 01/35  loss=0.7136 tr_acc=0.8573 tr_auc=0.6602  vl_acc=0.8578 vl_auc=0.7383 adv_auc=0.3414  lr=1.00e-05  gap=-0.05%  (370s)
+  [GPU] peak memory 8.2 GiB
+  Epoch 02/35  loss=0.6167 tr_acc=0.8624 tr_auc=0.7768  vl_acc=0.8605 vl_auc=0.8082 adv_auc=0.2932  lr=4.00e-05  gap=+0.19%  (357s)
+  Epoch 03/35  loss=0.5705 tr_acc=0.8690 tr_auc=0.8175  vl_acc=0.8609 vl_auc=0.8227 adv_auc=0.2342  lr=7.00e-05  gap=+0.81%  (356s)
+  Epoch 04/35  loss=0.5408 tr_acc=0.8720 tr_auc=0.8424  vl_acc=0.8568 vl_auc=0.8245 adv_auc=0.2349  lr=1.00e-04  gap=+1.52%  (356s)
+  Epoch 05/35  loss=0.4962 tr_acc=0.8773 tr_auc=0.8712  vl_acc=0.8760 vl_auc=0.8232 adv_auc=0.2032  lr=9.98e-05  gap=+0.13%  (356s)
+  Epoch 06/35  loss=0.4430 tr_acc=0.8846 tr_auc=0.9011  vl_acc=0.8802 vl_auc=0.8171 adv_auc=0.1862  lr=9.90e-05  gap=+0.44%  (357s)
+  Epoch 07/35  loss=0.3807 tr_acc=0.8962 tr_auc=0.9284  vl_acc=0.8767 vl_auc=0.8132 adv_auc=0.1916  lr=9.79e-05  gap=+1.95%  (357s)
+  Epoch 08/35  loss=0.3173 tr_acc=0.9112 tr_auc=0.9493  vl_acc=0.8723 vl_auc=0.8055 adv_auc=0.1874  lr=9.62e-05  gap=+3.89%  (356s)
+  Epoch 09/35  loss=0.2631 tr_acc=0.9254 tr_auc=0.9636  vl_acc=0.8865 vl_auc=0.8003 adv_auc=0.1719  lr=9.42e-05  gap=+3.90%  (356s)
+  Epoch 10/35  loss=0.2179 tr_acc=0.9382 tr_auc=0.9739  vl_acc=0.8909 vl_auc=0.7951 adv_auc=0.1598  lr=9.17e-05  gap=+4.73%  (357s)
+  Epoch 11/35  loss=0.1790 tr_acc=0.9501 tr_auc=0.9817  vl_acc=0.8978 vl_auc=0.7907 adv_auc=0.1493  lr=8.88e-05  gap=+5.23%  (357s)
+  Epoch 12/35  loss=0.1481 tr_acc=0.9597 tr_auc=0.9874  vl_acc=0.8938 vl_auc=0.7899 adv_auc=0.1634  lr=8.55e-05  gap=+6.59%  (357s)
+  Epoch 13/35  loss=0.1224 tr_acc=0.9674 tr_auc=0.9913  vl_acc=0.9050 vl_auc=0.7886 adv_auc=0.1419  lr=8.19e-05  gap=+6.24%  (357s)
+  Epoch 14/35  loss=0.1004 tr_acc=0.9739 tr_auc=0.9942  vl_acc=0.8996 vl_auc=0.7895 adv_auc=0.1424  lr=7.80e-05  gap=+7.43%  (357s)
+  Epoch 15/35  loss=0.0815 tr_acc=0.9793 tr_auc=0.9962  vl_acc=0.9086 vl_auc=0.7797 adv_auc=0.1320  lr=7.38e-05  gap=+7.07%  (357s)
+  Epoch 16/35  loss=0.0676 tr_acc=0.9830 tr_auc=0.9974  vl_acc=0.9088 vl_auc=0.7794 adv_auc=0.1360  lr=6.94e-05  gap=+7.42%  (357s)
+  Epoch 17/35  loss=0.0573 tr_acc=0.9859 tr_auc=0.9982  vl_acc=0.9098 vl_auc=0.7797 adv_auc=0.1447  lr=6.49e-05  gap=+7.61%  (356s)
+  Epoch 18/35  loss=0.0473 tr_acc=0.9887 tr_auc=0.9988  vl_acc=0.9068 vl_auc=0.7764 adv_auc=0.1420  lr=6.02e-05  gap=+8.19%  (357s)
+  Epoch 19/35  loss=0.0371 tr_acc=0.9912 tr_auc=0.9992  vl_acc=0.9119 vl_auc=0.7779 adv_auc=0.1322  lr=5.54e-05  gap=+7.93%  (357s)
+  Epoch 20/35  loss=0.0316 tr_acc=0.9927 tr_auc=0.9994  vl_acc=0.9135 vl_auc=0.7768 adv_auc=0.1294  lr=5.05e-05  gap=+7.92%  (357s)
+  Epoch 21/35  loss=0.0254 tr_acc=0.9942 tr_auc=0.9996  vl_acc=0.9148 vl_auc=0.7692 adv_auc=0.1203  lr=4.56e-05  gap=+7.93%  (356s)
+  Epoch 22/35  loss=0.0204 tr_acc=0.9955 tr_auc=0.9998  vl_acc=0.9133 vl_auc=0.7732 adv_auc=0.1305  lr=4.08e-05  gap=+8.23%  (356s)
+  Epoch 23/35  loss=0.0173 tr_acc=0.9963 tr_auc=0.9998  vl_acc=0.9114 vl_auc=0.7715 adv_auc=0.1339  lr=3.61e-05  gap=+8.49%  (356s)
+  Epoch 24/35  loss=0.0131 tr_acc=0.9974 tr_auc=0.9999  vl_acc=0.9154 vl_auc=0.7720 adv_auc=0.1333  lr=3.16e-05  gap=+8.20%  (356s)
+  Epoch 25/35  loss=0.0092 tr_acc=0.9983 tr_auc=0.9999  vl_acc=0.9167 vl_auc=0.7711 adv_auc=0.1264  lr=2.72e-05  gap=+8.15%  (357s)
+  Epoch 26/35  loss=0.0076 tr_acc=0.9986 tr_auc=1.0000  vl_acc=0.9152 vl_auc=0.7750 adv_auc=0.1407  lr=2.30e-05  gap=+8.34%  (356s)
+  Epoch 27/35  loss=0.0062 tr_acc=0.9990 tr_auc=1.0000  vl_acc=0.9162 vl_auc=0.7731 adv_auc=0.1340  lr=1.91e-05  gap=+8.28%  (356s)
+  Epoch 28/35  loss=0.0047 tr_acc=0.9992 tr_auc=1.0000  vl_acc=0.9155 vl_auc=0.7745 adv_auc=0.1395  lr=1.55e-05  gap=+8.37%  (356s)
+  Epoch 29/35  loss=0.0034 tr_acc=0.9996 tr_auc=1.0000  vl_acc=0.9181 vl_auc=0.7732 adv_auc=0.1336  lr=1.22e-05  gap=+8.15%  (356s)
+  Epoch 30/35  loss=0.0028 tr_acc=0.9996 tr_auc=1.0000  vl_acc=0.9178 vl_auc=0.7729 adv_auc=0.1338  lr=9.34e-06  gap=+8.18%  (356s)
+  Epoch 31/35  loss=0.0022 tr_acc=0.9998 tr_auc=1.0000  vl_acc=0.9183 vl_auc=0.7749 adv_auc=0.1403  lr=6.84e-06  gap=+8.15%  (356s)
+  Epoch 32/35  loss=0.0017 tr_acc=0.9998 tr_auc=1.0000  vl_acc=0.9172 vl_auc=0.7735 adv_auc=0.1384  lr=4.77e-06  gap=+8.27%  (356s)
+  Epoch 33/35  loss=0.0015 tr_acc=0.9999 tr_auc=1.0000  vl_acc=0.9179 vl_auc=0.7733 adv_auc=0.1364  lr=3.13e-06  gap=+8.20%  (356s)
+  Epoch 34/35  loss=0.0013 tr_acc=0.9999 tr_auc=1.0000  vl_acc=0.9188 vl_auc=0.7736 adv_auc=0.1351  lr=1.95e-06  gap=+8.11%  (356s)
+  Epoch 35/35  loss=0.0012 tr_acc=0.9999 tr_auc=1.0000  vl_acc=0.9184 vl_auc=0.7725 adv_auc=0.1344  lr=1.24e-06  gap=+8.15%  (356s)
+[DONE] Victim training=standard regime=noreg seed=42: selected epoch 35 (last epoch (no early stopping)) → /kaggle/working/results/victims/std_noreg_seed42/model.pth

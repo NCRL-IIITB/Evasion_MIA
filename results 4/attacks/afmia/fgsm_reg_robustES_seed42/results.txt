@@ -1,0 +1,15 @@
+afmia on /kaggle/working/results/victims/fgsm_reg_robustES_seed42 (seed 42)
+========================================================================================================
+Attack                                           Acc    Prec     Rec      F1     AUC   TPR@1%  TPR@.1%
+--------------------------------------------------------------------------------------------------------
+AFMIA / Gradient Boosting                     0.5021  0.5207  0.0528  0.0959  0.5066   0.0086   0.0004
+AFMIA / Random Forest                         0.4994  0.4972  0.1050  0.1734  0.4974   0.0070   0.0004
+AFMIA / MLP                                   0.4995  0.4995  0.5062  0.5028  0.5011   0.0094   0.0006
+AFMIA / Logistic Regression                   0.5025  0.5089  0.1430  0.2233  0.5100   0.0100   0.0002
+AFMIA + BCVA / Gradient Boosting              0.5015  0.5299  0.0266  0.0507  0.5079   0.0094   0.0006
+AFMIA + BCVA / Random Forest                  0.4999  0.4933  0.0074  0.0146  0.5010   0.0074   0.0008
+AFMIA + BCVA / MLP                            0.5020  0.5039  0.2580  0.3413  0.5047   0.0094   0.0000
+AFMIA + BCVA / Logistic Regression            0.5028  0.5098  0.1450  0.2258  0.5100   0.0100   0.0002
+
+max-confidence gap: +0.0043
+runtime: {'shadow_phase': 22244.8, 'total': 29988.8}

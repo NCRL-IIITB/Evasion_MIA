@@ -1,0 +1,16 @@
+cell,tag,metric,label,n,mean,std,ci_lo,ci_hi,per_seed
+std_reg,A,shadow_mia_gb_acc,Shadow-MIA acc (GB),1,0.5,,,,42:0.5000
+std_reg,A,shadow_mia_gb_auc,Shadow-MIA AUC (GB),1,0.49556884,,,,42:0.4956
+std_reg,A,shadow_mia_bcva_gb_acc,Shadow-MIA+BCVA acc (GB),1,0.5,,,,42:0.5000
+std_reg,A,afmia_gb_acc,AFMIA acc (GB),1,0.5012,,,,42:0.5012
+std_reg,A,afmia_gb_auc,AFMIA AUC (GB),1,0.51272354,,,,42:0.5127
+std_reg,A,afmia_gb_tpr1,AFMIA TPR@1%FPR (GB),1,0.0118,,,,42:0.0118
+std_reg,A,afmia_bcva_gb_acc,AFMIA+BCVA acc (GB),1,0.5007,,,,42:0.5007
+std_reg,A,thr_loss_auc,Loss-threshold AUC,1,0.52532136,,,,42:0.5253
+std_reg,A,thr_fluct_wb_auc,White-box fluctuation AUC,1,0.50283748,,,,42:0.5028
+std_reg,A,thr_adv_loss_auc,Adv-loss-threshold AUC,1,0.52149248,,,,42:0.5215
+std_reg,A,loss_gap,Clean loss gap (NM − M),1,0.016373485326766968,,,,42:0.0164
+std_reg,A,memorization_gap,Train−val acc gap,1,-0.0008568477651325068,,,,42:-0.0009
+std_reg,A,test_auc_clean,Clean test AUC,1,0.8288177155378875,,,,42:0.8288
+std_reg,A,flip_eps0.02,FGSM flip rate ε=0.02,1,0.2346242866834271,,,,42:0.2346
+std_reg,A,adv_auc_eps0.02,FGSM test AUC ε=0.02,1,0.31984763129243277,,,,42:0.3198

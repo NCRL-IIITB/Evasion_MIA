@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/tmp/Evasion_MIA/Matched_Experiments/aggregate_results.py", line 480, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/Evasion_MIA/Matched_Experiments/aggregate_results.py", line 461, in main
+    plot_cell_comparison(df, os.path.join(out_dir, "cell_comparison.png"))
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/Evasion_MIA/Matched_Experiments/aggregate_results.py", line 323, in plot_cell_comparison
+    ax.scatter(i + np.asarray(jitter), sub, s=36, color=color if filled else SURFACE,
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               edgecolors=color, linewidths=1.4, zorder=3,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               marker="o" if filled else "s")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/matplotlib/__init__.py", line 1521, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "/usr/local/lib/python3.13/dist-packages/matplotlib/axes/_axes.py", line 4900, in scatter
+    raise ValueError("x and y must be the same size")
+ValueError: x and y must be the same size
+[AGG] 2 victims, 4 checkpoints → /kaggle/working/results/summary/REPORT.md

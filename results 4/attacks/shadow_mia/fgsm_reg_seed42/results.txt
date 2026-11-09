@@ -1,0 +1,15 @@
+shadow_mia on /kaggle/working/results/victims/fgsm_reg_seed42 (seed 42)
+========================================================================================================
+Attack                                           Acc    Prec     Rec      F1     AUC   TPR@1%  TPR@.1%
+--------------------------------------------------------------------------------------------------------
+Shadow-model MIA / Gradient Boosting          0.5000  0.0000  0.0000  0.0000  0.5093   0.0098   0.0022
+Shadow-model MIA / Random Forest              0.5000  0.0000  0.0000  0.0000  0.5030   0.0102   0.0016
+Shadow-model MIA / MLP                        0.5017  0.5290  0.0310  0.0586  0.5135   0.0160   0.0034
+Shadow-model MIA / Logistic Regression        0.5040  0.5758  0.0304  0.0578  0.5147   0.0126   0.0016
+Shadow-model MIA + BCVA / Gradient Boosting   0.5000  0.0000  0.0000  0.0000  0.5088   0.0098   0.0022
+Shadow-model MIA + BCVA / Random Forest       0.5001  0.6667  0.0004  0.0008  0.5047   0.0084   0.0008
+Shadow-model MIA + BCVA / MLP                 0.4997  0.4965  0.0420  0.0774  0.5096   0.0122   0.0036
+Shadow-model MIA + BCVA / Logistic Regression  0.5033  0.5657  0.0284  0.0541  0.5146   0.0130   0.0014
+
+max-confidence gap: +0.0058
+runtime: {'shadow_phase': 8166.8, 'total': 15749.2}

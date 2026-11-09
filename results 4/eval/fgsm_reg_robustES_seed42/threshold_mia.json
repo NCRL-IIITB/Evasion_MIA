@@ -1,0 +1,48 @@
+{
+  "victim_dir": "/kaggle/working/results/victims/fgsm_reg_robustES_seed42",
+  "seed": 42,
+  "selected_epoch": 7,
+  "final": {
+    "generalization": {
+      "member_loss": 0.31968066096305847,
+      "nonmember_loss": 0.32514500617980957,
+      "loss_gap": 0.005464345216751099,
+      "member_auc": 0.8458387266804205,
+      "nonmember_auc": 0.8181535278668838,
+      "member_adv_loss": 0.3022913932800293,
+      "nonmember_adv_loss": 0.30766063928604126,
+      "adv_loss_gap": 0.005369246006011963,
+      "member_fluct": 1.022315263748169,
+      "nonmember_fluct": 1.0327272415161133,
+      "auc_gap": 0.027685198813536704
+    },
+    "threshold_attacks": {
+      "loss": {
+        "auc": 0.50717378,
+        "tpr_at_1pct_fpr": 0.0104,
+        "tpr_at_0.1pct_fpr": 0.0016,
+        "best_threshold_acc": 0.5085
+      },
+      "confidence": {
+        "auc": 0.49788486,
+        "tpr_at_1pct_fpr": 0.0114,
+        "tpr_at_0.1pct_fpr": 0.0016,
+        "best_threshold_acc": 0.5025
+      },
+      "adv_loss": {
+        "auc": 0.50850168,
+        "tpr_at_1pct_fpr": 0.0086,
+        "tpr_at_0.1pct_fpr": 0.0012,
+        "best_threshold_acc": 0.5085
+      },
+      "fluct_wb": {
+        "auc": 0.5066102399999999,
+        "tpr_at_1pct_fpr": 0.0114,
+        "tpr_at_0.1pct_fpr": 0.0024,
+        "best_threshold_acc": 0.5088
+      }
+    }
+  },
+  "checkpoints": [],
+  "runtime_s": 2092.2
+}

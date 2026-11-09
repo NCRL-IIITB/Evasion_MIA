@@ -1,0 +1,223 @@
+[2026-10-25 11:03:07] ==============================================================================
+[2026-10-25 11:03:07] Matched experiment on Kaggle — cell std_reg, seeds [42]; time budget 11.0 h
+[2026-10-25 11:03:07] ==============================================================================
+[2026-10-25 11:03:07] No previous output attached — starting fresh.
+[2026-10-25 11:03:07] Code version: d4c8d5d 2026-10-23 13:53:51 +0530
+[2026-10-25 11:03:20] GPU 0: Tesla T4
+[2026-10-25 11:03:20] GPU 1: Tesla T4
+[2026-10-25 11:03:20] CPU cores: 4  |  job slots on GPUs: [0, 1]
+[2026-10-25 11:03:38] NIH dataset: 112120 PNGs in 12 folder(s); labels CSV /kaggle/input/datasets/nih-chest-xrays/data/Data_Entry_2017.csv
+[2026-10-25 11:03:41] Manifest: 112120 images (78708 member / 33412 non-member) → /kaggle/temp/matched_cache/manifest_kaggle.csv
+[2026-10-25 11:03:41] Image cache: /kaggle/temp/matched_cache
+[2026-10-25 13:16:30] Image cache ready (132.8 min)
+[2026-10-25 13:16:30] 4 tasks planned, 0 already done
+[2026-10-25 13:16:30] START   train_std_reg_seed42  on GPU 0  (8.8 h left in this session)
+[2026-10-25 13:16:30]   … train_std_reg_seed42 running 0 min | ===== 2026-10-25 13:16:30 session start (GPU 0) =====
+[2026-10-25 13:16:30]   (8.8 h left in the time budget)
+[2026-10-25 13:26:30]   … train_std_reg_seed42 running 10 min | 100%|██████████| 30.8M/30.8M [00:00<00:00, 191MB/s]
+[2026-10-25 13:26:30]   (8.6 h left in the time budget)
+[2026-10-25 13:36:30]   … train_std_reg_seed42 running 20 min |   Epoch 02/35  loss=0.6349 tr_acc=0.8600 tr_auc=0.7584  vl_acc=0.8717 vl_auc=0.7962 adv_auc=0.3221  lr=4.00e-05  gap=-1.17%  (579s)
+[2026-10-25 13:36:30]   (8.4 h left in the time budget)
+[2026-10-25 13:46:30]   … train_std_reg_seed42 running 30 min |   Epoch 03/35  loss=0.5987 tr_acc=0.8648 tr_auc=0.7931  vl_acc=0.8686 vl_auc=0.8119 adv_auc=0.2808  lr=7.00e-05  gap=-0.39%  (594s)
+[2026-10-25 13:46:30]   (8.3 h left in the time budget)
+[2026-10-25 13:56:30]   … train_std_reg_seed42 running 40 min |   Epoch 03/35  loss=0.5987 tr_acc=0.8648 tr_auc=0.7931  vl_acc=0.8686 vl_auc=0.8119 adv_auc=0.2808  lr=7.00e-05  gap=-0.39%  (594s)
+[2026-10-25 13:56:30]   (8.1 h left in the time budget)
+[2026-10-25 14:06:30]   … train_std_reg_seed42 running 50 min |   Epoch 04/35  loss=0.5818 tr_acc=0.8675 tr_auc=0.8098  vl_acc=0.8601 vl_auc=0.8218 adv_auc=0.2735  lr=1.00e-04  gap=+0.74%  (610s)
+[2026-10-25 14:06:30]   (7.9 h left in the time budget)
+[2026-10-25 14:16:30]   … train_std_reg_seed42 running 60 min |   Epoch 06/35  loss=0.5501 tr_acc=0.8721 tr_auc=0.8346  vl_acc=0.8773 vl_auc=0.8297 adv_auc=0.2515  lr=9.90e-05  gap=-0.52%  (576s)
+[2026-10-25 14:16:30]   (7.8 h left in the time budget)
+[2026-10-25 14:26:30]   … train_std_reg_seed42 running 70 min |   Epoch 07/35  loss=0.5367 tr_acc=0.8740 tr_auc=0.8462  vl_acc=0.8747 vl_auc=0.8329 adv_auc=0.2406  lr=9.79e-05  gap=-0.07%  (570s)
+[2026-10-25 14:26:30]   (7.6 h left in the time budget)
+[2026-10-25 14:36:30]   … train_std_reg_seed42 running 80 min |   Epoch 08/35  loss=0.5238 tr_acc=0.8754 tr_auc=0.8557  vl_acc=0.8688 vl_auc=0.8344 adv_auc=0.2492  lr=9.62e-05  gap=+0.65%  (570s)
+[2026-10-25 14:36:30]   (7.4 h left in the time budget)
+[2026-10-25 14:46:30]   … train_std_reg_seed42 running 90 min |   Epoch 09/35  loss=0.5103 tr_acc=0.8761 tr_auc=0.8646  vl_acc=0.8770 vl_auc=0.8348 adv_auc=0.2357  lr=9.42e-05  gap=-0.09%  (580s)
+[2026-10-25 14:46:30]   (7.3 h left in the time budget)
+[2026-10-25 14:56:30]   … train_std_reg_seed42 running 100 min |   Epoch 10/35  loss=0.4968 tr_acc=0.8776 tr_auc=0.8722  vl_acc=0.8673 vl_auc=0.8334 adv_auc=0.2224  lr=9.17e-05  gap=+1.02%  (572s)
+[2026-10-25 14:56:30]   (7.1 h left in the time budget)
+[2026-10-25 15:06:30]   … train_std_reg_seed42 running 110 min |   Epoch 11/35  loss=0.4819 tr_acc=0.8794 tr_auc=0.8813  vl_acc=0.8587 vl_auc=0.8339 adv_auc=0.2592  lr=8.88e-05  gap=+2.06%  (575s)
+[2026-10-25 15:06:30]   (6.9 h left in the time budget)
+[2026-10-25 15:16:30]   … train_std_reg_seed42 running 120 min |   Epoch 12/35  loss=0.4661 tr_acc=0.8820 tr_auc=0.8903  vl_acc=0.8716 vl_auc=0.8311 adv_auc=0.2332  lr=8.55e-05  gap=+1.04%  (579s)
+[2026-10-25 15:16:30]   (6.8 h left in the time budget)
+[2026-10-25 15:26:30]   … train_std_reg_seed42 running 130 min |   Epoch 13/35  loss=0.4497 tr_acc=0.8841 tr_auc=0.8987  vl_acc=0.8721 vl_auc=0.8333 adv_auc=0.2296  lr=8.19e-05  gap=+1.21%  (574s)
+[2026-10-25 15:26:30]   (6.6 h left in the time budget)
+[2026-10-25 15:36:30]   … train_std_reg_seed42 running 140 min |   Epoch 14/35  loss=0.4311 tr_acc=0.8867 tr_auc=0.9078  vl_acc=0.8787 vl_auc=0.8326 adv_auc=0.2327  lr=7.80e-05  gap=+0.80%  (573s)
+[2026-10-25 15:36:30]   (6.4 h left in the time budget)
+[2026-10-25 15:46:30]   … train_std_reg_seed42 running 150 min |   Epoch 15/35  loss=0.4142 tr_acc=0.8892 tr_auc=0.9153  vl_acc=0.8751 vl_auc=0.8266 adv_auc=0.2440  lr=7.38e-05  gap=+1.41%  (566s)
+[2026-10-25 15:46:30]   (6.3 h left in the time budget)
+[2026-10-25 15:52:00] DONE    train_std_reg_seed42  (156 min)
+[2026-10-25 15:52:00] START   afmia_std_reg_seed42  on GPU 0  (6.2 h left in this session)
+[2026-10-25 15:52:00] START   shadow_mia_std_reg_seed42  on GPU 1  (6.2 h left in this session)
+[2026-10-25 15:56:30]   … afmia_std_reg_seed42 running 5 min |       [resnet18] Epoch 2/25 | Avg Loss: 0.6375
+[2026-10-25 15:56:30]   … shadow_mia_std_reg_seed42 running 5 min |       [resnet18] Epoch 6/25 | Avg Loss: 0.3010
+[2026-10-25 15:56:30]   (6.1 h left in the time budget)
+[2026-10-25 16:06:30]   … afmia_std_reg_seed42 running 15 min |       [resnet18] Epoch 8/25 | Avg Loss: 0.4011
+[2026-10-25 16:06:30]   … shadow_mia_std_reg_seed42 running 15 min |       [mobilenet_v3_small] Epoch 1/25 | Avg Loss: 0.5927
+[2026-10-25 16:06:30]   (5.9 h left in the time budget)
+[2026-10-25 16:16:30]   … afmia_std_reg_seed42 running 25 min |       [resnet18] Epoch 15/25 | Avg Loss: 0.1257
+[2026-10-25 16:16:30]   … shadow_mia_std_reg_seed42 running 25 min |       [efficientnet_b0] Epoch 3/25 | Avg Loss: 0.3642
+[2026-10-25 16:16:30]   (5.8 h left in the time budget)
+[2026-10-25 16:26:30]   … afmia_std_reg_seed42 running 35 min |       [resnet18] Epoch 21/25 | Avg Loss: 0.0623
+[2026-10-25 16:26:30]   … shadow_mia_std_reg_seed42 running 35 min |       [efficientnet_b0] Epoch 16/25 | Avg Loss: 0.0984
+[2026-10-25 16:26:30]   (5.6 h left in the time budget)
+[2026-10-25 16:36:30]   … afmia_std_reg_seed42 running 45 min |       [mobilenet_v3_small] Epoch 7/25 | Avg Loss: 0.2157
+[2026-10-25 16:36:30]   … shadow_mia_std_reg_seed42 running 45 min |       [densenet121] Epoch 1/25 | Avg Loss: 0.6680
+[2026-10-25 16:36:30]   (5.4 h left in the time budget)
+[2026-10-25 16:46:30]   … afmia_std_reg_seed42 running 55 min |   Shadow model 2/8 trained (mobilenet_v3_small, 842s) → saved
+[2026-10-25 16:46:30]   … shadow_mia_std_reg_seed42 running 55 min |       [densenet121] Epoch 7/25 | Avg Loss: 0.3769
+[2026-10-25 16:46:30]   (5.3 h left in the time budget)
+[2026-10-25 16:56:30]   … afmia_std_reg_seed42 running 65 min |       [efficientnet_b0] Epoch 3/25 | Avg Loss: 0.3382
+[2026-10-25 16:56:30]   … shadow_mia_std_reg_seed42 running 65 min |       [densenet121] Epoch 13/25 | Avg Loss: 0.2300
+[2026-10-25 16:56:30]   (5.1 h left in the time budget)
+[2026-10-25 17:06:30]   … afmia_std_reg_seed42 running 75 min |       [efficientnet_b0] Epoch 8/25 | Avg Loss: 0.2388
+[2026-10-25 17:06:30]   … shadow_mia_std_reg_seed42 running 75 min |       [densenet121] Epoch 19/25 | Avg Loss: 0.1523
+[2026-10-25 17:06:30]   (4.9 h left in the time budget)
+[2026-10-25 17:16:30]   … afmia_std_reg_seed42 running 85 min |       [efficientnet_b0] Epoch 12/25 | Avg Loss: 0.1205
+[2026-10-25 17:16:30]   … shadow_mia_std_reg_seed42 running 85 min |       [shufflenet_v2_x1_0] Epoch 2/25 | Avg Loss: 0.4994
+[2026-10-25 17:16:30]   (4.8 h left in the time budget)
+[2026-10-25 17:26:30]   … afmia_std_reg_seed42 running 95 min |       [efficientnet_b0] Epoch 16/25 | Avg Loss: 0.0706
+[2026-10-25 17:26:30]   … shadow_mia_std_reg_seed42 running 95 min |       [resnet18] Epoch 5/25 | Avg Loss: 0.3486
+[2026-10-25 17:26:30]   (4.6 h left in the time budget)
+[2026-10-25 17:36:30]   … afmia_std_reg_seed42 running 105 min |       [efficientnet_b0] Epoch 20/25 | Avg Loss: 0.0531
+[2026-10-25 17:36:30]   … shadow_mia_std_reg_seed42 running 105 min |   Shadow model 6/8 trained (resnet18, 763s) → saved
+[2026-10-25 17:36:30]   (4.4 h left in the time budget)
+[2026-10-25 17:46:30]   … afmia_std_reg_seed42 running 115 min |       [efficientnet_b0] Epoch 24/25 | Avg Loss: 0.0510
+[2026-10-25 17:46:30]   … shadow_mia_std_reg_seed42 running 115 min |       [efficientnet_b0] Epoch 3/25 | Avg Loss: 0.3581
+[2026-10-25 17:46:30]   (4.3 h left in the time budget)
+[2026-10-25 17:56:30]   … afmia_std_reg_seed42 running 125 min |       [densenet121] Epoch 1/25 | Avg Loss: 0.7480
+[2026-10-25 17:56:30]   … shadow_mia_std_reg_seed42 running 125 min |       [efficientnet_b0] Epoch 16/25 | Avg Loss: 0.0986
+[2026-10-25 17:56:30]   (4.1 h left in the time budget)
+[2026-10-25 18:06:30]   … afmia_std_reg_seed42 running 135 min |       [densenet121] Epoch 3/25 | Avg Loss: 0.6273
+[2026-10-25 18:06:30]   … shadow_mia_std_reg_seed42 running 135 min | [EVAL] Shadow-model MIA
+[2026-10-25 18:06:30]   (3.9 h left in the time budget)
+[2026-10-25 18:16:30]   … afmia_std_reg_seed42 running 145 min |       [densenet121] Epoch 5/25 | Avg Loss: 0.5659
+[2026-10-25 18:16:30]   … shadow_mia_std_reg_seed42 running 145 min |   Shadow-model MIA / Random Forest           acc=0.5001 f1=0.0004 auc=0.4933 tpr@1%=0.0096
+[2026-10-25 18:16:30]   (3.8 h left in the time budget)
+[2026-10-25 18:26:30]   … afmia_std_reg_seed42 running 155 min |       [densenet121] Epoch 7/25 | Avg Loss: 0.5323
+[2026-10-25 18:26:30]   … shadow_mia_std_reg_seed42 running 155 min |   Shadow-model MIA / Random Forest           acc=0.5001 f1=0.0004 auc=0.4933 tpr@1%=0.0096
+[2026-10-25 18:26:30]   (3.6 h left in the time budget)
+[2026-10-25 18:36:30]   … afmia_std_reg_seed42 running 165 min |       [densenet121] Epoch 9/25 | Avg Loss: 0.4939
+[2026-10-25 18:36:30]   … shadow_mia_std_reg_seed42 running 165 min |   Shadow-model MIA / Random Forest           acc=0.5001 f1=0.0004 auc=0.4933 tpr@1%=0.0096
+[2026-10-25 18:36:30]   (3.4 h left in the time budget)
+[2026-10-25 18:46:30]   … afmia_std_reg_seed42 running 175 min |       [densenet121] Epoch 11/25 | Avg Loss: 0.4610
+[2026-10-25 18:46:30]   … shadow_mia_std_reg_seed42 running 175 min |   Shadow-model MIA / Random Forest           acc=0.5001 f1=0.0004 auc=0.4933 tpr@1%=0.0096
+[2026-10-25 18:46:30]   (3.3 h left in the time budget)
+[2026-10-25 18:56:30]   … afmia_std_reg_seed42 running 185 min |       [densenet121] Epoch 13/25 | Avg Loss: 0.4220
+[2026-10-25 18:56:30]   … shadow_mia_std_reg_seed42 running 185 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 18:56:30]   (3.1 h left in the time budget)
+[2026-10-25 19:06:30]   … afmia_std_reg_seed42 running 195 min |       [densenet121] Epoch 15/25 | Avg Loss: 0.3806
+[2026-10-25 19:06:30]   … shadow_mia_std_reg_seed42 running 195 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 19:06:30]   (2.9 h left in the time budget)
+[2026-10-25 19:16:30]   … afmia_std_reg_seed42 running 205 min |       [densenet121] Epoch 17/25 | Avg Loss: 0.3424
+[2026-10-25 19:16:30]   … shadow_mia_std_reg_seed42 running 205 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 19:16:30]   (2.8 h left in the time budget)
+[2026-10-25 19:26:30]   … afmia_std_reg_seed42 running 215 min |       [densenet121] Epoch 19/25 | Avg Loss: 0.3108
+[2026-10-25 19:26:30]   … shadow_mia_std_reg_seed42 running 215 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 19:26:30]   (2.6 h left in the time budget)
+[2026-10-25 19:36:30]   … afmia_std_reg_seed42 running 225 min |       [densenet121] Epoch 21/25 | Avg Loss: 0.2737
+[2026-10-25 19:36:30]   … shadow_mia_std_reg_seed42 running 225 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 19:36:30]   (2.4 h left in the time budget)
+[2026-10-25 19:46:30]   … afmia_std_reg_seed42 running 235 min |       [densenet121] Epoch 23/25 | Avg Loss: 0.2418
+[2026-10-25 19:46:30]   … shadow_mia_std_reg_seed42 running 235 min |   Shadow-model MIA + BCVA / Random Forest    acc=0.5011 f1=0.0250 auc=0.4965 tpr@1%=0.0112
+[2026-10-25 19:46:30]   (2.3 h left in the time budget)
+[2026-10-25 19:56:30]   … afmia_std_reg_seed42 running 245 min |       [shufflenet_v2_x1_0] Epoch 3/25 | Avg Loss: 0.5091
+[2026-10-25 19:56:30]   … shadow_mia_std_reg_seed42 running 245 min |   Attack model trained (mlp) on 18 features.
+[2026-10-25 19:56:30]   (2.1 h left in the time budget)
+[2026-10-25 19:57:30] DONE    shadow_mia_std_reg_seed42  (246 min)
+[2026-10-25 19:57:30] START   eval_std_reg_seed42  on GPU 1  (2.1 h left in this session)
+[2026-10-25 20:06:30]   … afmia_std_reg_seed42 running 255 min |       [shufflenet_v2_x1_0] Epoch 17/25 | Avg Loss: 0.1213
+[2026-10-25 20:06:30]   … eval_std_reg_seed42 running 9 min |   [EVASION] eps=0.001  AUC=0.6861  flip=0.0629
+[2026-10-25 20:06:30]   (1.9 h left in the time budget)
+[2026-10-25 20:16:30]   … afmia_std_reg_seed42 running 265 min |       [resnet18] Epoch 3/25 | Avg Loss: 0.5841
+[2026-10-25 20:16:30]   … eval_std_reg_seed42 running 19 min |   [EVASION] eps=0.002  AUC=0.5861  flip=0.1104
+[2026-10-25 20:16:30]   (1.8 h left in the time budget)
+[2026-10-25 20:26:30]   … afmia_std_reg_seed42 running 275 min |       [resnet18] Epoch 9/25 | Avg Loss: 0.3498
+[2026-10-25 20:26:30]   … eval_std_reg_seed42 running 29 min |   [EVASION] eps=0.01   AUC=0.3644  flip=0.2184
+[2026-10-25 20:26:30]   (1.6 h left in the time budget)
+[2026-10-25 20:36:30]   … afmia_std_reg_seed42 running 285 min |       [resnet18] Epoch 16/25 | Avg Loss: 0.0982
+[2026-10-25 20:36:30]   … eval_std_reg_seed42 running 39 min |   epoch 05: loss_gap=+0.0068  loss_AUC=0.5090  fluct_wb_AUC=0.5049
+[2026-10-25 20:36:30]   (1.4 h left in the time budget)
+[2026-10-25 20:38:45] DONE    eval_std_reg_seed42  (41 min)
+[2026-10-25 20:46:30]   … afmia_std_reg_seed42 running 295 min |       [resnet18] Epoch 22/25 | Avg Loss: 0.0436
+[2026-10-25 20:46:30]   (1.3 h left in the time budget)
+[2026-10-25 20:56:30]   … afmia_std_reg_seed42 running 305 min |       [mobilenet_v3_small] Epoch 10/25 | Avg Loss: 0.1635
+[2026-10-25 20:56:30]   (1.1 h left in the time budget)
+[2026-10-25 21:06:30]   … afmia_std_reg_seed42 running 315 min |   Shadow model 7/8 trained (mobilenet_v3_small, 784s) → saved
+[2026-10-25 21:06:30]   (0.9 h left in the time budget)
+[2026-10-25 21:16:30]   … afmia_std_reg_seed42 running 325 min |       [efficientnet_b0] Epoch 4/25 | Avg Loss: 0.3292
+[2026-10-25 21:16:30]   (0.8 h left in the time budget)
+[2026-10-25 21:26:30]   … afmia_std_reg_seed42 running 335 min |       [efficientnet_b0] Epoch 9/25 | Avg Loss: 0.1447
+[2026-10-25 21:26:30]   (0.6 h left in the time budget)
+[2026-10-25 21:36:30]   … afmia_std_reg_seed42 running 345 min |       [efficientnet_b0] Epoch 13/25 | Avg Loss: 0.0951
+[2026-10-25 21:36:30]   (0.4 h left in the time budget)
+[2026-10-25 21:46:30]   … afmia_std_reg_seed42 running 355 min |       [efficientnet_b0] Epoch 17/25 | Avg Loss: 0.0749
+[2026-10-25 21:46:30]   (0.3 h left in the time budget)
+[2026-10-25 21:56:30]   … afmia_std_reg_seed42 running 365 min |       [efficientnet_b0] Epoch 21/25 | Avg Loss: 0.0452
+[2026-10-25 21:56:30]   (0.1 h left in the time budget)
+[2026-10-25 22:03:15] Time budget reached — stopping afmia_std_reg_seed42 (progress is saved)
+[2026-10-25 22:03:22] ==============================================================================
+[2026-10-25 22:03:22]   done         train_std_reg_seed42
+[2026-10-25 22:03:22]   interrupted  afmia_std_reg_seed42
+[2026-10-25 22:03:22]   done         shadow_mia_std_reg_seed42
+[2026-10-25 22:03:22]   done         eval_std_reg_seed42
+[2026-10-25 22:03:22] NOT FINISHED (time budget reached) — click 'Save Version' again with THIS version's output attached as input; it continues automatically.
+[2026-10-25 22:03:22] ==============================================================================
+[2026-10-28 04:46:39] ==============================================================================
+[2026-10-28 04:46:39] Matched experiment on Kaggle — cell std_reg, seeds [42]; time budget 11.0 h
+[2026-10-28 04:46:39] ==============================================================================
+[2026-10-28 04:46:39] Restored previous output from /kaggle/input/notebooks/kunaljindaliiitb/modified-evasion-mia/results (7s; last session ended 2026-10-25T22:03:22).
+[2026-10-28 04:46:39] Code version: d4c8d5d 2026-10-23 13:53:51 +0530
+[2026-10-28 04:47:04] GPU 0: Tesla T4
+[2026-10-28 04:47:04] GPU 1: Tesla T4
+[2026-10-28 04:47:04] CPU cores: 4  |  job slots on GPUs: [0, 1]
+[2026-10-28 04:47:14] NIH dataset: 112120 PNGs in 12 folder(s); labels CSV /kaggle/input/datasets/nih-chest-xrays/data/Data_Entry_2017.csv
+[2026-10-28 04:47:17] Manifest: 112120 images (78708 member / 33412 non-member) → /kaggle/temp/matched_cache/manifest_kaggle.csv
+[2026-10-28 04:47:17] Image cache: /kaggle/temp/matched_cache
+[2026-10-28 05:59:27] Image cache ready (72.2 min)
+[2026-10-28 05:59:27] 4 tasks planned, 3 already done: train_std_reg_seed42, shadow_mia_std_reg_seed42, eval_std_reg_seed42
+[2026-10-28 05:59:27] START   afmia_std_reg_seed42  on GPU 0  (9.8 h left in this session)
+[2026-10-28 05:59:27]   … afmia_std_reg_seed42 running 0 min | ===== 2026-10-28 05:59:27 session start (GPU 0) =====
+[2026-10-28 05:59:27]   (9.8 h left in the time budget)
+[2026-10-28 06:09:27]   … afmia_std_reg_seed42 running 10 min |       [efficientnet_b0] Epoch 2/25 | Avg Loss: 0.4929
+[2026-10-28 06:09:27]   (9.6 h left in the time budget)
+[2026-10-28 06:19:27]   … afmia_std_reg_seed42 running 20 min |       [efficientnet_b0] Epoch 6/25 | Avg Loss: 0.1842
+[2026-10-28 06:19:27]   (9.5 h left in the time budget)
+[2026-10-28 06:29:27]   … afmia_std_reg_seed42 running 30 min |       [efficientnet_b0] Epoch 10/25 | Avg Loss: 0.1132
+[2026-10-28 06:29:27]   (9.3 h left in the time budget)
+[2026-10-28 06:39:27]   … afmia_std_reg_seed42 running 40 min |       [efficientnet_b0] Epoch 14/25 | Avg Loss: 0.0788
+[2026-10-28 06:39:27]   (9.1 h left in the time budget)
+[2026-10-28 06:49:27]   … afmia_std_reg_seed42 running 50 min |       [efficientnet_b0] Epoch 18/25 | Avg Loss: 0.0571
+[2026-10-28 06:49:27]   (9.0 h left in the time budget)
+[2026-10-28 06:59:27]   … afmia_std_reg_seed42 running 60 min |       [efficientnet_b0] Epoch 22/25 | Avg Loss: 0.0425
+[2026-10-28 06:59:27]   (8.8 h left in the time budget)
+[2026-10-28 07:09:27]   … afmia_std_reg_seed42 running 70 min |   Shadow model 3: pool_size=10000, mean_var=0.001711
+[2026-10-28 07:09:27]   (8.6 h left in the time budget)
+[2026-10-28 07:19:27]   … afmia_std_reg_seed42 running 80 min |   AFMIA / Gradient Boosting                  acc=0.5012 f1=0.1000 auc=0.5127 tpr@1%=0.0118
+[2026-10-28 07:19:27]   (8.5 h left in the time budget)
+[2026-10-28 07:29:27]   … afmia_std_reg_seed42 running 90 min |   AFMIA / Random Forest                      acc=0.5036 f1=0.2591 auc=0.5134 tpr@1%=0.0090
+[2026-10-28 07:29:27]   (8.3 h left in the time budget)
+[2026-10-28 07:39:27]   … afmia_std_reg_seed42 running 100 min |   AFMIA / Random Forest                      acc=0.5036 f1=0.2591 auc=0.5134 tpr@1%=0.0090
+[2026-10-28 07:39:27]   (8.1 h left in the time budget)
+[2026-10-28 07:49:27]   … afmia_std_reg_seed42 running 110 min |   AFMIA / Random Forest                      acc=0.5036 f1=0.2591 auc=0.5134 tpr@1%=0.0090
+[2026-10-28 07:49:27]   (8.0 h left in the time budget)
+[2026-10-28 07:59:27]   … afmia_std_reg_seed42 running 120 min |   AFMIA / Random Forest                      acc=0.5036 f1=0.2591 auc=0.5134 tpr@1%=0.0090
+[2026-10-28 07:59:27]   (7.8 h left in the time budget)
+[2026-10-28 08:09:27]   … afmia_std_reg_seed42 running 130 min |   Attack model trained (mlp) on 17 fluctuation features.
+[2026-10-28 08:09:27]   (7.6 h left in the time budget)
+[2026-10-28 08:19:27]   … afmia_std_reg_seed42 running 140 min |   Attack model trained (random_forest) on 18 features (fluctuation + variance).
+[2026-10-28 08:19:27]   (7.5 h left in the time budget)
+[2026-10-28 08:29:27]   … afmia_std_reg_seed42 running 150 min |   AFMIA + BCVA / Random Forest               acc=0.5028 f1=0.1774 auc=0.5177 tpr@1%=0.0082
+[2026-10-28 08:29:27]   (7.3 h left in the time budget)
+[2026-10-28 08:39:27]   … afmia_std_reg_seed42 running 160 min |   AFMIA + BCVA / Random Forest               acc=0.5028 f1=0.1774 auc=0.5177 tpr@1%=0.0082
+[2026-10-28 08:39:27]   (7.1 h left in the time budget)
+[2026-10-28 08:49:27]   … afmia_std_reg_seed42 running 170 min |   AFMIA + BCVA / Random Forest               acc=0.5028 f1=0.1774 auc=0.5177 tpr@1%=0.0082
+[2026-10-28 08:49:27]   (7.0 h left in the time budget)
+[2026-10-28 08:59:27]   … afmia_std_reg_seed42 running 180 min |   Attack model trained (mlp) on 18 features (fluctuation + variance).
+[2026-10-28 08:59:27]   (6.8 h left in the time budget)
+[2026-10-28 09:02:12] DONE    afmia_std_reg_seed42  (183 min)
+[2026-10-28 09:02:19] ==============================================================================
+[2026-10-28 09:02:19]   done         train_std_reg_seed42
+[2026-10-28 09:02:19]   done         afmia_std_reg_seed42
+[2026-10-28 09:02:19]   done         shadow_mia_std_reg_seed42
+[2026-10-28 09:02:19]   done         eval_std_reg_seed42
+[2026-10-28 09:02:19] COMPLETE — every task for this cell is done. Download this notebook's output (results/) and merge it with the other accounts' outputs.
+[2026-10-28 09:02:19] ==============================================================================

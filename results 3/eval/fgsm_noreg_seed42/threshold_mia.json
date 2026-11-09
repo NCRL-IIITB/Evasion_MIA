@@ -1,0 +1,343 @@
+{
+  "victim_dir": "/kaggle/working/results/victims/fgsm_noreg_seed42",
+  "seed": 42,
+  "selected_epoch": 35,
+  "final": {
+    "generalization": {
+      "member_loss": 0.0006133778369985521,
+      "nonmember_loss": 0.6110222935676575,
+      "loss_gap": 0.6104089021682739,
+      "member_auc": 1.0,
+      "nonmember_auc": 0.749289819272114,
+      "member_adv_loss": 0.23709966242313385,
+      "nonmember_adv_loss": 1.2934939861297607,
+      "adv_loss_gap": 1.056394338607788,
+      "member_fluct": 0.7368550896644592,
+      "nonmember_fluct": 1.268332839012146,
+      "auc_gap": 0.250710180727886
+    },
+    "threshold_attacks": {
+      "loss": {
+        "auc": 0.81697116,
+        "tpr_at_1pct_fpr": 0.0182,
+        "tpr_at_0.1pct_fpr": 0.0028,
+        "best_threshold_acc": 0.8140000000000001
+      },
+      "confidence": {
+        "auc": 0.75253612,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.7325999999999999
+      },
+      "adv_loss": {
+        "auc": 0.81288782,
+        "tpr_at_1pct_fpr": 0.0186,
+        "tpr_at_0.1pct_fpr": 0.0028,
+        "best_threshold_acc": 0.7745
+      },
+      "fluct_wb": {
+        "auc": 0.6811016200000002,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.6515
+      }
+    }
+  },
+  "checkpoints": [
+    {
+      "generalization": {
+        "member_loss": 0.3339902460575104,
+        "nonmember_loss": 0.34092459082603455,
+        "loss_gap": 0.00693434476852417,
+        "member_auc": 0.8275163904718473,
+        "nonmember_auc": 0.7960005977781324,
+        "member_adv_loss": 0.46612876653671265,
+        "nonmember_adv_loss": 0.47157996892929077,
+        "adv_loss_gap": 0.005451202392578125,
+        "member_fluct": 2.969251871109009,
+        "nonmember_fluct": 2.9884555339813232,
+        "auc_gap": 0.03151579269371496
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.5100319,
+          "tpr_at_1pct_fpr": 0.0128,
+          "tpr_at_0.1pct_fpr": 0.0034,
+          "best_threshold_acc": 0.51
+        },
+        "confidence": {
+          "auc": 0.5021844400000001,
+          "tpr_at_1pct_fpr": 0.0138,
+          "tpr_at_0.1pct_fpr": 0.0024,
+          "best_threshold_acc": 0.5054000000000001
+        },
+        "adv_loss": {
+          "auc": 0.50785044,
+          "tpr_at_1pct_fpr": 0.0154,
+          "tpr_at_0.1pct_fpr": 0.0016,
+          "best_threshold_acc": 0.5099
+        },
+        "fluct_wb": {
+          "auc": 0.50586698,
+          "tpr_at_1pct_fpr": 0.0094,
+          "tpr_at_0.1pct_fpr": 0.0006,
+          "best_threshold_acc": 0.5085
+        }
+      },
+      "epoch": 5
+    },
+    {
+      "generalization": {
+        "member_loss": 0.2974490821361542,
+        "nonmember_loss": 0.36582475900650024,
+        "loss_gap": 0.06837567687034607,
+        "member_auc": 0.9403000308889351,
+        "nonmember_auc": 0.7904227465677731,
+        "member_adv_loss": 0.9380335807800293,
+        "nonmember_adv_loss": 1.0303720235824585,
+        "adv_loss_gap": 0.0923384428024292,
+        "member_fluct": 3.14030385017395,
+        "nonmember_fluct": 3.2598507404327393,
+        "auc_gap": 0.14987728432116199
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.5771363199999999,
+          "tpr_at_1pct_fpr": 0.0168,
+          "tpr_at_0.1pct_fpr": 0.0018,
+          "best_threshold_acc": 0.5658
+        },
+        "confidence": {
+          "auc": 0.52839072,
+          "tpr_at_1pct_fpr": 0.0144,
+          "tpr_at_0.1pct_fpr": 0.0018,
+          "best_threshold_acc": 0.5232000000000001
+        },
+        "adv_loss": {
+          "auc": 0.55834648,
+          "tpr_at_1pct_fpr": 0.0142,
+          "tpr_at_0.1pct_fpr": 0.0024,
+          "best_threshold_acc": 0.5475000000000001
+        },
+        "fluct_wb": {
+          "auc": 0.53820748,
+          "tpr_at_1pct_fpr": 0.0128,
+          "tpr_at_0.1pct_fpr": 0.0016,
+          "best_threshold_acc": 0.5304
+        }
+      },
+      "epoch": 10
+    },
+    {
+      "generalization": {
+        "member_loss": 0.13258786499500275,
+        "nonmember_loss": 0.35090404748916626,
+        "loss_gap": 0.2183161824941635,
+        "member_auc": 0.9880288423700977,
+        "nonmember_auc": 0.7734027121411107,
+        "member_adv_loss": 0.6914845108985901,
+        "nonmember_adv_loss": 1.0109654664993286,
+        "adv_loss_gap": 0.3194809556007385,
+        "member_fluct": 1.7021582126617432,
+        "nonmember_fluct": 1.8751230239868164,
+        "auc_gap": 0.21462613022898702
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.68364004,
+          "tpr_at_1pct_fpr": 0.0188,
+          "tpr_at_0.1pct_fpr": 0.0058,
+          "best_threshold_acc": 0.6573
+        },
+        "confidence": {
+          "auc": 0.56758492,
+          "tpr_at_1pct_fpr": 0.0158,
+          "tpr_at_0.1pct_fpr": 0.0056,
+          "best_threshold_acc": 0.5556000000000001
+        },
+        "adv_loss": {
+          "auc": 0.7022746799999999,
+          "tpr_at_1pct_fpr": 0.041,
+          "tpr_at_0.1pct_fpr": 0.005,
+          "best_threshold_acc": 0.6484000000000001
+        },
+        "fluct_wb": {
+          "auc": 0.57438172,
+          "tpr_at_1pct_fpr": 0.0202,
+          "tpr_at_0.1pct_fpr": 0.0044,
+          "best_threshold_acc": 0.5539000000000001
+        }
+      },
+      "epoch": 15
+    },
+    {
+      "generalization": {
+        "member_loss": 0.019054893404245377,
+        "nonmember_loss": 0.4303187131881714,
+        "loss_gap": 0.4112638235092163,
+        "member_auc": 0.9993700236986596,
+        "nonmember_auc": 0.7601431481371624,
+        "member_adv_loss": 0.3125563859939575,
+        "nonmember_adv_loss": 0.8862226605415344,
+        "adv_loss_gap": 0.5736662745475769,
+        "member_fluct": 1.11371910572052,
+        "nonmember_fluct": 1.4988423585891724,
+        "auc_gap": 0.23922687556149713
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.74302162,
+          "tpr_at_1pct_fpr": 0.019,
+          "tpr_at_0.1pct_fpr": 0.004,
+          "best_threshold_acc": 0.7427
+        },
+        "confidence": {
+          "auc": 0.62418064,
+          "tpr_at_1pct_fpr": 0.0168,
+          "tpr_at_0.1pct_fpr": 0.004,
+          "best_threshold_acc": 0.6078
+        },
+        "adv_loss": {
+          "auc": 0.7541493,
+          "tpr_at_1pct_fpr": 0.0174,
+          "tpr_at_0.1pct_fpr": 0.0032,
+          "best_threshold_acc": 0.7045999999999999
+        },
+        "fluct_wb": {
+          "auc": 0.6234121,
+          "tpr_at_1pct_fpr": 0.019,
+          "tpr_at_0.1pct_fpr": 0.0032,
+          "best_threshold_acc": 0.6043999999999999
+        }
+      },
+      "epoch": 20
+    },
+    {
+      "generalization": {
+        "member_loss": 0.004655425436794758,
+        "nonmember_loss": 0.5343837141990662,
+        "loss_gap": 0.5297282934188843,
+        "member_auc": 0.9999671707958903,
+        "nonmember_auc": 0.7478708912916674,
+        "member_adv_loss": 0.053064581006765366,
+        "nonmember_adv_loss": 0.5931285619735718,
+        "adv_loss_gap": 0.5400639772415161,
+        "member_fluct": 0.2594471275806427,
+        "nonmember_fluct": 0.6530576348304749,
+        "auc_gap": 0.25209627950422286
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.7738984400000002,
+          "tpr_at_1pct_fpr": 0.0178,
+          "tpr_at_0.1pct_fpr": 0.0028,
+          "best_threshold_acc": 0.7765
+        },
+        "confidence": {
+          "auc": 0.67972258,
+          "tpr_at_1pct_fpr": 0.011,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.6645000000000001
+        },
+        "adv_loss": {
+          "auc": 0.76831372,
+          "tpr_at_1pct_fpr": 0.0146,
+          "tpr_at_0.1pct_fpr": 0.0028,
+          "best_threshold_acc": 0.7354
+        },
+        "fluct_wb": {
+          "auc": 0.6783258999999999,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.6512
+        }
+      },
+      "epoch": 25
+    },
+    {
+      "generalization": {
+        "member_loss": 0.001233571325428784,
+        "nonmember_loss": 0.5874627828598022,
+        "loss_gap": 0.5862292051315308,
+        "member_auc": 0.9999999209070932,
+        "nonmember_auc": 0.7546167987848975,
+        "member_adv_loss": 0.018780237063765526,
+        "nonmember_adv_loss": 0.36954402923583984,
+        "adv_loss_gap": 0.35076379776000977,
+        "member_fluct": 0.04632186144590378,
+        "nonmember_fluct": 0.32176148891448975,
+        "auc_gap": 0.2453831221221957
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.79897268,
+          "tpr_at_1pct_fpr": 0.0192,
+          "tpr_at_0.1pct_fpr": 0.003,
+          "best_threshold_acc": 0.7990999999999999
+        },
+        "confidence": {
+          "auc": 0.72319336,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.7088000000000001
+        },
+        "adv_loss": {
+          "auc": 0.7262757200000001,
+          "tpr_at_1pct_fpr": 0.0214,
+          "tpr_at_0.1pct_fpr": 0.0064,
+          "best_threshold_acc": 0.6996
+        },
+        "fluct_wb": {
+          "auc": 0.7085528400000001,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.6912
+        }
+      },
+      "epoch": 30
+    },
+    {
+      "generalization": {
+        "member_loss": 0.0006133778369985521,
+        "nonmember_loss": 0.6110222935676575,
+        "loss_gap": 0.6104089021682739,
+        "member_auc": 1.0,
+        "nonmember_auc": 0.749289819272114,
+        "member_adv_loss": 0.23709966242313385,
+        "nonmember_adv_loss": 1.2934939861297607,
+        "adv_loss_gap": 1.056394338607788,
+        "member_fluct": 0.7368550896644592,
+        "nonmember_fluct": 1.268332839012146,
+        "auc_gap": 0.250710180727886
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.81697116,
+          "tpr_at_1pct_fpr": 0.0182,
+          "tpr_at_0.1pct_fpr": 0.0028,
+          "best_threshold_acc": 0.8140000000000001
+        },
+        "confidence": {
+          "auc": 0.75253612,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.7325999999999999
+        },
+        "adv_loss": {
+          "auc": 0.81288782,
+          "tpr_at_1pct_fpr": 0.0186,
+          "tpr_at_0.1pct_fpr": 0.0028,
+          "best_threshold_acc": 0.7745
+        },
+        "fluct_wb": {
+          "auc": 0.6811016200000002,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.6515
+        }
+      },
+      "epoch": 35
+    }
+  ],
+  "runtime_s": 3042.8
+}

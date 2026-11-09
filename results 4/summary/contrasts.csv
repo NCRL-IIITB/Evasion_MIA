@@ -1,0 +1,16 @@
+contrast,metric,label,n,mean,std,ci_lo,ci_hi,ci_excludes_0,per_seed
+Robust-ES vs clean-ES | AT (B2 − B),shadow_mia_gb_acc,Shadow-MIA acc (GB),1,0.0,,,,False,+0.0000
+Robust-ES vs clean-ES | AT (B2 − B),shadow_mia_gb_auc,Shadow-MIA AUC (GB),1,-0.012850340000000071,,,,False,-0.0129
+Robust-ES vs clean-ES | AT (B2 − B),shadow_mia_bcva_gb_acc,Shadow-MIA+BCVA acc (GB),1,0.0,,,,False,+0.0000
+Robust-ES vs clean-ES | AT (B2 − B),afmia_gb_acc,AFMIA acc (GB),1,-0.008199999999999985,,,,False,-0.0082
+Robust-ES vs clean-ES | AT (B2 − B),afmia_gb_auc,AFMIA AUC (GB),1,-0.007274239999999987,,,,False,-0.0073
+Robust-ES vs clean-ES | AT (B2 − B),afmia_gb_tpr1,AFMIA TPR@1%FPR (GB),1,-0.0066,,,,False,-0.0066
+Robust-ES vs clean-ES | AT (B2 − B),afmia_bcva_gb_acc,AFMIA+BCVA acc (GB),1,-0.0050000000000000044,,,,False,-0.0050
+Robust-ES vs clean-ES | AT (B2 − B),thr_loss_auc,Loss-threshold AUC,1,-0.02008966000000001,,,,False,-0.0201
+Robust-ES vs clean-ES | AT (B2 − B),thr_fluct_wb_auc,White-box fluctuation AUC,1,0.004857359999999922,,,,False,+0.0049
+Robust-ES vs clean-ES | AT (B2 − B),thr_adv_loss_auc,Adv-loss-threshold AUC,1,-0.011114419999999958,,,,False,-0.0111
+Robust-ES vs clean-ES | AT (B2 − B),loss_gap,Clean loss gap (NM − M),1,-0.014034539461135864,,,,False,-0.0140
+Robust-ES vs clean-ES | AT (B2 − B),memorization_gap,Train−val acc gap,1,0.005106221354053031,,,,False,+0.0051
+Robust-ES vs clean-ES | AT (B2 − B),test_auc_clean,Clean test AUC,1,-0.0014788060575912088,,,,False,-0.0015
+Robust-ES vs clean-ES | AT (B2 − B),flip_eps0.02,FGSM flip rate ε=0.02,1,-0.008244542878806008,,,,False,-0.0082
+Robust-ES vs clean-ES | AT (B2 − B),adv_auc_eps0.02,FGSM test AUC ε=0.02,1,0.1553326111664688,,,,False,+0.1553

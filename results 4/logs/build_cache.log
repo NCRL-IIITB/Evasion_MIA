@@ -1,0 +1,30 @@
+[CACHE] Indexing zip archives in /nonexistent …
+[CACHE] All 112120 images located (0 in zips).
+   10000/112120  (24 img/s)
+   20000/112120  (24 img/s)
+   30000/112120  (24 img/s)
+   40000/112120  (24 img/s)
+   50000/112120  (25 img/s)
+   60000/112120  (25 img/s)
+   70000/112120  (25 img/s)
+   80000/112120  (25 img/s)
+   90000/112120  (25 img/s)
+  100000/112120  (25 img/s)
+  110000/112120  (25 img/s)
+[CACHE] Built in 4566.0s; 0 colour image(s).
+[CACHE] Verified 300 images bit-exact against the original PIL pipeline ✓
+[CACHE] Indexing zip archives in /nonexistent …
+[CACHE] All 112120 images located (0 in zips).
+   10000/112120  (43 img/s)
+   20000/112120  (43 img/s)
+   30000/112120  (43 img/s)
+   40000/112120  (43 img/s)
+   50000/112120  (42 img/s)
+   60000/112120  (42 img/s)
+   70000/112120  (42 img/s)
+   80000/112120  (42 img/s)
+   90000/112120  (42 img/s)
+  100000/112120  (42 img/s)
+  110000/112120  (42 img/s)
+[CACHE] Built in 2647.7s; 0 colour image(s).
+[CACHE] Verified 300 images bit-exact against the original PIL pipeline ✓

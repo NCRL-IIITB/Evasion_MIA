@@ -1,0 +1,27 @@
+
+===== 2026-10-25 13:16:30 session start (GPU 0) =====
+[INFO] training=standard regime=reg seed=42  → /kaggle/working/results/victims/std_reg_seed42
+[INFO] GPU: Tesla T4
+[INFO] Train 66902 / val 11806 images (split seed 42)
+[INFO] Augmentation: ON   Early stopping: ON (patience 7, clean val AUC)
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+  0%|          | 0.00/30.8M [00:00<?, ?B/s] 44%|████▍     | 13.6M/30.8M [00:00<00:00, 143MB/s]100%|██████████| 30.8M/30.8M [00:00<00:00, 191MB/s]
+  Epoch 01/35  loss=0.7203 tr_acc=0.8581 tr_auc=0.6477  vl_acc=0.8675 vl_auc=0.7275 adv_auc=0.3849  lr=1.00e-05  gap=-0.94%  (607s)
+  [GPU] peak memory 8.2 GiB
+  Epoch 02/35  loss=0.6349 tr_acc=0.8600 tr_auc=0.7584  vl_acc=0.8717 vl_auc=0.7962 adv_auc=0.3221  lr=4.00e-05  gap=-1.17%  (579s)
+  Epoch 03/35  loss=0.5987 tr_acc=0.8648 tr_auc=0.7931  vl_acc=0.8686 vl_auc=0.8119 adv_auc=0.2808  lr=7.00e-05  gap=-0.39%  (594s)
+  Epoch 04/35  loss=0.5818 tr_acc=0.8675 tr_auc=0.8098  vl_acc=0.8601 vl_auc=0.8218 adv_auc=0.2735  lr=1.00e-04  gap=+0.74%  (610s)
+  Epoch 05/35  loss=0.5632 tr_acc=0.8698 tr_auc=0.8241  vl_acc=0.8764 vl_auc=0.8247 adv_auc=0.2464  lr=9.98e-05  gap=-0.66%  (601s)
+  Epoch 06/35  loss=0.5501 tr_acc=0.8721 tr_auc=0.8346  vl_acc=0.8773 vl_auc=0.8297 adv_auc=0.2515  lr=9.90e-05  gap=-0.52%  (576s)
+  Epoch 07/35  loss=0.5367 tr_acc=0.8740 tr_auc=0.8462  vl_acc=0.8747 vl_auc=0.8329 adv_auc=0.2406  lr=9.79e-05  gap=-0.07%  (570s)
+  Epoch 08/35  loss=0.5238 tr_acc=0.8754 tr_auc=0.8557  vl_acc=0.8688 vl_auc=0.8344 adv_auc=0.2492  lr=9.62e-05  gap=+0.65%  (570s)
+  Epoch 09/35  loss=0.5103 tr_acc=0.8761 tr_auc=0.8646  vl_acc=0.8770 vl_auc=0.8348 adv_auc=0.2357  lr=9.42e-05  gap=-0.09%  (580s)
+  Epoch 10/35  loss=0.4968 tr_acc=0.8776 tr_auc=0.8722  vl_acc=0.8673 vl_auc=0.8334 adv_auc=0.2224  lr=9.17e-05  gap=+1.02%  (572s)
+  Epoch 11/35  loss=0.4819 tr_acc=0.8794 tr_auc=0.8813  vl_acc=0.8587 vl_auc=0.8339 adv_auc=0.2592  lr=8.88e-05  gap=+2.06%  (575s)
+  Epoch 12/35  loss=0.4661 tr_acc=0.8820 tr_auc=0.8903  vl_acc=0.8716 vl_auc=0.8311 adv_auc=0.2332  lr=8.55e-05  gap=+1.04%  (579s)
+  Epoch 13/35  loss=0.4497 tr_acc=0.8841 tr_auc=0.8987  vl_acc=0.8721 vl_auc=0.8333 adv_auc=0.2296  lr=8.19e-05  gap=+1.21%  (574s)
+  Epoch 14/35  loss=0.4311 tr_acc=0.8867 tr_auc=0.9078  vl_acc=0.8787 vl_auc=0.8326 adv_auc=0.2327  lr=7.80e-05  gap=+0.80%  (573s)
+  Epoch 15/35  loss=0.4142 tr_acc=0.8892 tr_auc=0.9153  vl_acc=0.8751 vl_auc=0.8266 adv_auc=0.2440  lr=7.38e-05  gap=+1.41%  (566s)
+  Epoch 16/35  loss=0.3946 tr_acc=0.8930 tr_auc=0.9232  vl_acc=0.8739 vl_auc=0.8215 adv_auc=0.2310  lr=6.94e-05  gap=+1.91%  (572s)
+  [EARLY STOP:clean] no improvement for 7 epochs — best epoch 9 (AUC=0.8348)
+[DONE] Victim training=standard regime=reg seed=42 [clean-ES]: selected epoch 9 (best clean val macro-AUC (patience 7)) → /kaggle/working/results/victims/std_reg_seed42/model.pth

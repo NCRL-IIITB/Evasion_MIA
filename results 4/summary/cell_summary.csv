@@ -1,0 +1,31 @@
+cell,tag,metric,label,n,mean,std,ci_lo,ci_hi,per_seed
+fgsm_reg,B,shadow_mia_gb_acc,Shadow-MIA acc (GB),1,0.5,,,,42:0.5000
+fgsm_reg,B,shadow_mia_gb_auc,Shadow-MIA AUC (GB),1,0.50930988,,,,42:0.5093
+fgsm_reg,B,shadow_mia_bcva_gb_acc,Shadow-MIA+BCVA acc (GB),1,0.5,,,,42:0.5000
+fgsm_reg,B,afmia_gb_acc,AFMIA acc (GB),1,0.5103,,,,42:0.5103
+fgsm_reg,B,afmia_gb_auc,AFMIA AUC (GB),1,0.51390834,,,,42:0.5139
+fgsm_reg,B,afmia_gb_tpr1,AFMIA TPR@1%FPR (GB),1,0.0152,,,,42:0.0152
+fgsm_reg,B,afmia_bcva_gb_acc,AFMIA+BCVA acc (GB),1,0.5065,,,,42:0.5065
+fgsm_reg,B,thr_loss_auc,Loss-threshold AUC,1,0.52726344,,,,42:0.5273
+fgsm_reg,B,thr_fluct_wb_auc,White-box fluctuation AUC,1,0.50175288,,,,42:0.5018
+fgsm_reg,B,thr_adv_loss_auc,Adv-loss-threshold AUC,1,0.5196160999999999,,,,42:0.5196
+fgsm_reg,B,loss_gap,Clean loss gap (NM − M),1,0.019498884677886963,,,,42:0.0195
+fgsm_reg,B,memorization_gap,Train−val acc gap,1,0.01280583267982538,,,,42:0.0128
+fgsm_reg,B,test_auc_clean,Clean test AUC,1,0.8173957695237051,,,,42:0.8174
+fgsm_reg,B,flip_eps0.02,FGSM flip rate ε=0.02,1,0.10593000518775689,,,,42:0.1059
+fgsm_reg,B,adv_auc_eps0.02,FGSM test AUC ε=0.02,1,0.6596497276947617,,,,42:0.6596
+fgsm_reg_robustES,B2,shadow_mia_gb_acc,Shadow-MIA acc (GB),1,0.5,,,,42:0.5000
+fgsm_reg_robustES,B2,shadow_mia_gb_auc,Shadow-MIA AUC (GB),1,0.4964595399999999,,,,42:0.4965
+fgsm_reg_robustES,B2,shadow_mia_bcva_gb_acc,Shadow-MIA+BCVA acc (GB),1,0.5,,,,42:0.5000
+fgsm_reg_robustES,B2,afmia_gb_acc,AFMIA acc (GB),1,0.5021,,,,42:0.5021
+fgsm_reg_robustES,B2,afmia_gb_auc,AFMIA AUC (GB),1,0.5066341,,,,42:0.5066
+fgsm_reg_robustES,B2,afmia_gb_tpr1,AFMIA TPR@1%FPR (GB),1,0.0086,,,,42:0.0086
+fgsm_reg_robustES,B2,afmia_bcva_gb_acc,AFMIA+BCVA acc (GB),1,0.5015,,,,42:0.5015
+fgsm_reg_robustES,B2,thr_loss_auc,Loss-threshold AUC,1,0.50717378,,,,42:0.5072
+fgsm_reg_robustES,B2,thr_fluct_wb_auc,White-box fluctuation AUC,1,0.5066102399999999,,,,42:0.5066
+fgsm_reg_robustES,B2,thr_adv_loss_auc,Adv-loss-threshold AUC,1,0.50850168,,,,42:0.5085
+fgsm_reg_robustES,B2,loss_gap,Clean loss gap (NM − M),1,0.005464345216751099,,,,42:0.0055
+fgsm_reg_robustES,B2,memorization_gap,Train−val acc gap,1,0.01791205403387841,,,,42:0.0179
+fgsm_reg_robustES,B2,test_auc_clean,Clean test AUC,1,0.8159169634661139,,,,42:0.8159
+fgsm_reg_robustES,B2,flip_eps0.02,FGSM flip rate ε=0.02,1,0.09768546230895088,,,,42:0.0977
+fgsm_reg_robustES,B2,adv_auc_eps0.02,FGSM test AUC ε=0.02,1,0.8149823388612305,,,,42:0.8150

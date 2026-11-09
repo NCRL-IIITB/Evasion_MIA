@@ -1,0 +1,50 @@
+{
+  "cell": "std_noreg",
+  "seeds": [
+    42
+  ],
+  "robust_es": true,
+  "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+  "smoke": false,
+  "complete": true,
+  "failed": [],
+  "updated": "2026-10-28T08:43:32",
+  "tasks": {
+    "train_std_noreg_seed42": "done",
+    "afmia_std_noreg_seed42": "done",
+    "shadow_mia_std_noreg_seed42": "done",
+    "eval_std_noreg_seed42": "done"
+  },
+  "sessions": [
+    {
+      "start": "2026-10-27T14:28:54",
+      "end": "2026-10-28T01:29:08",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+      "status": {
+        "train_std_noreg_seed42": "done",
+        "afmia_std_noreg_seed42": "interrupted",
+        "shadow_mia_std_noreg_seed42": "done",
+        "eval_std_noreg_seed42": "done"
+      }
+    },
+    {
+      "start": "2026-10-28T04:28:20",
+      "end": "2026-10-28T08:43:32",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d4c8d5d 2026-10-23 13:53:51 +0530",
+      "status": {
+        "train_std_noreg_seed42": "done",
+        "afmia_std_noreg_seed42": "done",
+        "shadow_mia_std_noreg_seed42": "done",
+        "eval_std_noreg_seed42": "done"
+      }
+    }
+  ]
+}

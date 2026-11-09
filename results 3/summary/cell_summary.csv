@@ -1,0 +1,16 @@
+cell,tag,metric,label,n,mean,std,ci_lo,ci_hi,per_seed
+fgsm_noreg,D,shadow_mia_gb_acc,Shadow-MIA acc (GB),1,0.6965,,,,42:0.6965
+fgsm_noreg,D,shadow_mia_gb_auc,Shadow-MIA AUC (GB),1,0.83143502,,,,42:0.8314
+fgsm_noreg,D,shadow_mia_bcva_gb_acc,Shadow-MIA+BCVA acc (GB),1,0.6881,,,,42:0.6881
+fgsm_noreg,D,afmia_gb_acc,AFMIA acc (GB),1,0.6946,,,,42:0.6946
+fgsm_noreg,D,afmia_gb_auc,AFMIA AUC (GB),1,0.7981658,,,,42:0.7982
+fgsm_noreg,D,afmia_gb_tpr1,AFMIA TPR@1%FPR (GB),1,0.1994,,,,42:0.1994
+fgsm_noreg,D,afmia_bcva_gb_acc,AFMIA+BCVA acc (GB),1,0.685,,,,42:0.6850
+fgsm_noreg,D,thr_loss_auc,Loss-threshold AUC,1,0.81697116,,,,42:0.8170
+fgsm_noreg,D,thr_fluct_wb_auc,White-box fluctuation AUC,1,0.6811016200000002,,,,42:0.6811
+fgsm_noreg,D,thr_adv_loss_auc,Adv-loss-threshold AUC,1,0.81288782,,,,42:0.8129
+fgsm_noreg,D,loss_gap,Clean loss gap (NM − M),1,0.6104089021682739,,,,42:0.6104
+fgsm_noreg,D,memorization_gap,Train−val acc gap,1,0.07976004554844662,,,,42:0.0798
+fgsm_noreg,D,test_auc_clean,Clean test AUC,1,0.7526261877200203,,,,42:0.7526
+fgsm_noreg,D,flip_eps0.02,FGSM flip rate ε=0.02,1,0.06003232371603017,,,,42:0.0600
+fgsm_noreg,D,adv_auc_eps0.02,FGSM test AUC ε=0.02,1,0.5387134191066173,,,,42:0.5387
