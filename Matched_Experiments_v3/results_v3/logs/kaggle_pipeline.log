@@ -1,0 +1,18 @@
+[2026-11-10 12:21:14] ==============================================================================
+[2026-11-10 12:21:14] Matched experiment v3 (lab) — 'attack-only': train [] (seeds [42]), import ['std_noreg_seed42', 'fgsm_noreg_seed42']; budget 11.0 h
+[2026-11-10 12:21:14] ==============================================================================
+[2026-11-10 12:21:14] No previous v3 output attached — starting fresh.
+[2026-11-10 12:21:14] Code version: d28cf06 2026-11-10 03:00:10 +0530
+[2026-11-10 12:21:15] WARNING: no finished victim 'std_noreg_seed42' found under /kaggle/input — attach the old output (a Kaggle notebook output or an uploaded dataset of the results folder).
+[2026-11-10 12:21:15] WARNING: no finished victim 'fgsm_noreg_seed42' found under /kaggle/input — attach the old output (a Kaggle notebook output or an uploaded dataset of the results folder).
+[2026-11-10 12:21:28] GPU 0: Tesla T4
+[2026-11-10 12:21:28] GPU 1: Tesla T4
+[2026-11-10 12:21:28] CPU cores: 4  |  job slots: [0, 1]
+[2026-11-10 12:21:33] NIH dataset: 112120 PNGs in 12 folder(s)
+[2026-11-10 12:21:34] Manifest: 112120 images (78708 member / 33412 non-member) → /kaggle/temp/matched_cache/manifest_kaggle.csv
+[2026-11-10 12:21:34] Image cache: /kaggle/temp/matched_cache
+[2026-11-10 12:53:19] Image cache ready (31.8 min)
+[2026-11-10 12:53:19] 0 tasks planned, 0 already done
+[2026-11-10 12:53:25] ==============================================================================
+[2026-11-10 12:53:25] COMPLETE — every task is done. Download this notebook's output (results_v3/) and merge it with the other accounts' outputs (Matched_Experiments_v3/kaggle/merge_kaggle_results.py).
+[2026-11-10 12:53:25] ==============================================================================

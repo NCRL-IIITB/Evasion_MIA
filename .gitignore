@@ -65,3 +65,14 @@ __MACOSX/
 ._*
 # stray file created by a mistyped `pip install x>=2.31`
 =2.31
+
+# =============================================================================
+# FMIA_Experiments — local run outputs (on Kaggle they go to /kaggle/working)
+# Reports, CSVs and attack JSONs of a full run may be pushed; weights/signals not.
+# =============================================================================
+FMIA_Experiments/*/results_*/models/
+FMIA_Experiments/*/results_*/signals/
+FMIA_Experiments/*/results_*_smoke/
+
+# Downloaded Kaggle result archives (hundreds of MB; GitHub rejects files > 100 MB)
+results*.zip

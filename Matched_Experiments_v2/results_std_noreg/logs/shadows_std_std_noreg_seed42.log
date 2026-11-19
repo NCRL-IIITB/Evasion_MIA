@@ -1,0 +1,220 @@
+
+===== 2026-11-10 02:24:08 session start (GPU 1) =====
+[SHADOWS:std] pool=40000  victim pseudo-label positives/image 1.18
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+  0%|          | 0.00/44.7M [00:00<?, ?B/s] 19%|█▉        | 8.38M/44.7M [00:00<00:00, 87.7MB/s] 62%|██████▏   | 27.9M/44.7M [00:00<00:00, 156MB/s] 100%|██████████| 44.7M/44.7M [00:00<00:00, 165MB/s]
+      [resnet18] epoch 1/25 loss 0.6575
+      [resnet18] epoch 2/25 loss 0.6128
+      [resnet18] epoch 3/25 loss 0.5845
+      [resnet18] epoch 4/25 loss 0.5585
+      [resnet18] epoch 5/25 loss 0.5365
+      [resnet18] epoch 6/25 loss 0.5090
+      [resnet18] epoch 7/25 loss 0.4699
+      [resnet18] epoch 8/25 loss 0.4170
+      [resnet18] epoch 9/25 loss 0.3544
+      [resnet18] epoch 10/25 loss 0.2940
+      [resnet18] epoch 11/25 loss 0.2400
+      [resnet18] epoch 12/25 loss 0.1877
+      [resnet18] epoch 13/25 loss 0.1515
+      [resnet18] epoch 14/25 loss 0.1240
+      [resnet18] epoch 15/25 loss 0.0874
+      [resnet18] epoch 16/25 loss 0.0724
+      [resnet18] epoch 17/25 loss 0.0776
+      [resnet18] epoch 18/25 loss 0.0675
+      [resnet18] epoch 19/25 loss 0.0577
+      [resnet18] epoch 20/25 loss 0.0583
+      [resnet18] epoch 21/25 loss 0.0355
+      [resnet18] epoch 22/25 loss 0.0327
+      [resnet18] epoch 23/25 loss 0.0384
+      [resnet18] epoch 24/25 loss 0.0423
+      [resnet18] epoch 25/25 loss 0.0396
+  shadow 1/8 (resnet18) trained in 7.0 min → saved
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v3_small-047dcff4.pth
+  0%|          | 0.00/9.83M [00:00<?, ?B/s] 80%|████████  | 7.88M/9.83M [00:00<00:00, 82.2MB/s]100%|██████████| 9.83M/9.83M [00:00<00:00, 94.5MB/s]
+      [mobilenet_v3_small] epoch 1/25 loss 0.6118
+      [mobilenet_v3_small] epoch 2/25 loss 0.5450
+      [mobilenet_v3_small] epoch 3/25 loss 0.5063
+      [mobilenet_v3_small] epoch 4/25 loss 0.4712
+      [mobilenet_v3_small] epoch 5/25 loss 0.4228
+      [mobilenet_v3_small] epoch 6/25 loss 0.3732
+      [mobilenet_v3_small] epoch 7/25 loss 0.3285
+      [mobilenet_v3_small] epoch 8/25 loss 0.2864
+      [mobilenet_v3_small] epoch 9/25 loss 0.2464
+      [mobilenet_v3_small] epoch 10/25 loss 0.2150
+      [mobilenet_v3_small] epoch 11/25 loss 0.1866
+      [mobilenet_v3_small] epoch 12/25 loss 0.1634
+      [mobilenet_v3_small] epoch 13/25 loss 0.1501
+      [mobilenet_v3_small] epoch 14/25 loss 0.1351
+      [mobilenet_v3_small] epoch 15/25 loss 0.1181
+      [mobilenet_v3_small] epoch 16/25 loss 0.1199
+      [mobilenet_v3_small] epoch 17/25 loss 0.1015
+      [mobilenet_v3_small] epoch 18/25 loss 0.0933
+      [mobilenet_v3_small] epoch 19/25 loss 0.0825
+      [mobilenet_v3_small] epoch 20/25 loss 0.0865
+      [mobilenet_v3_small] epoch 21/25 loss 0.0834
+      [mobilenet_v3_small] epoch 22/25 loss 0.0726
+      [mobilenet_v3_small] epoch 23/25 loss 0.0696
+      [mobilenet_v3_small] epoch 24/25 loss 0.0681
+      [mobilenet_v3_small] epoch 25/25 loss 0.0730
+  shadow 2/8 (mobilenet_v3_small) trained in 8.0 min → saved
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s] 31%|███       | 6.38M/20.5M [00:00<00:00, 66.3MB/s]100%|██████████| 20.5M/20.5M [00:00<00:00, 125MB/s] 
+      [efficientnet_b0] epoch 1/25 loss 0.6338
+      [efficientnet_b0] epoch 2/25 loss 0.5596
+      [efficientnet_b0] epoch 3/25 loss 0.5212
+      [efficientnet_b0] epoch 4/25 loss 0.4821
+      [efficientnet_b0] epoch 5/25 loss 0.4419
+      [efficientnet_b0] epoch 6/25 loss 0.3939
+      [efficientnet_b0] epoch 7/25 loss 0.3477
+      [efficientnet_b0] epoch 8/25 loss 0.3020
+      [efficientnet_b0] epoch 9/25 loss 0.2586
+      [efficientnet_b0] epoch 10/25 loss 0.2197
+      [efficientnet_b0] epoch 11/25 loss 0.1917
+      [efficientnet_b0] epoch 12/25 loss 0.1714
+      [efficientnet_b0] epoch 13/25 loss 0.1507
+      [efficientnet_b0] epoch 14/25 loss 0.1359
+      [efficientnet_b0] epoch 15/25 loss 0.1219
+      [efficientnet_b0] epoch 16/25 loss 0.1177
+      [efficientnet_b0] epoch 17/25 loss 0.1117
+      [efficientnet_b0] epoch 18/25 loss 0.0962
+      [efficientnet_b0] epoch 19/25 loss 0.0899
+      [efficientnet_b0] epoch 20/25 loss 0.0808
+      [efficientnet_b0] epoch 21/25 loss 0.0780
+      [efficientnet_b0] epoch 22/25 loss 0.0881
+      [efficientnet_b0] epoch 23/25 loss 0.0772
+      [efficientnet_b0] epoch 24/25 loss 0.0581
+      [efficientnet_b0] epoch 25/25 loss 0.0608
+  shadow 3/8 (efficientnet_b0) trained in 13.8 min → saved
+      [densenet121] epoch 1/25 loss 0.6605
+      [densenet121] epoch 2/25 loss 0.6206
+      [densenet121] epoch 3/25 loss 0.6120
+      [densenet121] epoch 4/25 loss 0.5970
+      [densenet121] epoch 5/25 loss 0.5837
+      [densenet121] epoch 6/25 loss 0.5707
+      [densenet121] epoch 7/25 loss 0.5584
+      [densenet121] epoch 8/25 loss 0.5512
+      [densenet121] epoch 9/25 loss 0.5336
+      [densenet121] epoch 10/25 loss 0.5216
+      [densenet121] epoch 11/25 loss 0.5031
+      [densenet121] epoch 12/25 loss 0.4946
+      [densenet121] epoch 13/25 loss 0.4745
+      [densenet121] epoch 14/25 loss 0.4556
+      [densenet121] epoch 15/25 loss 0.4359
+      [densenet121] epoch 16/25 loss 0.4192
+      [densenet121] epoch 17/25 loss 0.3884
+      [densenet121] epoch 18/25 loss 0.3686
+      [densenet121] epoch 19/25 loss 0.3561
+      [densenet121] epoch 20/25 loss 0.3258
+      [densenet121] epoch 21/25 loss 0.3119
+      [densenet121] epoch 22/25 loss 0.2841
+      [densenet121] epoch 23/25 loss 0.2698
+      [densenet121] epoch 24/25 loss 0.2506
+      [densenet121] epoch 25/25 loss 0.2331
+  shadow 4/8 (densenet121) trained in 22.7 min → saved
+Downloading: "https://download.pytorch.org/models/shufflenetv2_x1-5666bf0f80.pth" to /root/.cache/torch/hub/checkpoints/shufflenetv2_x1-5666bf0f80.pth
+  0%|          | 0.00/8.79M [00:00<?, ?B/s]100%|██████████| 8.79M/8.79M [00:00<00:00, 99.3MB/s]
+      [shufflenet_v2_x1_0] epoch 1/25 loss 0.6459
+      [shufflenet_v2_x1_0] epoch 2/25 loss 0.5786
+      [shufflenet_v2_x1_0] epoch 3/25 loss 0.5400
+      [shufflenet_v2_x1_0] epoch 4/25 loss 0.5055
+      [shufflenet_v2_x1_0] epoch 5/25 loss 0.4680
+      [shufflenet_v2_x1_0] epoch 6/25 loss 0.4312
+      [shufflenet_v2_x1_0] epoch 7/25 loss 0.3973
+      [shufflenet_v2_x1_0] epoch 8/25 loss 0.3630
+      [shufflenet_v2_x1_0] epoch 9/25 loss 0.3293
+      [shufflenet_v2_x1_0] epoch 10/25 loss 0.2951
+      [shufflenet_v2_x1_0] epoch 11/25 loss 0.2680
+      [shufflenet_v2_x1_0] epoch 12/25 loss 0.2524
+      [shufflenet_v2_x1_0] epoch 13/25 loss 0.2189
+      [shufflenet_v2_x1_0] epoch 14/25 loss 0.2003
+      [shufflenet_v2_x1_0] epoch 15/25 loss 0.1902
+      [shufflenet_v2_x1_0] epoch 16/25 loss 0.1854
+      [shufflenet_v2_x1_0] epoch 17/25 loss 0.1606
+      [shufflenet_v2_x1_0] epoch 18/25 loss 0.1575
+      [shufflenet_v2_x1_0] epoch 19/25 loss 0.1350
+      [shufflenet_v2_x1_0] epoch 20/25 loss 0.1367
+      [shufflenet_v2_x1_0] epoch 21/25 loss 0.1331
+      [shufflenet_v2_x1_0] epoch 22/25 loss 0.1209
+      [shufflenet_v2_x1_0] epoch 23/25 loss 0.1148
+      [shufflenet_v2_x1_0] epoch 24/25 loss 0.0971
+      [shufflenet_v2_x1_0] epoch 25/25 loss 0.1090
+  shadow 5/8 (shufflenet_v2_x1_0) trained in 9.3 min → saved
+      [resnet18] epoch 1/25 loss 0.6610
+      [resnet18] epoch 2/25 loss 0.6105
+      [resnet18] epoch 3/25 loss 0.5833
+      [resnet18] epoch 4/25 loss 0.5576
+      [resnet18] epoch 5/25 loss 0.5315
+      [resnet18] epoch 6/25 loss 0.4997
+      [resnet18] epoch 7/25 loss 0.4635
+      [resnet18] epoch 8/25 loss 0.4160
+      [resnet18] epoch 9/25 loss 0.3556
+      [resnet18] epoch 10/25 loss 0.2963
+      [resnet18] epoch 11/25 loss 0.2443
+      [resnet18] epoch 12/25 loss 0.1868
+      [resnet18] epoch 13/25 loss 0.1446
+      [resnet18] epoch 14/25 loss 0.1099
+      [resnet18] epoch 15/25 loss 0.0906
+      [resnet18] epoch 16/25 loss 0.0781
+      [resnet18] epoch 17/25 loss 0.0658
+      [resnet18] epoch 18/25 loss 0.0565
+      [resnet18] epoch 19/25 loss 0.0592
+      [resnet18] epoch 20/25 loss 0.0530
+      [resnet18] epoch 21/25 loss 0.0456
+      [resnet18] epoch 22/25 loss 0.0425
+      [resnet18] epoch 23/25 loss 0.0426
+      [resnet18] epoch 24/25 loss 0.0378
+      [resnet18] epoch 25/25 loss 0.0349
+  shadow 6/8 (resnet18) trained in 7.0 min → saved
+      [mobilenet_v3_small] epoch 1/25 loss 0.6179
+      [mobilenet_v3_small] epoch 2/25 loss 0.5575
+      [mobilenet_v3_small] epoch 3/25 loss 0.5201
+      [mobilenet_v3_small] epoch 4/25 loss 0.4762
+      [mobilenet_v3_small] epoch 5/25 loss 0.4327
+      [mobilenet_v3_small] epoch 6/25 loss 0.3838
+      [mobilenet_v3_small] epoch 7/25 loss 0.3344
+      [mobilenet_v3_small] epoch 8/25 loss 0.2894
+      [mobilenet_v3_small] epoch 9/25 loss 0.2503
+      [mobilenet_v3_small] epoch 10/25 loss 0.2252
+      [mobilenet_v3_small] epoch 11/25 loss 0.2017
+      [mobilenet_v3_small] epoch 12/25 loss 0.1709
+      [mobilenet_v3_small] epoch 13/25 loss 0.1470
+      [mobilenet_v3_small] epoch 14/25 loss 0.1401
+      [mobilenet_v3_small] epoch 15/25 loss 0.1221
+      [mobilenet_v3_small] epoch 16/25 loss 0.1172
+      [mobilenet_v3_small] epoch 17/25 loss 0.0994
+      [mobilenet_v3_small] epoch 18/25 loss 0.0983
+      [mobilenet_v3_small] epoch 19/25 loss 0.0922
+      [mobilenet_v3_small] epoch 20/25 loss 0.0896
+      [mobilenet_v3_small] epoch 21/25 loss 0.0705
+      [mobilenet_v3_small] epoch 22/25 loss 0.0743
+      [mobilenet_v3_small] epoch 23/25 loss 0.0749
+      [mobilenet_v3_small] epoch 24/25 loss 0.0720
+      [mobilenet_v3_small] epoch 25/25 loss 0.0758
+  shadow 7/8 (mobilenet_v3_small) trained in 8.5 min → saved
+      [efficientnet_b0] epoch 1/25 loss 0.6414
+      [efficientnet_b0] epoch 2/25 loss 0.5655
+      [efficientnet_b0] epoch 3/25 loss 0.5205
+      [efficientnet_b0] epoch 4/25 loss 0.4832
+      [efficientnet_b0] epoch 5/25 loss 0.4395
+      [efficientnet_b0] epoch 6/25 loss 0.3909
+      [efficientnet_b0] epoch 7/25 loss 0.3425
+      [efficientnet_b0] epoch 8/25 loss 0.2970
+      [efficientnet_b0] epoch 9/25 loss 0.2577
+      [efficientnet_b0] epoch 10/25 loss 0.2257
+      [efficientnet_b0] epoch 11/25 loss 0.1928
+      [efficientnet_b0] epoch 12/25 loss 0.1750
+      [efficientnet_b0] epoch 13/25 loss 0.1526
+      [efficientnet_b0] epoch 14/25 loss 0.1463
+      [efficientnet_b0] epoch 15/25 loss 0.1168
+      [efficientnet_b0] epoch 16/25 loss 0.1065
+      [efficientnet_b0] epoch 17/25 loss 0.1103
+      [efficientnet_b0] epoch 18/25 loss 0.0939
+      [efficientnet_b0] epoch 19/25 loss 0.0942
+      [efficientnet_b0] epoch 20/25 loss 0.0944
+      [efficientnet_b0] epoch 21/25 loss 0.0797
+      [efficientnet_b0] epoch 22/25 loss 0.0754
+      [efficientnet_b0] epoch 23/25 loss 0.0835
+      [efficientnet_b0] epoch 24/25 loss 0.0744
+      [efficientnet_b0] epoch 25/25 loss 0.0611
+  shadow 8/8 (efficientnet_b0) trained in 12.9 min → saved
+[SHADOWS:std] all 8 shadows ready → /kaggle/working/results_v2/attacks/std_noreg_seed42/shadows_std

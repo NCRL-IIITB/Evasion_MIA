@@ -22,7 +22,11 @@ The old victims live in the folders you downloaded: `results 5` (C), `results 3`
   3. In the notebook: **Add Input → Your Datasets →** that dataset.
 - **Option B — attach the old notebook output.** Only works on the account that ran it: **Add Input → Your Work → Notebooks →** the old `Matched_Experiments` notebook.
 
-The pipeline searches every attached input for `victims/<name>/model_meta.json` and copies the victim into `results_v3/victims/v1-<name>/`.
+The pipeline searches every attached input for `victims/<name>/` and copies the victim into `results_v3/victims/v1-<name>/`. That folder must contain **both** `model_meta.json` and `model.pth`; your local `results 3` / `results 5` folders do. Upload the whole folder so the `victims/` subfolder is kept, not just the files.
+
+**Check before spending a session:** the log lists every `victims/…` folder it can see under the inputs, and whether each has `model.pth`. If an import can't be found and nothing else is left to do, the run stops with **FAILED** and lists those folders in `STATUS.md`.
+
+**Attach both inputs to the notebook:** the NIH dataset *and* your uploaded results dataset (**Add Input → Your Datasets**). A run where only NIH is attached has nothing to import.
 
 ## Steps (every account)
 

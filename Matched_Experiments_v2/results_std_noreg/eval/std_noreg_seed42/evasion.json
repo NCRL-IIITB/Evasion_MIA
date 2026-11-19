@@ -1,0 +1,144 @@
+{
+  "test_set": "33412 non-member images (patient-disjoint)",
+  "protocol": "unweighted BCE on true labels, eval mode, \u03b5 in /255 pixel units, clamped to the valid image range",
+  "paper_protocol": "paper Table I: \u03b5 in normalised units, clamp to [-3, 3]",
+  "clean": {
+    "hamming_loss": 0.08096492278223393,
+    "exact_match": 0.4143122231533581,
+    "f1_macro": 0.2736715208747887,
+    "auc_macro": 0.7624512807465335
+  },
+  "paper_fgsm": {
+    "0.001": {
+      "metrics": {
+        "hamming_loss": 0.17785226864599546,
+        "exact_match": 0.04306835867353047,
+        "f1_macro": 0.06666151516069543,
+        "auc_macro": 0.276389432960846
+      },
+      "flip_rate": 0.09739414980645676
+    },
+    "0.002": {
+      "metrics": {
+        "hamming_loss": 0.19848557404525322,
+        "exact_match": 0.04175146653896804,
+        "f1_macro": 0.042880322622190534,
+        "auc_macro": 0.2272238151124333
+      },
+      "flip_rate": 0.11814717267249292
+    },
+    "0.005": {
+      "metrics": {
+        "hamming_loss": 0.2215232052356439,
+        "exact_match": 0.04118280857177062,
+        "f1_macro": 0.027997231657846212,
+        "auc_macro": 0.19280863004407153
+      },
+      "flip_rate": 0.14135240831637336
+    },
+    "0.01": {
+      "metrics": {
+        "hamming_loss": 0.23202242707210982,
+        "exact_match": 0.04115287920507602,
+        "f1_macro": 0.023983189484776686,
+        "auc_macro": 0.17871521831967171
+      },
+      "flip_rate": 0.15202721577078096
+    },
+    "0.02": {
+      "metrics": {
+        "hamming_loss": 0.2318448461630552,
+        "exact_match": 0.04118280857177062,
+        "f1_macro": 0.021061445121736,
+        "auc_macro": 0.17319410638977095
+      },
+      "flip_rate": 0.15246019394229618
+    }
+  },
+  "fgsm": {
+    "0.5": {
+      "metrics": {
+        "hamming_loss": 0.23051997286404086,
+        "exact_match": 0.04115287920507602,
+        "f1_macro": 0.024503641407018387,
+        "auc_macro": 0.18101179031848855
+      },
+      "flip_rate": 0.1505008180693563
+    },
+    "1": {
+      "metrics": {
+        "hamming_loss": 0.23302406321082245,
+        "exact_match": 0.04118280857177062,
+        "f1_macro": 0.021258518792866332,
+        "auc_macro": 0.17355850307001564
+      },
+      "flip_rate": 0.153447863043218
+    },
+    "2": {
+      "metrics": {
+        "hamming_loss": 0.21925655453130613,
+        "exact_match": 0.04127259667185442,
+        "f1_macro": 0.01973401258960787,
+        "auc_macro": 0.1794593497135285
+      },
+      "flip_rate": 0.14187916517019833
+    },
+    "4": {
+      "metrics": {
+        "hamming_loss": 0.18026657089269324,
+        "exact_match": 0.044295462708009097,
+        "f1_macro": 0.01791528722310092,
+        "auc_macro": 0.230399367785683
+      },
+      "flip_rate": 0.11737898559399816
+    },
+    "8": {
+      "metrics": {
+        "hamming_loss": 0.1171435412426673,
+        "exact_match": 0.1568598108464025,
+        "f1_macro": 0.02975635535605492,
+        "auc_macro": 0.39769024050199314
+      },
+      "flip_rate": 0.08684704098327946
+    }
+  },
+  "pgd": {
+    "1": {
+      "metrics": {
+        "hamming_loss": 0.31737333333333334,
+        "exact_match": 0.0328,
+        "f1_macro": 0.00552417313876767,
+        "auc_macro": 0.18399247427702545
+      },
+      "flip_rate": 0.24196
+    },
+    "2": {
+      "metrics": {
+        "hamming_loss": 0.34702666666666665,
+        "exact_match": 0.0246,
+        "f1_macro": 0.0044515003199663925,
+        "auc_macro": 0.17629444083520376
+      },
+      "flip_rate": 0.27441333333333334
+    },
+    "4": {
+      "metrics": {
+        "hamming_loss": 0.35778666666666664,
+        "exact_match": 0.011,
+        "f1_macro": 0.001974172072273676,
+        "auc_macro": 0.16620417066766427
+      },
+      "flip_rate": 0.2921066666666667
+    }
+  },
+  "pgd_subset": {
+    "n": 5000,
+    "clean": {
+      "hamming_loss": 0.08064,
+      "exact_match": 0.4162,
+      "f1_macro": 0.2867906467101355,
+      "auc_macro": 0.7763122577623225
+    }
+  },
+  "victim_dir": "/kaggle/working/results_v2/victims/std_noreg_seed42"
+}

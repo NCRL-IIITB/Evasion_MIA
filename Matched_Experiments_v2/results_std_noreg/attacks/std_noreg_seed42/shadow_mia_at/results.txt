@@ -1,0 +1,13 @@
+shadow_mia_at on /kaggle/working/results_v2/victims/std_noreg_seed42 (seed 42)
+========================================================================================================================
+Attack                                                       AUC   TPR@1%  TPR@.1%  Acc@.5  Acc@med    Prec     Rec      F1
+--------------------------------------------------------------------------------------------------------------------------------
+Shadow-MIA (AT shadows) / Gradient Boosting               0.7893   0.2010   0.0378  0.6829   0.6804  0.6150  0.9778  0.7551
+Shadow-MIA (AT shadows) / Random Forest                   0.7625   0.1180   0.0384  0.6561   0.6750  0.6081  0.8780  0.7186
+Shadow-MIA (AT shadows) / MLP                             0.7562   0.0878   0.0246  0.6348   0.6468  0.5782  0.9964  0.7318
+Shadow-MIA (AT shadows) / Logistic Regression             0.7052   0.0304   0.0128  0.6030   0.6398  0.5591  0.9742  0.7105
+
+Classifier-free scores on the victim (AUC; shadow-row AUC = same score on the attacker's shadow rows)
+------------------------------------------------------------------------------------------------------------------------
+threshold: certainty                                      0.7913   0.0000                    0.7230   shadow-row AUC 0.5905
+threshold: max_conf                                       0.8338   0.0000                    0.7551   shadow-row AUC 0.6361

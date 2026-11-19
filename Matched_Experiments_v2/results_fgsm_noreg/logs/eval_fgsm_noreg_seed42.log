@@ -1,0 +1,37 @@
+
+===== 2026-11-10 23:59:47 session start (GPU 1) =====
+[EVAL] /kaggle/working/results_v2/victims/fgsm_noreg_seed42: evasion …
+  [EVASION] clean AUC=0.7349 on 33412 non-members
+  [EVASION] paper FGSM ε=0.001 (normalised)  AUC=0.5712  flip=0.0380
+  [EVASION] paper FGSM ε=0.002 (normalised)  AUC=0.4730  flip=0.0589
+  [EVASION] paper FGSM ε=0.005 (normalised)  AUC=0.3474  flip=0.0835
+  [EVASION] paper FGSM ε=0.01 (normalised)  AUC=0.3021  flip=0.0944
+  [EVASION] paper FGSM ε=0.02 (normalised)  AUC=0.3237  flip=0.0935
+  [EVASION] FGSM ε=0.5/255  AUC=0.3079  flip=0.0927
+
+===== 2026-11-11 07:39:03 session start (GPU 1) =====
+[EVAL] /kaggle/working/results_v2/victims/fgsm_noreg_seed42: evasion …
+  [EVASION] clean AUC=0.7349 on 33412 non-members
+  [EVASION] paper FGSM ε=0.001 (normalised)  AUC=0.5712  flip=0.0380
+  [EVASION] paper FGSM ε=0.002 (normalised)  AUC=0.4730  flip=0.0589
+  [EVASION] paper FGSM ε=0.005 (normalised)  AUC=0.3474  flip=0.0835
+  [EVASION] paper FGSM ε=0.01 (normalised)  AUC=0.3022  flip=0.0944
+  [EVASION] paper FGSM ε=0.02 (normalised)  AUC=0.3238  flip=0.0936
+  [EVASION] FGSM ε=0.5/255  AUC=0.3079  flip=0.0927
+  [EVASION] FGSM ε=1/255  AUC=0.3131  flip=0.0950
+  [EVASION] FGSM ε=2/255  AUC=0.3636  flip=0.0897
+  [EVASION] FGSM ε=4/255  AUC=0.4935  flip=0.1942
+  [EVASION] FGSM ε=8/255  AUC=0.5117  flip=0.3136
+  [EVASION] PGD-10 ε=1/255  AUC=0.3283  flip=0.1334
+  [EVASION] PGD-10 ε=2/255  AUC=0.3415  flip=0.1483
+  [EVASION] PGD-10 ε=4/255  AUC=0.3096  flip=0.1616
+[EVAL] threshold MIAs on 5000 + 5000 images (final model) …
+  final: loss_AUC=0.7051  certainty_AUC=0.5604  adv_loss_AUC=0.5227  adv_loss_pgd_AUC=0.6101  fluct_e1_AUC=0.5687  fluct_e4_AUC=0.4916  dlogit_e4_AUC=0.5016
+  epoch 05: loss_gap=+0.0021 loss_AUC=0.5030 adv_loss_AUC=0.5052 fluct_e4_AUC=0.5122
+  epoch 10: loss_gap=+0.0171 loss_AUC=0.5171 adv_loss_AUC=0.4985 fluct_e4_AUC=0.5006
+  epoch 15: loss_gap=+0.0995 loss_AUC=0.5755 adv_loss_AUC=0.5105 fluct_e4_AUC=0.4941
+  epoch 20: loss_gap=+0.2149 loss_AUC=0.6386 adv_loss_AUC=0.5146 fluct_e4_AUC=0.5150
+  epoch 25: loss_gap=+0.3103 loss_AUC=0.6941 adv_loss_AUC=0.5294 fluct_e4_AUC=0.5151
+  epoch 30: loss_gap=+0.2939 loss_AUC=0.6922 adv_loss_AUC=0.5194 fluct_e4_AUC=0.4909
+  epoch 35: loss_gap=+0.3584 loss_AUC=0.7051 adv_loss_AUC=0.5227 fluct_e4_AUC=0.4916
+[EVAL] done in 4620s → /kaggle/working/results_v2/eval/fgsm_noreg_seed42

@@ -1,0 +1,61 @@
+{
+  "cell": "fgsm_noreg",
+  "victims": [
+    "fgsm_noreg"
+  ],
+  "seeds": [
+    42
+  ],
+  "code_version": "d28cf06 2026-11-10 03:00:10 +0530",
+  "smoke": false,
+  "complete": true,
+  "failed": [],
+  "updated": "2026-11-11T10:16:10",
+  "tasks": {
+    "train_fgsm_noreg_seed42": "done",
+    "shadows_at_fgsm_noreg_seed42": "done",
+    "shadows_std_fgsm_noreg_seed42": "done",
+    "eval_fgsm_noreg_seed42": "done",
+    "attack_afmia_fgsm_noreg_seed42": "done",
+    "attack_shadow_mia_std_fgsm_noreg_seed42": "done",
+    "attack_shadow_mia_at_fgsm_noreg_seed42": "done"
+  },
+  "sessions": [
+    {
+      "start": "2026-11-10T13:21:56",
+      "end": "2026-11-11T00:22:07",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d28cf06 2026-11-10 03:00:10 +0530",
+      "status": {
+        "train_fgsm_noreg_seed42": "done",
+        "shadows_at_fgsm_noreg_seed42": "interrupted",
+        "shadows_std_fgsm_noreg_seed42": "paused",
+        "eval_fgsm_noreg_seed42": "interrupted",
+        "attack_afmia_fgsm_noreg_seed42": "pending",
+        "attack_shadow_mia_std_fgsm_noreg_seed42": "pending",
+        "attack_shadow_mia_at_fgsm_noreg_seed42": "pending"
+      }
+    },
+    {
+      "start": "2026-11-11T06:44:06",
+      "end": "2026-11-11T10:16:10",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d28cf06 2026-11-10 03:00:10 +0530",
+      "status": {
+        "train_fgsm_noreg_seed42": "done",
+        "shadows_at_fgsm_noreg_seed42": "done",
+        "shadows_std_fgsm_noreg_seed42": "done",
+        "eval_fgsm_noreg_seed42": "done",
+        "attack_afmia_fgsm_noreg_seed42": "done",
+        "attack_shadow_mia_std_fgsm_noreg_seed42": "done",
+        "attack_shadow_mia_at_fgsm_noreg_seed42": "done"
+      }
+    }
+  ]
+}

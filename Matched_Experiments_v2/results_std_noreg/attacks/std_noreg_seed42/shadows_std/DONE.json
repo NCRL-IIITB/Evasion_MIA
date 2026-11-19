@@ -1,0 +1,11 @@
+{
+  "kind": "std",
+  "n_shadows": 8,
+  "durations_s": {
+    "resnet18": 419.6,
+    "mobilenet_v3_small": 508.9,
+    "efficientnet_b0": 773.5,
+    "densenet121": 1364.6,
+    "shufflenet_v2_x1_0": 556.7
+  }
+}

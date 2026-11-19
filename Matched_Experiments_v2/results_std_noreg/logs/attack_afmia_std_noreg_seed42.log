@@ -1,0 +1,34 @@
+
+===== 2026-11-10 06:00:08 session start (GPU 0) =====
+[afmia] victim /kaggle/working/results_v2/victims/std_noreg_seed42: 8 at shadows, attack subset 10000 images → 39694 balanced rows; eval 5000 + 5000
+  shadow side: clean, v1 and v2 probes on the attack subset …
+    shadow side 1600/10000 images (2.5 min)
+    shadow side 3200/10000 images (4.6 min)
+    shadow side 4800/10000 images (6.7 min)
+    shadow side 6400/10000 images (8.8 min)
+    shadow side 8000/10000 images (10.9 min)
+    shadow side 9600/10000 images (13.0 min)
+  victim side: clean, v1 and v2 probes on the evaluation images …
+    victim side 1600/10000 images (1.5 min)
+    victim side 3200/10000 images (2.9 min)
+    victim side 4800/10000 images (4.2 min)
+    victim side 6400/10000 images (5.6 min)
+    victim side 8000/10000 images (7.0 min)
+    victim side 9600/10000 images (8.4 min)
+  AFMIA (paper features) / Gradient Boosting           AUC=0.7794 TPR@1%=0.1868 acc@0.5=0.6456 acc@median=0.6660
+  AFMIA (paper features) / Random Forest               AUC=0.8005 TPR@1%=0.1074 acc@0.5=0.6489 acc@median=0.7025
+  AFMIA (paper features) / MLP                         AUC=0.7596 TPR@1%=0.0892 acc@0.5=0.6117 acc@median=0.6402
+  AFMIA (paper features) / Logistic Regression         AUC=0.8557 TPR@1%=0.1728 acc@0.5=0.5874 acc@median=0.7544
+  AFMIA (paper features) + BCVA / Gradient Boosting    AUC=0.7623 TPR@1%=0.1892 acc@0.5=0.6315 acc@median=0.6492
+  AFMIA (paper features) + BCVA / Random Forest        AUC=0.7916 TPR@1%=0.1034 acc@0.5=0.6399 acc@median=0.7015
+  AFMIA (paper features) + BCVA / MLP                  AUC=0.7072 TPR@1%=0.0476 acc@0.5=0.6204 acc@median=0.6052
+  AFMIA (paper features) + BCVA / Logistic Regression  AUC=0.7076 TPR@1%=0.0334 acc@0.5=0.5931 acc@median=0.6366
+  AFMIA-v2 (perturbation only) / Gradient Boosting     AUC=0.7362 TPR@1%=0.0456 acc@0.5=0.6430 acc@median=0.6678
+  AFMIA-v2 (perturbation only) / Random Forest         AUC=0.6655 TPR@1%=0.0230 acc@0.5=0.6089 acc@median=0.6108
+  AFMIA-v2 (perturbation only) / MLP                   AUC=0.7116 TPR@1%=0.0462 acc@0.5=0.6243 acc@median=0.6452
+  AFMIA-v2 (perturbation only) / Logistic Regression   AUC=0.7225 TPR@1%=0.0456 acc@0.5=0.6061 acc@median=0.6634
+  AFMIA-v2 (+ clean confidence) / Gradient Boosting    AUC=0.7881 TPR@1%=0.1858 acc@0.5=0.6656 acc@median=0.6810
+  AFMIA-v2 (+ clean confidence) / Random Forest        AUC=0.7410 TPR@1%=0.0488 acc@0.5=0.6395 acc@median=0.6627
+  AFMIA-v2 (+ clean confidence) / MLP                  AUC=0.7234 TPR@1%=0.0906 acc@0.5=0.6227 acc@median=0.6482
+  AFMIA-v2 (+ clean confidence) / Logistic Regression  AUC=0.7203 TPR@1%=0.0350 acc@0.5=0.6294 acc@median=0.6482
+[DONE] afmia → /kaggle/working/results_v2/attacks/std_noreg_seed42/afmia (24.9 min)

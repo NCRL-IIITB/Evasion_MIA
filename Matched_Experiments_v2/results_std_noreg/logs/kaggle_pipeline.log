@@ -1,0 +1,154 @@
+[2026-11-09 21:36:11] ==============================================================================
+[2026-11-09 21:36:11] Matched experiment v2 on Kaggle — cell std_noreg, seeds [42], victims ['std_noreg']; budget 11.0 h
+[2026-11-09 21:36:11] ==============================================================================
+[2026-11-09 21:36:11] No previous v2 output attached — starting fresh.
+[2026-11-09 21:36:11] Code version: d28cf06 2026-11-10 03:00:10 +0530
+[2026-11-09 21:36:24] GPU 0: Tesla T4
+[2026-11-09 21:36:24] GPU 1: Tesla T4
+[2026-11-09 21:36:24] CPU cores: 4  |  job slots: [0, 1]
+[2026-11-09 21:36:30] NIH dataset: 112120 PNGs in 12 folder(s)
+[2026-11-09 21:36:31] Manifest: 112120 images (78708 member / 33412 non-member) → /kaggle/temp/matched_cache/manifest_kaggle.csv
+[2026-11-09 21:36:31] Image cache: /kaggle/temp/matched_cache
+[2026-11-09 22:14:52] Image cache ready (38.4 min)
+[2026-11-09 22:14:52] 7 tasks planned, 0 already done
+[2026-11-09 22:14:52] START   train_std_noreg_seed42  on GPU 0  (10.4 h left)
+[2026-11-09 22:14:52]   … train_std_noreg_seed42 running 0 min | ===== 2026-11-09 22:14:52 session start (GPU 0) =====
+[2026-11-09 22:14:52]   (10.4 h left in the time budget)
+[2026-11-09 22:24:52]   … train_std_noreg_seed42 running 10 min |   [GPU] peak memory 8.2 GiB
+[2026-11-09 22:24:52]   (10.2 h left in the time budget)
+[2026-11-09 22:34:52]   … train_std_noreg_seed42 running 20 min |   Epoch 02/35 loss=0.6169 tr_acc=0.8622 vl_auc=0.8074 fgsm_auc=0.3984 pgd_auc=0.1158 lr=4.00e-05 gap=-0.15% (426s)
+[2026-11-09 22:34:52]   (10.0 h left in the time budget)
+[2026-11-09 22:44:52]   … train_std_noreg_seed42 running 30 min |   Epoch 04/35 loss=0.5396 tr_acc=0.8719 vl_auc=0.8208 fgsm_auc=0.2544 pgd_auc=0.1492 lr=1.00e-04 gap=+1.14% (427s)
+[2026-11-09 22:44:52]   (9.9 h left in the time budget)
+[2026-11-09 22:54:52]   … train_std_noreg_seed42 running 40 min |   Epoch 05/35 loss=0.4970 tr_acc=0.8771 vl_auc=0.8224 fgsm_auc=0.2251 pgd_auc=0.1088 lr=9.98e-05 gap=+0.26% (427s)
+[2026-11-09 22:54:52]   (9.7 h left in the time budget)
+[2026-11-09 23:04:52]   … train_std_noreg_seed42 running 50 min |   Epoch 07/35 loss=0.3800 tr_acc=0.8961 vl_auc=0.8109 fgsm_auc=0.2083 pgd_auc=0.1056 lr=9.79e-05 gap=+2.35% (427s)
+[2026-11-09 23:04:52]   (9.5 h left in the time budget)
+[2026-11-09 23:14:52]   … train_std_noreg_seed42 running 60 min |   Epoch 08/35 loss=0.3171 tr_acc=0.9109 vl_auc=0.7995 fgsm_auc=0.2064 pgd_auc=0.0899 lr=9.62e-05 gap=+3.36% (426s)
+[2026-11-09 23:14:52]   (9.4 h left in the time budget)
+[2026-11-09 23:24:52]   … train_std_noreg_seed42 running 70 min |   Epoch 09/35 loss=0.2630 tr_acc=0.9252 vl_auc=0.7982 fgsm_auc=0.2105 pgd_auc=0.0691 lr=9.42e-05 gap=+4.15% (427s)
+[2026-11-09 23:24:52]   (9.2 h left in the time budget)
+[2026-11-09 23:34:52]   … train_std_noreg_seed42 running 80 min |   Epoch 11/35 loss=0.1803 tr_acc=0.9494 vl_auc=0.7886 fgsm_auc=0.1862 pgd_auc=0.0566 lr=8.88e-05 gap=+5.71% (426s)
+[2026-11-09 23:34:52]   (9.0 h left in the time budget)
+[2026-11-09 23:44:52]   … train_std_noreg_seed42 running 90 min |   Epoch 12/35 loss=0.1484 tr_acc=0.9594 vl_auc=0.7883 fgsm_auc=0.1932 pgd_auc=0.0645 lr=8.55e-05 gap=+5.70% (426s)
+[2026-11-09 23:44:52]   (8.9 h left in the time budget)
+[2026-11-09 23:54:52]   … train_std_noreg_seed42 running 100 min |   Epoch 14/35 loss=0.0996 tr_acc=0.9738 vl_auc=0.7813 fgsm_auc=0.1776 pgd_auc=0.0594 lr=7.80e-05 gap=+6.94% (425s)
+[2026-11-09 23:54:52]   (8.7 h left in the time budget)
+[2026-11-10 00:04:52]   … train_std_noreg_seed42 running 110 min |   Epoch 15/35 loss=0.0824 tr_acc=0.9791 vl_auc=0.7782 fgsm_auc=0.1818 pgd_auc=0.0676 lr=7.38e-05 gap=+7.42% (426s)
+[2026-11-10 00:04:52]   (8.5 h left in the time budget)
+[2026-11-10 00:14:52]   … train_std_noreg_seed42 running 120 min |   Epoch 16/35 loss=0.0681 tr_acc=0.9831 vl_auc=0.7772 fgsm_auc=0.1976 pgd_auc=0.0576 lr=6.94e-05 gap=+8.10% (426s)
+[2026-11-10 00:14:52]   (8.4 h left in the time budget)
+[2026-11-10 00:24:52]   … train_std_noreg_seed42 running 130 min |   Epoch 18/35 loss=0.0470 tr_acc=0.9887 vl_auc=0.7755 fgsm_auc=0.1917 pgd_auc=0.0786 lr=6.02e-05 gap=+8.22% (426s)
+[2026-11-10 00:24:52]   (8.2 h left in the time budget)
+[2026-11-10 00:34:52]   … train_std_noreg_seed42 running 140 min |   Epoch 19/35 loss=0.0374 tr_acc=0.9911 vl_auc=0.7738 fgsm_auc=0.1882 pgd_auc=0.0882 lr=5.54e-05 gap=+8.19% (426s)
+[2026-11-10 00:34:52]   (8.0 h left in the time budget)
+[2026-11-10 00:44:52]   … train_std_noreg_seed42 running 150 min |   Epoch 21/35 loss=0.0256 tr_acc=0.9943 vl_auc=0.7713 fgsm_auc=0.2042 pgd_auc=0.0614 lr=4.56e-05 gap=+8.25% (426s)
+[2026-11-10 00:44:52]   (7.9 h left in the time budget)
+[2026-11-10 00:54:52]   … train_std_noreg_seed42 running 160 min |   Epoch 22/35 loss=0.0204 tr_acc=0.9956 vl_auc=0.7741 fgsm_auc=0.1954 pgd_auc=0.0812 lr=4.08e-05 gap=+8.37% (426s)
+[2026-11-10 00:54:52]   (7.7 h left in the time budget)
+[2026-11-10 01:04:52]   … train_std_noreg_seed42 running 170 min |   Epoch 23/35 loss=0.0161 tr_acc=0.9966 vl_auc=0.7712 fgsm_auc=0.1921 pgd_auc=0.0750 lr=3.61e-05 gap=+8.59% (425s)
+[2026-11-10 01:04:52]   (7.5 h left in the time budget)
+[2026-11-10 01:14:52]   … train_std_noreg_seed42 running 180 min |   Epoch 25/35 loss=0.0100 tr_acc=0.9981 vl_auc=0.7715 fgsm_auc=0.1934 pgd_auc=0.0710 lr=2.72e-05 gap=+8.41% (426s)
+[2026-11-10 01:14:52]   (7.4 h left in the time budget)
+[2026-11-10 01:24:52]   … train_std_noreg_seed42 running 190 min |   Epoch 26/35 loss=0.0078 tr_acc=0.9986 vl_auc=0.7709 fgsm_auc=0.1884 pgd_auc=0.0683 lr=2.30e-05 gap=+8.20% (426s)
+[2026-11-10 01:24:52]   (7.2 h left in the time budget)
+[2026-11-10 01:34:52]   … train_std_noreg_seed42 running 200 min |   Epoch 28/35 loss=0.0045 tr_acc=0.9993 vl_auc=0.7735 fgsm_auc=0.1943 pgd_auc=0.0833 lr=1.55e-05 gap=+8.17% (427s)
+[2026-11-10 01:34:52]   (7.0 h left in the time budget)
+[2026-11-10 01:44:52]   … train_std_noreg_seed42 running 210 min |   Epoch 29/35 loss=0.0032 tr_acc=0.9996 vl_auc=0.7742 fgsm_auc=0.2025 pgd_auc=0.0776 lr=1.22e-05 gap=+8.05% (426s)
+[2026-11-10 01:44:52]   (6.9 h left in the time budget)
+[2026-11-10 01:54:52]   … train_std_noreg_seed42 running 220 min |   Epoch 30/35 loss=0.0025 tr_acc=0.9997 vl_auc=0.7734 fgsm_auc=0.1955 pgd_auc=0.0658 lr=9.34e-06 gap=+8.20% (426s)
+[2026-11-10 01:54:52]   (6.7 h left in the time budget)
+[2026-11-10 02:04:53]   … train_std_noreg_seed42 running 230 min |   Epoch 32/35 loss=0.0016 tr_acc=0.9998 vl_auc=0.7737 fgsm_auc=0.2012 pgd_auc=0.0796 lr=4.77e-06 gap=+8.24% (426s)
+[2026-11-10 02:04:53]   (6.5 h left in the time budget)
+[2026-11-10 02:14:53]   … train_std_noreg_seed42 running 240 min |   Epoch 33/35 loss=0.0015 tr_acc=0.9998 vl_auc=0.7724 fgsm_auc=0.1987 pgd_auc=0.0844 lr=3.13e-06 gap=+8.16% (427s)
+[2026-11-10 02:14:53]   (6.4 h left in the time budget)
+[2026-11-10 02:24:08] DONE    train_std_noreg_seed42  (249 min)
+[2026-11-10 02:24:08] START   shadows_at_std_noreg_seed42  on GPU 0  (6.2 h left)
+[2026-11-10 02:24:08] START   shadows_std_std_noreg_seed42  on GPU 1  (6.2 h left)
+[2026-11-10 02:24:53]   … shadows_at_std_noreg_seed42 running 1 min | ===== 2026-11-10 02:24:08 session start (GPU 0) =====
+[2026-11-10 02:24:53]   … shadows_std_std_noreg_seed42 running 1 min | ===== 2026-11-10 02:24:08 session start (GPU 1) =====
+[2026-11-10 02:24:53]   (6.2 h left in the time budget)
+[2026-11-10 02:34:53]   … shadows_at_std_noreg_seed42 running 11 min |       [resnet18] epoch 9/25 loss 0.6022
+[2026-11-10 02:34:53]   … shadows_std_std_noreg_seed42 running 11 min |       [mobilenet_v3_small] epoch 1/25 loss 0.6118
+[2026-11-10 02:34:53]   (6.0 h left in the time budget)
+[2026-11-10 02:44:53]   … shadows_at_std_noreg_seed42 running 21 min |       [resnet18] epoch 22/25 loss 0.1135
+[2026-11-10 02:44:53]   … shadows_std_std_noreg_seed42 running 21 min |       [efficientnet_b0] epoch 4/25 loss 0.4821
+[2026-11-10 02:44:53]   (5.9 h left in the time budget)
+[2026-11-10 02:54:53]   … shadows_at_std_noreg_seed42 running 31 min |       [mobilenet_v3_small] epoch 11/25 loss 0.3220
+[2026-11-10 02:54:53]   … shadows_std_std_noreg_seed42 running 31 min |       [efficientnet_b0] epoch 23/25 loss 0.0772
+[2026-11-10 02:54:53]   (5.7 h left in the time budget)
+[2026-11-10 03:04:53]   … shadows_at_std_noreg_seed42 running 41 min |   shadow 2/8 (mobilenet_v3_small) trained in 16.2 min → saved
+[2026-11-10 03:04:53]   … shadows_std_std_noreg_seed42 running 41 min |       [densenet121] epoch 9/25 loss 0.5336
+[2026-11-10 03:04:53]   (5.5 h left in the time budget)
+[2026-11-10 03:14:53]   … shadows_at_std_noreg_seed42 running 51 min |       [efficientnet_b0] epoch 8/25 loss 0.3985
+[2026-11-10 03:14:53]   … shadows_std_std_noreg_seed42 running 51 min |       [densenet121] epoch 20/25 loss 0.3258
+[2026-11-10 03:14:53]   (5.4 h left in the time budget)
+[2026-11-10 03:24:53]   … shadows_at_std_noreg_seed42 running 61 min |       [efficientnet_b0] epoch 15/25 loss 0.1713
+[2026-11-10 03:24:53]   … shadows_std_std_noreg_seed42 running 61 min |       [shufflenet_v2_x1_0] epoch 16/25 loss 0.1854
+[2026-11-10 03:24:53]   (5.2 h left in the time budget)
+[2026-11-10 03:34:53]   … shadows_at_std_noreg_seed42 running 71 min |       [efficientnet_b0] epoch 21/25 loss 0.0897
+[2026-11-10 03:34:53]   … shadows_std_std_noreg_seed42 running 71 min |   shadow 6/8 (resnet18) trained in 7.0 min → saved
+[2026-11-10 03:34:53]   (5.0 h left in the time budget)
+[2026-11-10 03:44:53]   … shadows_at_std_noreg_seed42 running 81 min |       [densenet121] epoch 2/25 loss 0.6707
+[2026-11-10 03:44:53]   … shadows_std_std_noreg_seed42 running 81 min |       [efficientnet_b0] epoch 3/25 loss 0.5205
+[2026-11-10 03:44:53]   (4.9 h left in the time budget)
+[2026-11-10 03:54:53]   … shadows_at_std_noreg_seed42 running 91 min |       [densenet121] epoch 6/25 loss 0.6455
+[2026-11-10 03:54:53]   … shadows_std_std_noreg_seed42 running 91 min |       [efficientnet_b0] epoch 22/25 loss 0.0754
+[2026-11-10 03:54:53]   (4.7 h left in the time budget)
+[2026-11-10 03:56:23] DONE    shadows_std_std_noreg_seed42  (92 min)
+[2026-11-10 03:56:23] START   eval_std_noreg_seed42  on GPU 1  (4.7 h left)
+[2026-11-10 04:04:53]   … shadows_at_std_noreg_seed42 running 101 min |       [densenet121] epoch 10/25 loss 0.6267
+[2026-11-10 04:04:53]   … eval_std_noreg_seed42 running 9 min |   [EVASION] paper FGSM ε=0.002 (normalised)  AUC=0.2272  flip=0.1181
+[2026-11-10 04:04:53]   (4.5 h left in the time budget)
+[2026-11-10 04:14:53]   … shadows_at_std_noreg_seed42 running 111 min |       [densenet121] epoch 14/25 loss 0.6106
+[2026-11-10 04:14:53]   … eval_std_noreg_seed42 running 19 min |   [EVASION] paper FGSM ε=0.02 (normalised)  AUC=0.1732  flip=0.1525
+[2026-11-10 04:14:53]   (4.4 h left in the time budget)
+[2026-11-10 04:24:53]   … shadows_at_std_noreg_seed42 running 121 min |       [densenet121] epoch 18/25 loss 0.5947
+[2026-11-10 04:24:53]   … eval_std_noreg_seed42 running 29 min |   [EVASION] FGSM ε=2/255  AUC=0.1795  flip=0.1419
+[2026-11-10 04:24:53]   (4.2 h left in the time budget)
+[2026-11-10 04:34:53]   … shadows_at_std_noreg_seed42 running 131 min |       [densenet121] epoch 22/25 loss 0.5733
+[2026-11-10 04:34:53]   … eval_std_noreg_seed42 running 39 min |   [EVASION] PGD-10 ε=1/255  AUC=0.1840  flip=0.2420
+[2026-11-10 04:34:53]   (4.0 h left in the time budget)
+[2026-11-10 04:44:53]   … shadows_at_std_noreg_seed42 running 141 min |       [shufflenet_v2_x1_0] epoch 6/25 loss 0.5447
+[2026-11-10 04:44:53]   … eval_std_noreg_seed42 running 49 min | [EVAL] threshold MIAs on 5000 + 5000 images (final model) …
+[2026-11-10 04:44:53]   (3.9 h left in the time budget)
+[2026-11-10 04:54:53]   … shadows_at_std_noreg_seed42 running 151 min |       [shufflenet_v2_x1_0] epoch 22/25 loss 0.1491
+[2026-11-10 04:54:53]   … eval_std_noreg_seed42 running 59 min |   epoch 10: loss_gap=+0.1738 loss_AUC=0.6708 adv_loss_AUC=0.5885 fluct_e4_AUC=0.4776
+[2026-11-10 04:54:53]   (3.7 h left in the time budget)
+[2026-11-10 05:04:53]   … shadows_at_std_noreg_seed42 running 161 min |       [resnet18] epoch 11/25 loss 0.5553
+[2026-11-10 05:04:53]   … eval_std_noreg_seed42 running 69 min |   epoch 25: loss_gap=+0.5919 loss_AUC=0.8147 adv_loss_AUC=0.6269 fluct_e4_AUC=0.4260
+[2026-11-10 05:04:53]   (3.5 h left in the time budget)
+[2026-11-10 05:09:23] DONE    eval_std_noreg_seed42  (73 min)
+[2026-11-10 05:09:23] START   attack_shadow_mia_std_std_noreg_seed42  on GPU 1  (3.4 h left)
+[2026-11-10 05:14:38] DONE    attack_shadow_mia_std_std_noreg_seed42  (5 min)
+[2026-11-10 05:14:53]   … shadows_at_std_noreg_seed42 running 171 min |       [resnet18] epoch 23/25 loss 0.0743
+[2026-11-10 05:14:53]   (3.4 h left in the time budget)
+[2026-11-10 05:24:53]   … shadows_at_std_noreg_seed42 running 181 min |       [mobilenet_v3_small] epoch 20/25 loss 0.1398
+[2026-11-10 05:24:53]   (3.2 h left in the time budget)
+[2026-11-10 05:34:53]   … shadows_at_std_noreg_seed42 running 191 min |       [efficientnet_b0] epoch 5/25 loss 0.3744
+[2026-11-10 05:34:53]   (3.0 h left in the time budget)
+[2026-11-10 05:44:53]   … shadows_at_std_noreg_seed42 running 201 min |       [efficientnet_b0] epoch 13/25 loss 0.2368
+[2026-11-10 05:44:53]   (2.9 h left in the time budget)
+[2026-11-10 05:54:53]   … shadows_at_std_noreg_seed42 running 211 min |       [efficientnet_b0] epoch 21/25 loss 0.0870
+[2026-11-10 05:54:53]   (2.7 h left in the time budget)
+[2026-11-10 06:00:08] DONE    shadows_at_std_noreg_seed42  (216 min)
+[2026-11-10 06:00:08] START   attack_afmia_std_noreg_seed42  on GPU 0  (2.6 h left)
+[2026-11-10 06:00:08] START   attack_shadow_mia_at_std_noreg_seed42  on GPU 1  (2.6 h left)
+[2026-11-10 06:04:08] DONE    attack_shadow_mia_at_std_noreg_seed42  (4 min)
+[2026-11-10 06:04:53]   … attack_afmia_std_noreg_seed42 running 5 min |     shadow side 3200/10000 images (4.6 min)
+[2026-11-10 06:04:53]   (2.5 h left in the time budget)
+[2026-11-10 06:14:53]   … attack_afmia_std_noreg_seed42 running 15 min |   victim side: clean, v1 and v2 probes on the evaluation images …
+[2026-11-10 06:14:53]   (2.4 h left in the time budget)
+[2026-11-10 06:24:53]   … attack_afmia_std_noreg_seed42 running 25 min |   AFMIA-v2 (+ clean confidence) / Gradient Boosting    AUC=0.7881 TPR@1%=0.1858 acc@0.5=0.6656 acc@median=0.6810
+[2026-11-10 06:24:53]   (2.2 h left in the time budget)
+[2026-11-10 06:25:23] DONE    attack_afmia_std_noreg_seed42  (25 min)
+[2026-11-10 06:25:29] ==============================================================================
+[2026-11-10 06:25:29]   done         train_std_noreg_seed42
+[2026-11-10 06:25:29]   done         shadows_at_std_noreg_seed42
+[2026-11-10 06:25:29]   done         shadows_std_std_noreg_seed42
+[2026-11-10 06:25:29]   done         eval_std_noreg_seed42
+[2026-11-10 06:25:29]   done         attack_afmia_std_noreg_seed42
+[2026-11-10 06:25:29]   done         attack_shadow_mia_std_std_noreg_seed42
+[2026-11-10 06:25:29]   done         attack_shadow_mia_at_std_noreg_seed42
+[2026-11-10 06:25:29] COMPLETE — every task is done. Download this notebook's output (results_v2/) and merge it with the other account's output.
+[2026-11-10 06:25:29] ==============================================================================

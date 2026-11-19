@@ -1,0 +1,12 @@
+
+===== 2026-11-11 08:56:18 session start (GPU 1) =====
+[shadow_mia_std] victim /kaggle/working/results_v2/victims/fgsm_noreg_seed42: 8 std shadows, attack subset 10000 images → 39694 balanced rows; eval 5000 + 5000
+  Shadow-MIA / Gradient Boosting                       AUC=0.5944 TPR@1%=0.0626 acc@0.5=0.5667 acc@median=0.5666
+  Shadow-MIA / Random Forest                           AUC=0.5909 TPR@1%=0.0404 acc@0.5=0.5627 acc@median=0.5603
+  Shadow-MIA / MLP                                     AUC=0.6271 TPR@1%=0.0660 acc@0.5=0.5849 acc@median=0.5882
+  Shadow-MIA / Logistic Regression                     AUC=0.6063 TPR@1%=0.0436 acc@0.5=0.5606 acc@median=0.5704
+  Shadow-MIA + BCVA / Gradient Boosting                AUC=0.5998 TPR@1%=0.0614 acc@0.5=0.5695 acc@median=0.5698
+  Shadow-MIA + BCVA / Random Forest                    AUC=0.5918 TPR@1%=0.0486 acc@0.5=0.5613 acc@median=0.5611
+  Shadow-MIA + BCVA / MLP                              AUC=0.6087 TPR@1%=0.0470 acc@0.5=0.5696 acc@median=0.5698
+  Shadow-MIA + BCVA / Logistic Regression              AUC=0.6057 TPR@1%=0.0426 acc@0.5=0.5605 acc@median=0.5688
+[DONE] shadow_mia_std → /kaggle/working/results_v2/attacks/fgsm_noreg_seed42/shadow_mia_std (5.4 min)

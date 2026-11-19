@@ -184,6 +184,27 @@ def restore_previous(input_root, R, results_name):
                    f"ended {st.get('updated')})."]
 
 
+def list_input_victims(input_root):
+    """Every victims/<run>/ folder under the attached inputs, with what it contains."""
+    found = set()
+    for d in range(1, 7):
+        found.update(glob.glob(os.path.join(input_root, *(["*"] * d), "victims", "*")))
+    rows = []
+    for v in sorted(p for p in found if os.path.isdir(p)):
+        meta_path = os.path.join(v, "model_meta.json")
+        smoke = None
+        if os.path.exists(meta_path):
+            try:
+                with open(meta_path) as f:
+                    smoke = bool(json.load(f).get("smoke"))
+            except Exception:
+                smoke = "unreadable"
+        rows.append(f"{v}  [model_meta.json: {'yes' if os.path.exists(meta_path) else 'NO'}, "
+                    f"model.pth: {'yes' if os.path.exists(os.path.join(v, 'model.pth')) else 'NO'}, "
+                    f"smoke: {smoke}]")
+    return rows
+
+
 def import_runs(input_root, R, names, smoke):
     """Copy finished victims (model.pth + meta + history + checkpoints) from attached
     outputs of earlier experiments.  v1 victims get the prefix 'v1-', v2 victims 'v2-'
@@ -462,6 +483,27 @@ def main():
     commit = code_version()
     log(f"Code version: {commit}")
     imported = import_runs(args.input_root, R, args.import_runs, args.smoke) if args.import_runs else []
+    if args.import_runs:
+        tops = sorted(os.listdir(args.input_root)) if os.path.isdir(args.input_root) else []
+        log(f"Attached inputs (top level of {args.input_root}): {tops}")
+        seen = list_input_victims(args.input_root)
+        log(f"victims/ folders visible in the inputs: {len(seen)}")
+        for row in seen:
+            log("   " + row)
+        missing = [n for n in args.import_runs if not any(r.endswith(n) for r in imported)]
+        if missing:
+            msg = (f"could not import {missing}. A victim is imported only if the attached input "
+                   "contains victims/<name>/ with model_meta.json AND model.pth (and is not a smoke "
+                   "run). Attach the old results folder(s) — e.g. upload your local 'results 5' "
+                   "(std_noreg_seed42) and 'results 3' (fgsm_noreg_seed42) as a private Kaggle "
+                   "dataset and add it via Add Input → Your Datasets — then run again.")
+            if not trained and not imported:
+                with open(os.path.join(R, "STATUS.md"), "w") as f:
+                    f.write(f"# Kaggle run status (v3 lab) — `{args.label}`\n\n**FAILED: {msg}**\n\n"
+                            "Victim folders seen in the inputs:\n\n"
+                            + "".join(f"- `{r}`\n" for r in seen or ["(none)"]))
+                fatal(msg)
+            log("WARNING: " + msg + " Continuing with the victims that were found.")
 
     gpus = check_gpus(args.allow_cpu)
     slots = [int(g) for g in args.gpu_slots.split(",")] if args.gpu_slots else gpus

@@ -1,0 +1,564 @@
+{
+  "final": {
+    "generalization": {
+      "member_loss": 8.702027116669342e-05,
+      "nonmember_loss": 0.6754354238510132,
+      "loss_gap": 0.6753484010696411,
+      "member_auc": 1.0,
+      "nonmember_auc": 0.7634616528425808,
+      "adv_loss_gap": 0.6913108825683594,
+      "auc_gap": 0.23653834715741917,
+      "member_fluct_e1": 3.4719667434692383,
+      "nonmember_fluct_e1": 3.062087059020996,
+      "member_fluct_e4": 2.575216770172119,
+      "nonmember_fluct_e4": 2.3375985622406006,
+      "avg_max_conf_members": 0.9998859167098999,
+      "avg_max_conf_nonmembers": 0.8818041086196899,
+      "paper_fluct": {
+        "eps_normalised": 0.01,
+        "labels": "true",
+        "gradient_mode": "eval",
+        "avg_members_pct": 22.659366607666016,
+        "avg_nonmembers_pct": 14.970341682434082,
+        "per_class_members": [
+          0.3157776892185211,
+          0.21160674095153809,
+          0.6431885957717896,
+          0.236005499958992,
+          0.08038769662380219,
+          0.1330055147409439,
+          0.07121006399393082,
+          0.34748491644859314,
+          0.09109260886907578,
+          0.17661871016025543,
+          0.10135877877473831,
+          0.2810419797897339,
+          0.21324214339256287,
+          0.012632372789084911,
+          0.48425161838531494
+        ],
+        "per_class_nonmembers": [
+          0.2200249284505844,
+          0.12420262396335602,
+          0.4146847724914551,
+          0.13279779255390167,
+          0.039804160594940186,
+          0.07867258042097092,
+          0.033377449959516525,
+          0.24224887788295746,
+          0.044208358973264694,
+          0.09459994733333588,
+          0.06214597821235657,
+          0.19785846769809723,
+          0.14364971220493317,
+          0.006152932066470385,
+          0.41112232208251953
+        ],
+        "class_names": [
+          "Atelectasis",
+          "Consolidation",
+          "Infiltration",
+          "Pneumothorax",
+          "Edema",
+          "Emphysema",
+          "Fibrosis",
+          "Effusion",
+          "Pneumonia",
+          "Pleural_Thickening",
+          "Cardiomegaly",
+          "Nodule",
+          "Mass",
+          "Hernia",
+          "No Finding"
+        ]
+      }
+    },
+    "threshold_attacks": {
+      "loss": {
+        "auc": 0.83782014,
+        "tpr_at_1pct_fpr": 0.0176,
+        "tpr_at_0.1pct_fpr": 0.0018,
+        "best_threshold_acc": 0.8500000000000001,
+        "acc_median": 0.7756
+      },
+      "certainty": {
+        "auc": 0.7916480399999999,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.7909,
+        "acc_median": 0.7231
+      },
+      "adv_loss": {
+        "auc": 0.64121618,
+        "tpr_at_1pct_fpr": 0.0176,
+        "tpr_at_0.1pct_fpr": 0.0018,
+        "best_threshold_acc": 0.6022000000000001,
+        "acc_median": 0.5978
+      },
+      "adv_loss_pgd": {
+        "auc": 0.55040896,
+        "tpr_at_1pct_fpr": 0.0138,
+        "tpr_at_0.1pct_fpr": 0.001,
+        "best_threshold_acc": 0.5365,
+        "acc_median": 0.527
+      },
+      "fluct_e1": {
+        "auc": 0.42087946,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.5206,
+        "acc_median": 0.4334
+      },
+      "fluct_e4": {
+        "auc": 0.43221478,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.5215000000000001,
+        "acc_median": 0.4598
+      },
+      "dlogit_e4": {
+        "auc": 0.4396192,
+        "tpr_at_1pct_fpr": 0.0,
+        "tpr_at_0.1pct_fpr": 0.0,
+        "best_threshold_acc": 0.5206,
+        "acc_median": 0.448
+      }
+    }
+  },
+  "checkpoints": {
+    "5": {
+      "generalization": {
+        "member_loss": 0.2493256777524948,
+        "nonmember_loss": 0.2766491174697876,
+        "loss_gap": 0.027323439717292786,
+        "member_auc": 0.9010890027178509,
+        "nonmember_auc": 0.8102388863734009,
+        "adv_loss_gap": 0.014464735984802246,
+        "auc_gap": 0.09085011634444995,
+        "member_fluct_e1": 4.242956161499023,
+        "nonmember_fluct_e1": 4.2677202224731445,
+        "member_fluct_e4": 3.59964919090271,
+        "nonmember_fluct_e4": 3.5940701961517334,
+        "avg_max_conf_members": 0.8148568272590637,
+        "avg_max_conf_nonmembers": 0.8094704747200012
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.54053904,
+          "tpr_at_1pct_fpr": 0.014,
+          "tpr_at_0.1pct_fpr": 0.0012,
+          "best_threshold_acc": 0.5376,
+          "acc_median": 0.5262
+        },
+        "certainty": {
+          "auc": 0.49830816000000006,
+          "tpr_at_1pct_fpr": 0.013,
+          "tpr_at_0.1pct_fpr": 0.0012,
+          "best_threshold_acc": 0.51,
+          "acc_median": 0.4908
+        },
+        "adv_loss": {
+          "auc": 0.5233886400000001,
+          "tpr_at_1pct_fpr": 0.0122,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.5241,
+          "acc_median": 0.5132
+        },
+        "fluct_e1": {
+          "auc": 0.5088372,
+          "tpr_at_1pct_fpr": 0.0088,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.5116,
+          "acc_median": 0.5096
+        },
+        "fluct_e4": {
+          "auc": 0.49701426,
+          "tpr_at_1pct_fpr": 0.0114,
+          "tpr_at_0.1pct_fpr": 0.0018,
+          "best_threshold_acc": 0.5059,
+          "acc_median": 0.499
+        },
+        "dlogit_e4": {
+          "auc": 0.5011007399999999,
+          "tpr_at_1pct_fpr": 0.0128,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5085000000000001,
+          "acc_median": 0.504
+        }
+      },
+      "epoch": 5
+    },
+    "10": {
+      "generalization": {
+        "member_loss": 0.1126021221280098,
+        "nonmember_loss": 0.28635698556900024,
+        "loss_gap": 0.17375487089157104,
+        "member_auc": 0.9856159868895891,
+        "nonmember_auc": 0.7907721530987952,
+        "adv_loss_gap": 0.19430077075958252,
+        "auc_gap": 0.19484383379079384,
+        "member_fluct_e1": 4.7245612144470215,
+        "nonmember_fluct_e1": 4.710173606872559,
+        "member_fluct_e4": 3.268699884414673,
+        "nonmember_fluct_e4": 3.16586971282959,
+        "avg_max_conf_members": 0.9144318103790283,
+        "avg_max_conf_nonmembers": 0.8726977705955505
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.67076388,
+          "tpr_at_1pct_fpr": 0.0116,
+          "tpr_at_0.1pct_fpr": 0.0006,
+          "best_threshold_acc": 0.6548,
+          "acc_median": 0.6208
+        },
+        "certainty": {
+          "auc": 0.55000954,
+          "tpr_at_1pct_fpr": 0.009,
+          "tpr_at_0.1pct_fpr": 0.0006,
+          "best_threshold_acc": 0.5452,
+          "acc_median": 0.529
+        },
+        "adv_loss": {
+          "auc": 0.58846326,
+          "tpr_at_1pct_fpr": 0.0098,
+          "tpr_at_0.1pct_fpr": 0.001,
+          "best_threshold_acc": 0.5753,
+          "acc_median": 0.5566
+        },
+        "fluct_e1": {
+          "auc": 0.49761958,
+          "tpr_at_1pct_fpr": 0.0058,
+          "tpr_at_0.1pct_fpr": 0.0012,
+          "best_threshold_acc": 0.5037,
+          "acc_median": 0.4956
+        },
+        "fluct_e4": {
+          "auc": 0.4776018,
+          "tpr_at_1pct_fpr": 0.0072,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.5001,
+          "acc_median": 0.488
+        },
+        "dlogit_e4": {
+          "auc": 0.47034758,
+          "tpr_at_1pct_fpr": 0.0076,
+          "tpr_at_0.1pct_fpr": 0.001,
+          "best_threshold_acc": 0.5009,
+          "acc_median": 0.4838
+        }
+      },
+      "epoch": 10
+    },
+    "15": {
+      "generalization": {
+        "member_loss": 0.03836407512426376,
+        "nonmember_loss": 0.39271146059036255,
+        "loss_gap": 0.3543473780155182,
+        "member_auc": 0.9986994550785717,
+        "nonmember_auc": 0.7714520492771855,
+        "adv_loss_gap": 0.36580413579940796,
+        "auc_gap": 0.22724740580138625,
+        "member_fluct_e1": 4.110958099365234,
+        "nonmember_fluct_e1": 3.8448073863983154,
+        "member_fluct_e4": 2.830829381942749,
+        "nonmember_fluct_e4": 2.669403553009033,
+        "avg_max_conf_members": 0.9733414053916931,
+        "avg_max_conf_nonmembers": 0.9082029461860657
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.76172774,
+          "tpr_at_1pct_fpr": 0.012,
+          "tpr_at_0.1pct_fpr": 0.001,
+          "best_threshold_acc": 0.7482,
+          "acc_median": 0.6954
+        },
+        "certainty": {
+          "auc": 0.6278928800000001,
+          "tpr_at_1pct_fpr": 0.0104,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.6071,
+          "acc_median": 0.5966
+        },
+        "adv_loss": {
+          "auc": 0.61499796,
+          "tpr_at_1pct_fpr": 0.0138,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.5958,
+          "acc_median": 0.574
+        },
+        "fluct_e1": {
+          "auc": 0.45024982,
+          "tpr_at_1pct_fpr": 0.0056,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.501,
+          "acc_median": 0.4636
+        },
+        "fluct_e4": {
+          "auc": 0.45218714000000004,
+          "tpr_at_1pct_fpr": 0.012,
+          "tpr_at_0.1pct_fpr": 0.0008,
+          "best_threshold_acc": 0.5015,
+          "acc_median": 0.4686
+        },
+        "dlogit_e4": {
+          "auc": 0.46440506000000004,
+          "tpr_at_1pct_fpr": 0.0082,
+          "tpr_at_0.1pct_fpr": 0.0012,
+          "best_threshold_acc": 0.5004,
+          "acc_median": 0.4732
+        }
+      },
+      "epoch": 15
+    },
+    "20": {
+      "generalization": {
+        "member_loss": 0.011829409748315811,
+        "nonmember_loss": 0.503960371017456,
+        "loss_gap": 0.49213096499443054,
+        "member_auc": 0.9998473334608701,
+        "nonmember_auc": 0.7661057706247543,
+        "adv_loss_gap": 0.4322415590286255,
+        "auc_gap": 0.2337415628361158,
+        "member_fluct_e1": 3.9774951934814453,
+        "nonmember_fluct_e1": 3.625950813293457,
+        "member_fluct_e4": 3.014237403869629,
+        "nonmember_fluct_e4": 2.754775285720825,
+        "avg_max_conf_members": 0.9885979294776917,
+        "avg_max_conf_nonmembers": 0.9053863286972046
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.79545928,
+          "tpr_at_1pct_fpr": 0.0146,
+          "tpr_at_0.1pct_fpr": 0.0016,
+          "best_threshold_acc": 0.7823,
+          "acc_median": 0.7284
+        },
+        "certainty": {
+          "auc": 0.6930622,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.6744999999999999,
+          "acc_median": 0.6512
+        },
+        "adv_loss": {
+          "auc": 0.6288411599999999,
+          "tpr_at_1pct_fpr": 0.0146,
+          "tpr_at_0.1pct_fpr": 0.0016,
+          "best_threshold_acc": 0.5975,
+          "acc_median": 0.5944
+        },
+        "fluct_e1": {
+          "auc": 0.43879431999999996,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5032,
+          "acc_median": 0.4526
+        },
+        "fluct_e4": {
+          "auc": 0.43650782,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5033,
+          "acc_median": 0.4562
+        },
+        "dlogit_e4": {
+          "auc": 0.43856408,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5032,
+          "acc_median": 0.4552
+        }
+      },
+      "epoch": 20
+    },
+    "25": {
+      "generalization": {
+        "member_loss": 0.0023189354687929153,
+        "nonmember_loss": 0.594267725944519,
+        "loss_gap": 0.5919488072395325,
+        "member_auc": 0.9999986651970154,
+        "nonmember_auc": 0.76391041706856,
+        "adv_loss_gap": 0.508881688117981,
+        "auc_gap": 0.2360882481284554,
+        "member_fluct_e1": 3.752060890197754,
+        "nonmember_fluct_e1": 3.3539133071899414,
+        "member_fluct_e4": 2.9547269344329834,
+        "nonmember_fluct_e4": 2.657953977584839,
+        "avg_max_conf_members": 0.997530460357666,
+        "avg_max_conf_nonmembers": 0.9029346704483032
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.81467012,
+          "tpr_at_1pct_fpr": 0.0136,
+          "tpr_at_0.1pct_fpr": 0.002,
+          "best_threshold_acc": 0.8119000000000001,
+          "acc_median": 0.751
+        },
+        "certainty": {
+          "auc": 0.73906436,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.7192000000000001,
+          "acc_median": 0.6828
+        },
+        "adv_loss": {
+          "auc": 0.6268541,
+          "tpr_at_1pct_fpr": 0.0136,
+          "tpr_at_0.1pct_fpr": 0.002,
+          "best_threshold_acc": 0.5886,
+          "acc_median": 0.5862
+        },
+        "fluct_e1": {
+          "auc": 0.42624806,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5058,
+          "acc_median": 0.4476
+        },
+        "fluct_e4": {
+          "auc": 0.42596932,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5068,
+          "acc_median": 0.4446
+        },
+        "dlogit_e4": {
+          "auc": 0.433998,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5058,
+          "acc_median": 0.4532
+        }
+      },
+      "epoch": 25
+    },
+    "30": {
+      "generalization": {
+        "member_loss": 0.00026984140276908875,
+        "nonmember_loss": 0.6550658941268921,
+        "loss_gap": 0.6547960638999939,
+        "member_auc": 1.0,
+        "nonmember_auc": 0.7627453278092414,
+        "adv_loss_gap": 0.6250730752944946,
+        "auc_gap": 0.23725467219075858,
+        "member_fluct_e1": 3.5116288661956787,
+        "nonmember_fluct_e1": 3.0733683109283447,
+        "member_fluct_e4": 2.6748733520507812,
+        "nonmember_fluct_e4": 2.384284019470215,
+        "avg_max_conf_members": 0.9995778203010559,
+        "avg_max_conf_nonmembers": 0.8863967061042786
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.8354319599999999,
+          "tpr_at_1pct_fpr": 0.0132,
+          "tpr_at_0.1pct_fpr": 0.0014,
+          "best_threshold_acc": 0.8422000000000001,
+          "acc_median": 0.7698
+        },
+        "certainty": {
+          "auc": 0.78309316,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.7722,
+          "acc_median": 0.7176
+        },
+        "adv_loss": {
+          "auc": 0.63669782,
+          "tpr_at_1pct_fpr": 0.0132,
+          "tpr_at_0.1pct_fpr": 0.0014,
+          "best_threshold_acc": 0.6039,
+          "acc_median": 0.603
+        },
+        "fluct_e1": {
+          "auc": 0.41568464000000005,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5145,
+          "acc_median": 0.4366
+        },
+        "fluct_e4": {
+          "auc": 0.42132689999999995,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5146999999999999,
+          "acc_median": 0.4482
+        },
+        "dlogit_e4": {
+          "auc": 0.43047496,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5144,
+          "acc_median": 0.4458
+        }
+      },
+      "epoch": 30
+    },
+    "35": {
+      "generalization": {
+        "member_loss": 8.702027116669342e-05,
+        "nonmember_loss": 0.6754354238510132,
+        "loss_gap": 0.6753484010696411,
+        "member_auc": 1.0,
+        "nonmember_auc": 0.7634616528425808,
+        "adv_loss_gap": 0.6913108825683594,
+        "auc_gap": 0.23653834715741917,
+        "member_fluct_e1": 3.4719667434692383,
+        "nonmember_fluct_e1": 3.062087059020996,
+        "member_fluct_e4": 2.575216770172119,
+        "nonmember_fluct_e4": 2.3375985622406006,
+        "avg_max_conf_members": 0.9998859167098999,
+        "avg_max_conf_nonmembers": 0.8818041086196899
+      },
+      "threshold_attacks": {
+        "loss": {
+          "auc": 0.83782014,
+          "tpr_at_1pct_fpr": 0.0176,
+          "tpr_at_0.1pct_fpr": 0.0018,
+          "best_threshold_acc": 0.8500000000000001,
+          "acc_median": 0.7756
+        },
+        "certainty": {
+          "auc": 0.7916480399999999,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.7909,
+          "acc_median": 0.7231
+        },
+        "adv_loss": {
+          "auc": 0.64121618,
+          "tpr_at_1pct_fpr": 0.0176,
+          "tpr_at_0.1pct_fpr": 0.0018,
+          "best_threshold_acc": 0.6022000000000001,
+          "acc_median": 0.5978
+        },
+        "fluct_e1": {
+          "auc": 0.42087946,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5206,
+          "acc_median": 0.4334
+        },
+        "fluct_e4": {
+          "auc": 0.43221478,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5215000000000001,
+          "acc_median": 0.4598
+        },
+        "dlogit_e4": {
+          "auc": 0.4396192,
+          "tpr_at_1pct_fpr": 0.0,
+          "tpr_at_0.1pct_fpr": 0.0,
+          "best_threshold_acc": 0.5206,
+          "acc_median": 0.448
+        }
+      },
+      "epoch": 35
+    }
+  }
+}

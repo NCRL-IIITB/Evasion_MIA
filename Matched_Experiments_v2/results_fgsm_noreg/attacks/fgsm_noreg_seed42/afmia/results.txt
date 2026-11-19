@@ -1,0 +1,38 @@
+afmia on /kaggle/working/results_v2/victims/fgsm_noreg_seed42 (seed 42)
+========================================================================================================================
+Attack                                                       AUC   TPR@1%  TPR@.1%  Acc@.5  Acc@med    Prec     Rec      F1
+--------------------------------------------------------------------------------------------------------------------------------
+AFMIA (paper features) / Gradient Boosting                0.6054   0.0442   0.0100  0.5629   0.5680  0.5461  0.7448  0.6302
+AFMIA (paper features) / Random Forest                    0.5977   0.0386   0.0056  0.5609   0.5664  0.5471  0.7078  0.6171
+AFMIA (paper features) / MLP                              0.6065   0.0428   0.0038  0.5626   0.5726  0.5427  0.7950  0.6451
+AFMIA (paper features) / Logistic Regression              0.5769   0.0146   0.0016  0.5454   0.5594  0.5268  0.8912  0.6622
+AFMIA (paper features) + BCVA / Gradient Boosting         0.6059   0.0456   0.0084  0.5584   0.5688  0.5402  0.7842  0.6397
+AFMIA (paper features) + BCVA / Random Forest             0.5967   0.0336   0.0026  0.5605   0.5653  0.5462  0.7156  0.6195
+AFMIA (paper features) + BCVA / MLP                       0.5971   0.0360   0.0074  0.5498   0.5564  0.5314  0.8434  0.6520
+AFMIA (paper features) + BCVA / Logistic Regression       0.5757   0.0158   0.0032  0.5455   0.5542  0.5269  0.8922  0.6625
+AFMIA-v2 (perturbation only) / Gradient Boosting          0.5022   0.0138   0.0024  0.5013   0.4902  0.5007  0.9556  0.6571
+AFMIA-v2 (perturbation only) / Random Forest              0.5049   0.0114   0.0014  0.4975   0.4972  0.4987  0.9532  0.6548
+AFMIA-v2 (perturbation only) / MLP                        0.5618   0.0160   0.0022  0.5111   0.5438  0.5059  0.9590  0.6623
+AFMIA-v2 (perturbation only) / Logistic Regression        0.5737   0.0096   0.0010  0.5176   0.5614  0.5097  0.9260  0.6575
+AFMIA-v2 (+ clean confidence) / Gradient Boosting         0.6177   0.0506   0.0076  0.5746   0.5824  0.5570  0.7286  0.6314
+AFMIA-v2 (+ clean confidence) / Random Forest             0.5840   0.0288   0.0028  0.5282   0.5570  0.5164  0.8884  0.6531
+AFMIA-v2 (+ clean confidence) / MLP                       0.5834   0.0182   0.0036  0.5546   0.5548  0.5334  0.8718  0.6619
+AFMIA-v2 (+ clean confidence) / Logistic Regression       0.5890   0.0148   0.0008  0.5489   0.5692  0.5296  0.8740  0.6596
+
+Classifier-free scores on the victim (AUC; shadow-row AUC = same score on the attacker's shadow rows)
+------------------------------------------------------------------------------------------------------------------------
+threshold: certainty                                      0.5605   0.0156                    0.5456   shadow-row AUC 0.5975
+threshold: max_conf                                       0.6053   0.0176                    0.5786   shadow-row AUC 0.6297
+threshold: neg_clean_loss_own                             0.5596   0.0156                    0.5458   shadow-row AUC 0.5970
+threshold: neg_fl_sum_e1                                  0.5734   0.0162                    0.5590   shadow-row AUC 0.5772
+threshold: neg_dz_mean_e1                                 0.5293   0.0162                    0.5210   shadow-row AUC 0.5099
+threshold: neg_adv_loss_own_e1                            0.5832   0.0146                    0.5718   shadow-row AUC 0.5966
+threshold: neg_fl_sum_e2                                  0.5840   0.0186                    0.5630   shadow-row AUC 0.5780
+threshold: neg_dz_mean_e2                                 0.5363   0.0186                    0.5276   shadow-row AUC 0.5088
+threshold: neg_adv_loss_own_e2                            0.5859   0.0190                    0.5766   shadow-row AUC 0.5927
+threshold: neg_fl_sum_e4                                  0.5357   0.0174                    0.5268   shadow-row AUC 0.5584
+threshold: neg_dz_mean_e4                                 0.5122   0.0142                    0.5052   shadow-row AUC 0.5028
+threshold: neg_adv_loss_own_e4                            0.5393   0.0124                    0.5256   shadow-row AUC 0.5674
+threshold: neg_fl_sum_e8                                  0.4717   0.0218                    0.4748   shadow-row AUC 0.5335
+threshold: neg_dz_mean_e8                                 0.4922   0.0136                    0.4970   shadow-row AUC 0.4947
+threshold: neg_adv_loss_own_e8                            0.4804   0.0220                    0.4854   shadow-row AUC 0.5391

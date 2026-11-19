@@ -1,0 +1,15 @@
+[CACHE] Indexing zip archives in /nonexistent …
+[CACHE] All 112120 images located (0 in zips).
+   10000/112120  (45 img/s)
+   20000/112120  (45 img/s)
+   30000/112120  (45 img/s)
+   40000/112120  (45 img/s)
+   50000/112120  (45 img/s)
+   60000/112120  (45 img/s)
+   70000/112120  (45 img/s)
+   80000/112120  (46 img/s)
+   90000/112120  (48 img/s)
+  100000/112120  (49 img/s)
+  110000/112120  (49 img/s)
+[CACHE] Built in 2257.3s; 0 colour image(s).
+[CACHE] Verified 300 images bit-exact against the original PIL pipeline ✓

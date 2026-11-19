@@ -1,0 +1,26 @@
+{
+  "label": "attack-only",
+  "trained": [],
+  "imported": [],
+  "seeds": [
+    42
+  ],
+  "code_version": "d28cf06 2026-11-10 03:00:10 +0530",
+  "smoke": false,
+  "complete": true,
+  "failed": [],
+  "updated": "2026-11-10T12:53:25",
+  "tasks": {},
+  "sessions": [
+    {
+      "start": "2026-11-10T12:21:14",
+      "end": "2026-11-10T12:53:25",
+      "gpus": [
+        0,
+        1
+      ],
+      "code_version": "d28cf06 2026-11-10 03:00:10 +0530",
+      "status": {}
+    }
+  ]
+}
